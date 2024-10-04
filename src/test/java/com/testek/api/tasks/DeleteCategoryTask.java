@@ -1,0 +1,37 @@
+package com.testek.api.tasks;
+
+import com.testek.api.utilities.CategoryEndpoints;
+import io.restassured.http.ContentType;
+import net.serenitybdd.screenplay.Actor;
+import net.serenitybdd.screenplay.Task;
+import net.serenitybdd.screenplay.rest.interactions.Delete;
+
+public class DeleteCategoryTask implements Task {
+    private final String categoryId;
+    private final boolean isSoft;
+
+    public DeleteCategoryTask(String categoryId, boolean isSoft) {
+        this.categoryId = categoryId;
+        this.isSoft = isSoft;
+    }
+
+    @Override
+    public <T extends Actor> void performAs(T t) {
+        String access_token = "Bearer " + t.recall("access_token");
+        t.attemptsTo(
+                Delete.from(CategoryEndpoints.CATEGORY_DELETE).with(
+                        req -> {
+                            req.contentType(ContentType.JSON);
+                            req.header("Authorization", access_token);
+                            req.pathParams("categoryId", categoryId);
+                            req.queryParam("isSoft", isSoft);
+                            return req;
+                        }
+                )
+        );
+    }
+
+    public static DeleteCategoryTask deleteCategory(String categoryId, boolean isSoft) {
+        return new DeleteCategoryTask(categoryId, isSoft);
+    }
+}

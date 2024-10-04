@@ -10,6 +10,6 @@ public class CategoryEndpoints {
     public static final String CATEGORY_CREATE = "/category";
     public static final String CATEGORY_UPDATE = "/category/{id}";
     public static final String CATEGORY_DELETE = "/category/{categoryId}";
-    public static final String CATEGORY_GET_BY_ID = "/category/{category}/detail";
+    public static final String CATEGORY_GET_BY_ID = "/category/{categoryId}/detail";
     public static final String CATEGORY_GET_ALL = "/category/search";
 }
