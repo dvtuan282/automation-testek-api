@@ -17,7 +17,6 @@ import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.stream.Stream;
-
 @ExtendWith(SerenityJUnit5Extension.class)
 public class LoginTestCase {
     private static Actor actor;

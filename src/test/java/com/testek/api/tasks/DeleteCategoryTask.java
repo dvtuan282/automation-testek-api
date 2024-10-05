@@ -25,6 +25,9 @@ public class DeleteCategoryTask implements Task {
                             req.header("Authorization", access_token);
                             req.pathParams("categoryId", categoryId);
                             req.queryParam("isSoft", isSoft);
+                            req.log().uri();
+                            req.then().log().all();
+                            req.log().body();
                             return req;
                         }
                 )

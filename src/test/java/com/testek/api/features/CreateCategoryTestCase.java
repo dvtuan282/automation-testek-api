@@ -14,6 +14,7 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.ensure.Ensure;
 import net.serenitybdd.screenplay.rest.abilities.CallAnApi;
 import net.serenitybdd.screenplay.rest.interactions.Delete;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -26,6 +27,7 @@ import java.util.stream.Stream;
 @ExtendWith(SerenityJUnit5Extension.class)
 public class CreateCategoryTestCase {
     private static Actor actor;
+    private String idActual;
 
     @BeforeAll
     static void setUp() {
@@ -47,16 +49,12 @@ public class CreateCategoryTestCase {
                 CreateCategoryTask.withCategory(categoryModel),
                 Ensure.that(description, StatusCodeResponse.responseStatus()).isEqualTo(201)
         );
-        String idActual = actor.asksFor(BodyResponse.bodyResponse("data.id")).toString();
+        idActual = actor.asksFor(BodyResponse.bodyResponse("data.id")).toString();
         System.out.println("idActual: " + idActual);
         System.out.println("=======Compare data=======");
         actor.attemptsTo(
                 GetCategoryTask.withCategoryId(idActual),
                 Ensure.that(description, BodyResponse.bodyResponse("data.id").asString()).isEqualTo(idActual)
-        );
-        System.out.println("=======Clean data=======");
-        actor.attemptsTo(
-                DeleteCategoryTask.deleteCategory(idActual, false)
         );
     }
 
@@ -68,6 +66,13 @@ public class CreateCategoryTestCase {
                 CreateCategoryTask.withCategory(categoryModel),
                 Ensure.that(description, StatusCodeResponse.responseStatus()).isEqualTo(400),
                 Ensure.that(description, BodyResponse.bodyResponse("error").asString()).isEqualTo(errorExpected)
+        );
+    }
+
+    @AfterEach
+    void cleanUp() {
+        actor.attemptsTo(
+                DeleteCategoryTask.deleteCategory(idActual, false)
         );
     }
 
