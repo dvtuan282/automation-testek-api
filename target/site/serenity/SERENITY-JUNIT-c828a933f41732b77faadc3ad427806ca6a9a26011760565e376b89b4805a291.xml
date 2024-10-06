@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="4" name="com.testek.api.features.supplierFeatures.CreateSupplierTestCase" skipped="0" tests="8" time="6.24" timestamp="2024-10-06 01:01:38"><testcase classname="com.testek.api.features.supplierFeatures.CreateSupplierTestCase" name="CreateSupplierNotSuccess(SupplierModel, String, Integer, String)"><failure message="Expected: Create supplier not success when field Phone numbers do not start with 0  that is equal to: &lt;400&gt;&#10;Actual:   &lt;201&gt;" type="java.lang.AssertionError">Expected: Create supplier not success when field Phone numbers do not start with 0  that is equal to: &lt;400&gt;
+Actual:   &lt;201&gt;</failure><system-err>Expected: Create supplier not success when field Phone numbers do not start with 0  that is equal to: &lt;400&gt;
+Actual:   &lt;201&gt;&#13;
+com.testek.api.features.supplierFeatures.CreateSupplierTestCase.CreateSupplierNotSuccess(CreateSupplierTestCase.java:63)&#13;
+</system-err></testcase><testcase classname="com.testek.api.features.supplierFeatures.CreateSupplierTestCase" name="CreateSupplierSuccess(SupplierModel, String, Integer)"><failure message="Expected: Create supplier success when field not data that is equal to: &lt;201&gt;&#10;Actual:   &lt;400&gt;" type="java.lang.AssertionError">Expected: Create supplier success when field not data that is equal to: &lt;201&gt;
+Actual:   &lt;400&gt;</failure><system-err>Expected: Create supplier success when field not data that is equal to: &lt;201&gt;
+Actual:   &lt;400&gt;&#13;
+com.testek.api.features.supplierFeatures.CreateSupplierTestCase.CreateSupplierSuccess(CreateSupplierTestCase.java:48)&#13;
+</system-err></testcase></testsuite>

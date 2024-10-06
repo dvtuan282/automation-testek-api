@@ -5,6 +5,7 @@ import com.testek.api.utilities.CategoryEndpoints;
 import io.restassured.http.ContentType;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
+import net.serenitybdd.screenplay.rest.interactions.Delete;
 import net.serenitybdd.screenplay.rest.interactions.Put;
 
 public class DeleteSupplierTask implements Task {
@@ -19,11 +20,11 @@ public class DeleteSupplierTask implements Task {
         String access_token = "Bearer " + t.recall("access_token");
 
         t.attemptsTo(
-                Put.to(CategoryEndpoints.SUPPLER_UPDATE).with(
+                Delete.from(CategoryEndpoints.SUPPLER_DELETE).with(
                         req -> {
                             req.contentType(ContentType.JSON);
                             req.header("Authorization", access_token);
-                            req.pathParam("id", supplierId);
+                            req.pathParam("supplierId", supplierId);
                             req.log().uri();
                             req.then().log().body();
                             req.then().log().status();
