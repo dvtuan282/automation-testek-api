@@ -1,5 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="2" failures="1" name="com.testek.api.features.UpdateCategoryTestCase" skipped="0" tests="3" time="5.99" timestamp="2024-10-07 01:45:07"><testcase classname="com.testek.api.features.UpdateCategoryTestCase" name="UpdateCateNotSuccess(CategoryModel, String, String)"><error message="Expected: Update danh mục khi tên là null that is equal to: &lt;400&gt;&#10;Actual:   &lt;200&gt;" type="java.lang.AssertionError">Expected: Update danh mục khi tên là null that is equal to: &lt;400&gt;
-Actual:   &lt;200&gt;</error><system-err>Expected: Update danh mục khi tên là null that is equal to: &lt;400&gt;
-Actual:   &lt;200&gt;&#13;
-com.testek.api.features.UpdateCategoryTestCase.UpdateCateNotSuccess(UpdateCategoryTestCase.java:72)&#13;
-</system-err></testcase></testsuite>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="com.testek.api.features.UpdateCategoryTestCase" skipped="0" tests="3" time="4.51" timestamp="2024-10-07 10:19:18"><testcase classname="com.testek.api.features.UpdateCategoryTestCase" name="UpdateCateNotSuccess(CategoryModel, String, String)"/></testsuite>

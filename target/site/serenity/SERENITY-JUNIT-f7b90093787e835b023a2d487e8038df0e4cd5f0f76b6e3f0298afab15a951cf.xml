@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="7" failures="1" name="com.testek.api.features.supplierFeatures.UpdateSupplierTestCase" skipped="0" tests="8" time="4.28" timestamp="2024-10-07 10:32:05"><testcase classname="com.testek.api.features.supplierFeatures.UpdateSupplierTestCase" name="updateSupplierNotSuccess(SupplierModel, String, int)"><error message="Expected: Update supplier when field option is space that is equal to: &lt;400&gt;&#10;Actual:   &lt;200&gt;" type="java.lang.AssertionError">Expected: Update supplier when field option is space that is equal to: &lt;400&gt;
+Actual:   &lt;200&gt;</error><system-err>Expected: Update supplier when field option is space that is equal to: &lt;400&gt;
+Actual:   &lt;200&gt;&#13;
+com.testek.api.features.supplierFeatures.UpdateSupplierTestCase.updateSupplierNotSuccess(UpdateSupplierTestCase.java:62)&#13;
+</system-err></testcase></testsuite>
