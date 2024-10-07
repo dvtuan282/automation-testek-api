@@ -8,8 +8,8 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.rest.interactions.Put;
 
 public class UpdateCategoryTask implements Task {
-    private String categoryId;
-    private CategoryModel categoryModel;
+    private final String categoryId;
+    private final CategoryModel categoryModel;
 
     public UpdateCategoryTask(String categoryId, CategoryModel categoryModel) {
         this.categoryId = categoryId;
@@ -27,8 +27,9 @@ public class UpdateCategoryTask implements Task {
                             req.pathParam("id", categoryId);
                             req.body(categoryModel);
                             req.log().uri();
-                            req.then().log().all();
-                            req.log().body();
+                            req.then().log().status();
+                            req.then().log().body();
+                            req.that().log().body();
                             return req;
                         }
                 )

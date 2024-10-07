@@ -26,8 +26,9 @@ public class GetCategoryTask implements Task {
                             req.pathParams("categoryId", categoryId);
                             req.header("Authorization", access_token);
                             req.log().uri();
-                            req.then().log().all();
-                            req.log().body();
+                            req.then().log().status();
+                            req.then().log().body();
+                            req.that().log().body();
                             return req;
                         }
                 )
