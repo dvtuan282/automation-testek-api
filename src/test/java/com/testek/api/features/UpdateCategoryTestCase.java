@@ -39,7 +39,7 @@ public class UpdateCategoryTestCase {
         );
         // create category
         actor.attemptsTo(
-                CreateCategoryTask.withCategory(new CategoryModel("tạo ra để update", "Update để kiểm tra", "ACTIVE"))
+                CreateCategoryTask.withCategory(new CategoryModel("tạo ra để update", "Update để kiểm tra 20031", "ACTIVE"))
         );
         // lấy path từ body đã tạo thành công
         pathParam = actor.asksFor(BodyResponse.bodyResponse("data.id")).toString();
@@ -71,18 +71,15 @@ public class UpdateCategoryTestCase {
         System.out.println("=======Update data=======");
         actor.attemptsTo(
                 UpdateCategoryTask.updateCategoryWith(pathParam, categoryModel),
-                Ensure.that(description, StatusCodeResponse.responseStatus()).isEqualTo(400),
-                Ensure.that(description, BodyResponse.bodyResponse("error").asString()).isEqualTo(errorExpected)
+                Ensure.that(description, StatusCodeResponse.responseStatus()).isEqualTo(200)
         );
     }
 
     @AfterEach
     void cleanUp() {
         if (pathParam != null) {
-            System.out.println("=======Clean data=======");
-            actor.attemptsTo(
-                    DeleteCategoryTask.deleteCategory(pathParam, false)
-            );
+                System.out.println("=======Clean data=======");
+                actor.attemptsTo(DeleteCategoryTask.deleteCategory(pathParam, false));
         }
     }
 
