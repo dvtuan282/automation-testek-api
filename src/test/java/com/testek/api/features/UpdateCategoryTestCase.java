@@ -5,13 +5,11 @@ import com.testek.api.models.CategoryModel;
 import com.testek.api.questions.BodyResponse;
 import com.testek.api.questions.StatusCodeResponse;
 import com.testek.api.tasks.*;
-import com.testek.api.utilities.CategoryEndpoints;
-import io.cucumber.java.an.E;
+import com.testek.api.utilities.Endpoints;
 import net.serenitybdd.junit5.SerenityJUnit5Extension;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.ensure.Ensure;
 import net.serenitybdd.screenplay.rest.abilities.CallAnApi;
-import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -29,7 +27,7 @@ public class UpdateCategoryTestCase {
 
     @BeforeAll
     static void setUp() {
-        actor = Actor.named("tuanTester").whoCan(CallAnApi.at(CategoryEndpoints.BASIC_URL));
+        actor = Actor.named("tuanTester").whoCan(CallAnApi.at(Endpoints.BASIC_URL));
     }
 
     @BeforeEach

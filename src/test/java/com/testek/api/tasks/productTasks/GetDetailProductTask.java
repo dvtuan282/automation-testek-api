@@ -1,28 +1,28 @@
-package com.testek.api.tasks.supplierTasks;
+package com.testek.api.tasks.productTasks;
 
 import com.testek.api.utilities.Endpoints;
 import io.restassured.http.ContentType;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
-import net.serenitybdd.screenplay.rest.interactions.Delete;
+import net.serenitybdd.screenplay.rest.interactions.Get;
 
-public class DeleteSupplierTask implements Task {
-    private final String supplierId;
+public class GetDetailProductTask implements Task {
+    private final String productId;
 
-    public DeleteSupplierTask(String supplierId) {
-        this.supplierId = supplierId;
+    public GetDetailProductTask(String productId) {
+        this.productId = productId;
     }
+
 
     @Override
     public <T extends Actor> void performAs(T t) {
         String access_token = "Bearer " + t.recall("access_token");
-
         t.attemptsTo(
-                Delete.from(Endpoints.SUPPLER_DELETE).with(
+                Get.resource(Endpoints.PRODUCT_GET_BY_ID).with(
                         req -> {
                             req.contentType(ContentType.JSON);
                             req.header("Authorization", access_token);
-                            req.pathParam("supplierId", supplierId);
+                            req.pathParam("productId", productId);
                             req.log().uri();
                             req.then().log().body();
                             req.then().log().status();
@@ -32,10 +32,7 @@ public class DeleteSupplierTask implements Task {
                 )
         );
     }
-
-    public static DeleteSupplierTask withSuppliers(String supplierId) {
-        return new DeleteSupplierTask(supplierId);
+    public static GetDetailProductTask withIdProduct(String productId) {
+        return new GetDetailProductTask(productId);
     }
-
-
 }

@@ -8,12 +8,11 @@ import com.testek.api.tasks.CreateCategoryTask;
 import com.testek.api.tasks.DeleteCategoryTask;
 import com.testek.api.tasks.GetCategoryTask;
 import com.testek.api.tasks.LoginTask;
-import com.testek.api.utilities.CategoryEndpoints;
+import com.testek.api.utilities.Endpoints;
 import net.serenitybdd.junit5.SerenityJUnit5Extension;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.ensure.Ensure;
 import net.serenitybdd.screenplay.rest.abilities.CallAnApi;
-import net.serenitybdd.screenplay.rest.interactions.Delete;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -31,7 +30,7 @@ public class CreateCategoryTestCase {
 
     @BeforeAll
     static void setUp() {
-        actor = Actor.named("tuanTester").whoCan(CallAnApi.at(CategoryEndpoints.BASIC_URL));
+        actor = Actor.named("tuanTester").whoCan(CallAnApi.at(Endpoints.BASIC_URL));
     }
 
     @BeforeEach

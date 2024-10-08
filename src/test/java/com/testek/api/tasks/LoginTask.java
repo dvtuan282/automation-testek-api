@@ -1,7 +1,7 @@
 package com.testek.api.tasks;
 
 import com.testek.api.models.AccountModel;
-import com.testek.api.utilities.CategoryEndpoints;
+import com.testek.api.utilities.Endpoints;
 import io.restassured.http.ContentType;
 import net.serenitybdd.rest.SerenityRest;
 import net.serenitybdd.screenplay.Actor;
@@ -22,7 +22,7 @@ public class LoginTask implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                Post.to(CategoryEndpoints.LOGIN).with(
+                Post.to(Endpoints.LOGIN).with(
                         req -> {
                             req.contentType(ContentType.JSON);
                             req.body(accountModel);

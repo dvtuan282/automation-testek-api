@@ -1,7 +1,7 @@
 package com.testek.api.tasks.supplierTasks;
 
 import com.testek.api.models.SupplierModel;
-import com.testek.api.utilities.CategoryEndpoints;
+import com.testek.api.utilities.Endpoints;
 import io.restassured.http.ContentType;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
@@ -18,7 +18,7 @@ public class CreateSupplier implements Task {
     public <T extends Actor> void performAs(T t) {
         String access_token = "Bearer " + t.recall("access_token");
         t.attemptsTo(
-                Post.to(CategoryEndpoints.SUPPLER_CREATE).with(
+                Post.to(Endpoints.SUPPLER_CREATE).with(
                         req -> {
                             req.contentType(ContentType.JSON);
                             req.body(supplierModel);

@@ -3,10 +3,9 @@ package com.testek.api.features;
 import com.testek.api.models.AccountModel;
 import com.testek.api.questions.BodyResponse;
 import com.testek.api.questions.StatusCodeResponse;
-import com.testek.api.tasks.CreateCategoryTask;
 import com.testek.api.tasks.GetCategoryTask;
 import com.testek.api.tasks.LoginTask;
-import com.testek.api.utilities.CategoryEndpoints;
+import com.testek.api.utilities.Endpoints;
 import net.serenitybdd.junit5.SerenityJUnit5Extension;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.ensure.Ensure;
@@ -22,7 +21,7 @@ public class GetCategoryTestCase {
 
     @BeforeAll
     static void setUp() {
-        actor = Actor.named("tuanTester").whoCan(CallAnApi.at(CategoryEndpoints.BASIC_URL));
+        actor = Actor.named("tuanTester").whoCan(CallAnApi.at(Endpoints.BASIC_URL));
     }
 
     @BeforeEach

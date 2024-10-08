@@ -1,6 +1,6 @@
 package com.testek.api.tasks.supplierTasks;
 
-import com.testek.api.utilities.CategoryEndpoints;
+import com.testek.api.utilities.Endpoints;
 import io.restassured.http.ContentType;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
@@ -17,7 +17,7 @@ public class GetSupplierTask implements Task {
     public <T extends Actor> void performAs(T t) {
         String access_token = "Bearer " + t.recall("access_token");
         t.attemptsTo(
-                Get.resource(CategoryEndpoints.SUPPLER_GET_BY_ID).with(
+                Get.resource(Endpoints.SUPPLER_GET_BY_ID).with(
                         req -> {
                             req.contentType(ContentType.JSON);
                             req.header("Authorization", access_token);
