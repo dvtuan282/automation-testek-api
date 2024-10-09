@@ -5,7 +5,7 @@ import com.testek.api.models.SupplierModel;
 import com.testek.api.questions.BodyResponse;
 import com.testek.api.questions.StatusCodeResponse;
 import com.testek.api.tasks.LoginTask;
-import com.testek.api.tasks.supplierTasks.CreateSupplier;
+import com.testek.api.tasks.supplierTasks.CreateSupplierTask;
 import com.testek.api.tasks.supplierTasks.DeleteSupplierTask;
 import com.testek.api.tasks.supplierTasks.GetSupplierTask;
 import com.testek.api.utilities.Endpoints;
@@ -37,7 +37,7 @@ public class GetSupplierTestCase {
         );
 
         actor.attemptsTo(
-                CreateSupplier.withSupplier(new SupplierModel("Phổ Yên", "Thái Nguyên", "Cty A", "Việt Nam", "0987654321", "5435", "Công ty b1"))
+                CreateSupplierTask.withSupplier(new SupplierModel("Phổ Yên", "Thái Nguyên", "Cty A", "Việt Nam", "0987654321", "5435", "Công ty b1"))
         );
         idSupplier = actor.asksFor(BodyResponse.bodyResponse("data.id")).toString();
     }

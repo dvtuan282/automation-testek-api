@@ -23,7 +23,7 @@ public class Endpoints {
 
     // Product
     public static final String PRODUCT_CREATE = "/product";
-    public static final String PRODUCT_UPDATE = "/product/{id}";
+    public static final String PRODUCT_UPDATE = "/product/{productId}";
     public static final String PRODUCT_DELETE = "/product/{productId}";
     public static final String PRODUCT_GET_BY_ID = "/product/{productId}/detail";
     public static final String PRODUCT_GET_ALL = "/product/search";

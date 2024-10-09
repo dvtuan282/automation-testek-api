@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="1" name="com.testek.api.features.LoginTestCase" skipped="0" tests="7" time="4.53" timestamp="2024-10-03 11:59:12"><testcase classname="com.testek.api.features.LoginTestCase" name="TestCaseLogin(AccountModel, String, Integer, String)"><failure message="Expected: Login thành công that is equal to: &lt;&quot;access_token&quot;&gt;&#10;Actual:   &lt;&quot;null&quot;&gt;" type="java.lang.AssertionError">Expected: Login thành công that is equal to: &lt;"access_token"&gt;
-Actual:   &lt;"null"&gt;</failure><system-err>Expected: Login thành công that is equal to: &lt;"access_token"&gt;
-Actual:   &lt;"null"&gt;&#13;
-com.testek.api.features.LoginTestCase.TestCaseLogin(LoginTestCase.java:36)&#13;
-</system-err></testcase></testsuite>

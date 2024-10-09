@@ -33,12 +33,13 @@ public class GetCategoryTestCase {
 
     @Test
     void getACategorySuccess() {
-        String categoryId = "344128b6-75c6-40e0-8a14-78c8692a38e1";
+        String categoryId = "74374d66-a270-4cd1-ae58-8b1b4265a687";
         actor.attemptsTo(
                 GetCategoryTask.withCategoryId(categoryId),
                 Ensure.that("Successfully get categoty by id with status is 200", StatusCodeResponse.responseStatus()).isEqualTo(200),
                 Ensure.that(BodyResponse.bodyResponse("data.id").asString()).isEqualTo(categoryId)
         );
+        System.out.println("a: " + BodyResponse.bodyResponse("data"));
     }
 
     @Test

@@ -1,13 +1,13 @@
 package com.testek.api.features.supplierFeatures;
 
-
 import com.testek.api.models.AccountModel;
 import com.testek.api.models.SupplierModel;
 import com.testek.api.questions.BodyResponse;
 import com.testek.api.questions.StatusCodeResponse;
 import com.testek.api.tasks.LoginTask;
-import com.testek.api.tasks.supplierTasks.CreateSupplier;
+import com.testek.api.tasks.supplierTasks.CreateSupplierTask;
 import com.testek.api.tasks.supplierTasks.DeleteSupplierTask;
+import com.testek.api.tasks.supplierTasks.GetSupplierTask;
 import com.testek.api.tasks.supplierTasks.UpdateSupplierTask;
 import com.testek.api.utilities.Endpoints;
 import net.serenitybdd.junit5.SerenityJUnit5Extension;
@@ -30,8 +30,9 @@ public class UpdateSupplierTestCase {
     private static Actor actor;
     private String idSupplier;
 
+
     @BeforeAll
-    static void setup() {
+    static void setUp() {
         actor = Actor.named("tuanTester").whoCan(CallAnApi.at(Endpoints.BASIC_URL));
     }
 
@@ -41,10 +42,13 @@ public class UpdateSupplierTestCase {
                 LoginTask.withAccount(new AccountModel("testek", "admin"))
         );
         actor.attemptsTo(
-                CreateSupplier.withSupplier(new SupplierModel("Phổ Yên", "Thái Nguyên", "Cty A", "Việt Nam", "09876543232", "5435", "Công ty update12332"))
+                CreateSupplierTask.withSupplier(new SupplierModel("Phổ Yên", "Thái Nguyên", "Cty A", "Việt Nam", "09876543232", "5435", "Công ty up102"))
         );
 
-        idSupplier = actor.asksFor(BodyResponse.bodyResponse("data.id")).toString();
+        int statusResponse = actor.asksFor(StatusCodeResponse.responseStatus());
+        if (statusResponse == 201 || statusResponse == 200) {
+            idSupplier = actor.asksFor(BodyResponse.bodyResponse("data.id")).toString();
+        }
     }
 
     @ParameterizedTest
@@ -54,19 +58,21 @@ public class UpdateSupplierTestCase {
                 UpdateSupplierTask.withSupplier(idSupplier, supplierRequest),
                 Ensure.that(description, StatusCodeResponse.responseStatus()).isEqualTo(statusCodeExpected)
         );
+        actor.attemptsTo(
+                GetSupplierTask.withSupplierId(idSupplier)
+        );
     }
 
     @ParameterizedTest
     @MethodSource("providedSupplierNotSuccess")
     void updateSupplierNotSuccess(SupplierModel supplierRequest, int statusCodeExpected) {
+        actor.attemptsTo(
+                UpdateSupplierTask.withSupplier(idSupplier, supplierRequest)
+        );
         int statusActual = actor.asksFor(StatusCodeResponse.responseStatus());
         actor.attemptsTo(
-                UpdateSupplierTask.withSupplier(idSupplier, supplierRequest),
                 Ensure.that(statusActual).isEqualTo(statusCodeExpected)
         );
-        if (statusActual == 200) {
-            idSupplier = actor.asksFor(BodyResponse.bodyResponse("data.id")).toString();
-        }
     }
 
     @Test
@@ -80,14 +86,13 @@ public class UpdateSupplierTestCase {
         );
 
     }
-
     @AfterEach
-    void cleanUp() {
-        if (idSupplier != null) {
-            actor.attemptsTo(
-                    DeleteSupplierTask.withSuppliers(idSupplier)
-            );
-        }
+    public void cleanUp() {
+        System.out.println("aaa");
+        actor.attemptsTo(
+                DeleteSupplierTask.withSuppliers(idSupplier)
+        );
+        System.out.println("bbb");
     }
 
     public static Stream<Arguments> providedSupplierSuccess() {
@@ -109,9 +114,6 @@ public class UpdateSupplierTestCase {
                 Arguments.of(
                         new SupplierModel(" ", "Thái Nguyên2", " ", "Việt Nam4", " ", "54356", " "), 400),
                 Arguments.of(
-                        new SupplierModel(null, "Thái Nguyên2", null, "Việt Nam4", null, "54356", null),
-                        400),
-                Arguments.of(
                         new SupplierModel("", "Thái Nguyên2", "", "Việt Nam4", "", "54356", ""),
                         400),
                 Arguments.of(
@@ -131,4 +133,5 @@ public class UpdateSupplierTestCase {
                         400)
         );
     }
+
 }

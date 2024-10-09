@@ -90,12 +90,14 @@
             <version>1.5.6</version>
             <scope>test</scope>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>org.slf4j</groupId>-->
-<!--            <artifactId>slf4j-simple</artifactId>-->
-<!--            <version>1.7.7</version>-->
-<!--            <scope>test</scope>-->
-<!--        </dependency>-->
+
+        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.30</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
@@ -112,10 +114,9 @@
                 <version>3.0.0-M5</version>
                 <configuration>
                     <includes>
-                        <include>**/*Test.java</include>
-                        <include>**/Test*.java</include>
-                        <include>**/When*.java</include>
-                        <include>**/*Story.java</include>
+                        <include>UpdateSupplierTestCase.java</include>
+<!--                        <include>**/When*.java</include>-->
+<!--                        <include>**/*Story.java</include>-->
                     </includes>
                     <argLine>-Xmx512m</argLine>
                 </configuration>

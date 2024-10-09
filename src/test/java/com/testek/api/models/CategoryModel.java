@@ -1,12 +1,18 @@
 package com.testek.api.models;
 
+import lombok.*;
+
+@Getter
+@Setter
+@AllArgsConstructor
+@EqualsAndHashCode
+@NoArgsConstructor
+@Data
 public class CategoryModel {
+    private String id;
     private String cateDesc;
     private String categoryName;
     private String status;
-
-    public CategoryModel() {
-    }
 
     public CategoryModel(String cateDesc, String categoryName, String status) {
         this.cateDesc = cateDesc;
@@ -14,27 +20,8 @@ public class CategoryModel {
         this.status = status;
     }
 
-    public String getCateDesc() {
-        return cateDesc;
-    }
-
-    public void setCateDesc(String cateDesc) {
+    public CategoryModel(String cateDesc, String categoryName) {
         this.cateDesc = cateDesc;
-    }
-
-    public String getCategoryName() {
-        return categoryName;
-    }
-
-    public void setCategoryName(String categoryName) {
         this.categoryName = categoryName;
     }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    } 
 }
