@@ -3,6 +3,7 @@ package com.testek.api.features;
 import com.testek.api.models.AccountModel;
 import com.testek.api.models.CategoryModel;
 import com.testek.api.questions.BodyResponse;
+import com.testek.api.questions.CategoryQuestion;
 import com.testek.api.questions.StatusCodeResponse;
 import com.testek.api.tasks.CreateCategoryTask;
 import com.testek.api.tasks.DeleteCategoryTask;
@@ -49,11 +50,13 @@ public class CreateCategoryTestCase {
                 Ensure.that(description, StatusCodeResponse.responseStatus()).isEqualTo(201)
         );
         idActual = actor.asksFor(BodyResponse.bodyResponse("data.id")).toString();
+
         System.out.println("idActual: " + idActual);
         System.out.println("=======Compare data=======");
+
         actor.attemptsTo(
                 GetCategoryTask.withCategoryId(idActual),
-                Ensure.that(description, BodyResponse.bodyResponse("data.id").asString()).isEqualTo(idActual)
+                Ensure.that(description, CategoryQuestion.responseBody(categoryModel).asString()).isEqualTo("CateRes match CateReq")
         );
     }
 
@@ -75,11 +78,10 @@ public class CreateCategoryTestCase {
         );
     }
 
-
     private static Stream<Arguments> DataCreateCateSuccess() {
         return Stream.of(
-                Arguments.of(new CategoryModel("Dòng xe địa hình cao cấp", "tuanTester3", "ACTIVE"), "Tạo danh mục active thành công"),
-                Arguments.of(new CategoryModel("Dòng xe địa hình cao cấp", "tuantester4", "INACTIVE"), "Tạo danh mục inactive thành công")
+                Arguments.of(new CategoryModel("Dòng xe địa hình cao cấp", "tuanTester005", "ACTIVE"), "Tạo danh mục active thành công"),
+                Arguments.of(new CategoryModel("Dòng xe địa hình cao cấp", "tuantester006", "INACTIVE"), "Tạo danh mục inactive thành công")
         );
     }
 

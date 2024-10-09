@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="3" name="com.testek.api.features.CategoryTestCase" skipped="0" tests="3" time="5.76" timestamp="2024-10-04 10:38:50"><testcase classname="com.testek.api.features.CategoryTestCase" name="CreateCateSuccess(CategoryModel, String)"><failure message="Expected: Tạo danh mục active thành công that is equal to: &lt;&quot;ádfuasd&quot;&gt;&#10;Actual:   &lt;&quot;c2484407-4ddc-46d1-bd63-46ee2a8fa4f0&quot;&gt;" type="java.lang.AssertionError">Expected: Tạo danh mục active thành công that is equal to: &lt;"ádfuasd"&gt;
-Actual:   &lt;"c2484407-4ddc-46d1-bd63-46ee2a8fa4f0"&gt;</failure><system-err>Expected: Tạo danh mục active thành công that is equal to: &lt;"ádfuasd"&gt;
-Actual:   &lt;"c2484407-4ddc-46d1-bd63-46ee2a8fa4f0"&gt;&#13;
-com.testek.api.features.CategoryTestCase.CreateCateSuccess(CategoryTestCase.java:53)&#13;
-</system-err></testcase></testsuite>

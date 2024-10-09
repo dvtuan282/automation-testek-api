@@ -1,1 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="com.testek.api.features.LoginTestCase" skipped="0" tests="6" time="0.39" timestamp="2024-10-04 12:05:34"><testcase classname="com.testek.api.features.LoginTestCase" name="LoginNotSuccess(AccountModel, String, Integer, String)"/></testsuite>
