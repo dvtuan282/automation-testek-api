@@ -1,6 +1,15 @@
 package com.testek.api.models;
 
+import lombok.*;
+
+@EqualsAndHashCode
+@Getter
+@Setter
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class SupplierModel {
+    private String id;
     private String supAddress;
     private String supCity;
     private String supContactName;
@@ -9,9 +18,6 @@ public class SupplierModel {
     private String supPostalCode;
     private String supName;
 
-    public SupplierModel() {
-    }
-
     public SupplierModel(String supAddress, String supCity, String supContactName, String supCountry, String supPhone, String supPostalCode, String supName) {
         this.supAddress = supAddress;
         this.supCity = supCity;
@@ -19,62 +25,6 @@ public class SupplierModel {
         this.supCountry = supCountry;
         this.supPhone = supPhone;
         this.supPostalCode = supPostalCode;
-        this.supName = supName;
-    }
-
-    public String getSupAddress() {
-        return supAddress;
-    }
-
-    public void setSupAddress(String supAddress) {
-        this.supAddress = supAddress;
-    }
-
-    public String getSupCity() {
-        return supCity;
-    }
-
-    public void setSupCity(String supCity) {
-        this.supCity = supCity;
-    }
-
-    public String getSupContactName() {
-        return supContactName;
-    }
-
-    public void setSupContactName(String supContactName) {
-        this.supContactName = supContactName;
-    }
-
-    public String getSupCountry() {
-        return supCountry;
-    }
-
-    public void setSupCountry(String supCountry) {
-        this.supCountry = supCountry;
-    }
-
-    public String getSupPhone() {
-        return supPhone;
-    }
-
-    public void setSupPhone(String supPhone) {
-        this.supPhone = supPhone;
-    }
-
-    public String getSupPostalCode() {
-        return supPostalCode;
-    }
-
-    public void setSupPostalCode(String supPostalCode) {
-        this.supPostalCode = supPostalCode;
-    }
-
-    public String getSupName() {
-        return supName;
-    }
-
-    public void setSupName(String supName) {
         this.supName = supName;
     }
 }

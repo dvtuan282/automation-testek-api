@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="4" name="com.testek.api.features.supplierFeatures.CreateSupplierTestCase" skipped="0" tests="7" time="6.9" timestamp="2024-10-09 04:24:55"><testcase classname="com.testek.api.features.supplierFeatures.CreateSupplierTestCase" name="CreateSupplierNotSuccess(SupplierModel, String, Integer, String)"><failure message="Expected: Create supplier not success when field Phone numbers do not start with 0  that is equal to: &lt;&quot;INVALID_INPUT&quot;&gt;&#10;Actual:   &lt;&quot;SUPPLIER_EXISTED&quot;&gt;" type="java.lang.AssertionError">Expected: Create supplier not success when field Phone numbers do not start with 0  that is equal to: &lt;"INVALID_INPUT"&gt;
+Actual:   &lt;"SUPPLIER_EXISTED"&gt;</failure><system-err>Expected: Create supplier not success when field Phone numbers do not start with 0  that is equal to: &lt;"INVALID_INPUT"&gt;
+Actual:   &lt;"SUPPLIER_EXISTED"&gt;&#13;
+com.testek.api.features.supplierFeatures.CreateSupplierTestCase.CreateSupplierNotSuccess(CreateSupplierTestCase.java:63)&#13;
+</system-err></testcase><testcase classname="com.testek.api.features.supplierFeatures.CreateSupplierTestCase" name="CreateSupplierSuccess(SupplierModel, String, Integer)"><failure message="Expected:  that is equal to: &lt;&quot;supplierRes match supplierReq&quot;&gt;&#10;Actual:   &lt;&quot;supplierRes not match supplierReq&quot;&gt;" type="java.lang.AssertionError">Expected:  that is equal to: &lt;"supplierRes match supplierReq"&gt;
+Actual:   &lt;"supplierRes not match supplierReq"&gt;</failure><system-err>Expected:  that is equal to: &lt;"supplierRes match supplierReq"&gt;
+Actual:   &lt;"supplierRes not match supplierReq"&gt;&#13;
+com.testek.api.features.supplierFeatures.CreateSupplierTestCase.CreateSupplierSuccess(CreateSupplierTestCase.java:54)&#13;
+</system-err></testcase></testsuite>
