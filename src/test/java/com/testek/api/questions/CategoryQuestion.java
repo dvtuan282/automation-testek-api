@@ -6,7 +6,7 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 
 public class CategoryQuestion implements Question<String> {
-    private CategoryModel categoryRequest;
+    private final CategoryModel categoryRequest;
 
     public CategoryQuestion(CategoryModel categoryRequest) {
         this.categoryRequest = categoryRequest;

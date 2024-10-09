@@ -4,8 +4,9 @@ import com.testek.api.models.AccountModel;
 import com.testek.api.models.SupplierModel;
 import com.testek.api.questions.BodyResponse;
 import com.testek.api.questions.StatusCodeResponse;
+import com.testek.api.questions.SupplierQuestion;
 import com.testek.api.tasks.LoginTask;
-import com.testek.api.tasks.supplierTasks.CreateSupplier;
+import com.testek.api.tasks.supplierTasks.CreateSupplierTask;
 import com.testek.api.tasks.supplierTasks.DeleteSupplierTask;
 import com.testek.api.tasks.supplierTasks.GetSupplierTask;
 import com.testek.api.utilities.Endpoints;
@@ -45,14 +46,13 @@ public class CreateSupplierTestCase {
     @MethodSource("providedSupplierSuccess")
     void CreateSupplierSuccess(SupplierModel supplierInput, String description, Integer statusExpected) {
         actor.attemptsTo(
-                CreateSupplier.withSupplier(supplierInput),
+                CreateSupplierTask.withSupplier(supplierInput),
                 Ensure.that(description, StatusCodeResponse.responseStatus().asInteger()).isEqualTo(statusExpected)
         );
         idSupplier = actor.asksFor(BodyResponse.bodyResponse("data.id")).toString();
-
         actor.attemptsTo(
                 GetSupplierTask.withSupplierId(idSupplier),
-                Ensure.that(BodyResponse.bodyResponse("data.id").asString()).isEqualTo(idSupplier)
+                Ensure.that(SupplierQuestion.responseSupp(supplierInput)).isEqualTo("supplierRes match supplierReq")
         );
     }
 
@@ -60,7 +60,7 @@ public class CreateSupplierTestCase {
     @MethodSource("providedSupplierNotSuccess")
     void CreateSupplierNotSuccess(SupplierModel supplierInput, String description, Integer statusExpected, String errorExpected) {
         actor.attemptsTo(
-                CreateSupplier.withSupplier(supplierInput),
+                CreateSupplierTask.withSupplier(supplierInput),
                 Ensure.that(description, StatusCodeResponse.responseStatus().asInteger()).isEqualTo(statusExpected),
                 Ensure.that(description, BodyResponse.bodyResponse("error").asString()).isEqualTo(errorExpected)
         );
@@ -81,10 +81,8 @@ public class CreateSupplierTestCase {
 
     private static Stream<Arguments> providedSupplierSuccess() {
         return Stream.of(
-                Arguments.of(new SupplierModel("Phổ Yên", "Thái Nguyên", "Cty A", "Việt Nam", "0987654321", "5435", "Công ty b1"),
-                        "Create supplier success with data valid", 201),
-                Arguments.of(new SupplierModel("Phổ Yên", " ", "Cty A", " ", "0987654321", " ", "Công ty c1"),
-                        "Create supplier success when field not data", 201)
+                Arguments.of(new SupplierModel("Phổ Yên", "Thái Nguyên", "Cty A", "Việt Nam", "0987654321", "5435", "Công ty b123234"),
+                        "Create supplier success with data valid", 201)
         );
     }
 

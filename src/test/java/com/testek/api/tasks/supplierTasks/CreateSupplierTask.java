@@ -7,10 +7,10 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.rest.interactions.Post;
 
-public class CreateSupplier implements Task {
+public class CreateSupplierTask implements Task {
     private final SupplierModel supplierModel;
 
-    public CreateSupplier(SupplierModel supplierModel) {
+    public CreateSupplierTask(SupplierModel supplierModel) {
         this.supplierModel = supplierModel;
     }
 
@@ -32,7 +32,7 @@ public class CreateSupplier implements Task {
                 )
         );
     }
-    public static CreateSupplier withSupplier(SupplierModel supplierModel) {
-        return new CreateSupplier(supplierModel);
+    public static CreateSupplierTask withSupplier(SupplierModel supplierModel) {
+        return new CreateSupplierTask(supplierModel);
     }
 }

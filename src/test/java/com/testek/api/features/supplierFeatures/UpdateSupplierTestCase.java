@@ -5,8 +5,9 @@ import com.testek.api.models.SupplierModel;
 import com.testek.api.questions.BodyResponse;
 import com.testek.api.questions.StatusCodeResponse;
 import com.testek.api.tasks.LoginTask;
-import com.testek.api.tasks.supplierTasks.CreateSupplier;
+import com.testek.api.tasks.supplierTasks.CreateSupplierTask;
 import com.testek.api.tasks.supplierTasks.DeleteSupplierTask;
+import com.testek.api.tasks.supplierTasks.GetSupplierTask;
 import com.testek.api.tasks.supplierTasks.UpdateSupplierTask;
 import com.testek.api.utilities.Endpoints;
 import net.serenitybdd.junit5.SerenityJUnit5Extension;
@@ -41,7 +42,7 @@ public class UpdateSupplierTestCase {
                 LoginTask.withAccount(new AccountModel("testek", "admin"))
         );
         actor.attemptsTo(
-                CreateSupplier.withSupplier(new SupplierModel("Phổ Yên", "Thái Nguyên", "Cty A", "Việt Nam", "09876543232", "5435", "Công ty up102"))
+                CreateSupplierTask.withSupplier(new SupplierModel("Phổ Yên", "Thái Nguyên", "Cty A", "Việt Nam", "09876543232", "5435", "Công ty up102"))
         );
 
         int statusResponse = actor.asksFor(StatusCodeResponse.responseStatus());
@@ -56,6 +57,9 @@ public class UpdateSupplierTestCase {
         actor.attemptsTo(
                 UpdateSupplierTask.withSupplier(idSupplier, supplierRequest),
                 Ensure.that(description, StatusCodeResponse.responseStatus()).isEqualTo(statusCodeExpected)
+        );
+        actor.attemptsTo(
+                GetSupplierTask.withSupplierId(idSupplier)
         );
     }
 
@@ -82,6 +86,7 @@ public class UpdateSupplierTestCase {
         );
 
     }
+
     @AfterEach
     public void cleanUp() {
         System.out.println("aaa");
