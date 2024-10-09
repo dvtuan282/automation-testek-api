@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="2" name="com.testek.api.features.CreateCategoryTestCase" skipped="0" tests="2" time="6.14" timestamp="2024-10-04 10:54:36"><testcase classname="com.testek.api.features.CreateCategoryTestCase" name="CreateCateSuccess(CategoryModel, String)"><failure message="Expected: Tạo danh mục active thành công that is equal to: &lt;201&gt;&#10;Actual:   &lt;400&gt;" type="java.lang.AssertionError">Expected: Tạo danh mục active thành công that is equal to: &lt;201&gt;
-Actual:   &lt;400&gt;</failure><system-err>Expected: Tạo danh mục active thành công that is equal to: &lt;201&gt;
-Actual:   &lt;400&gt;&#13;
-com.testek.api.features.CreateCategoryTestCase.CreateCateSuccess(CreateCategoryTestCase.java:46)&#13;
-</system-err></testcase></testsuite>

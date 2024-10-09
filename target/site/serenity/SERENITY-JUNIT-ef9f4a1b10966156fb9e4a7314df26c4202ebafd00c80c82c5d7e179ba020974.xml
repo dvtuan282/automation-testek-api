@@ -1,1 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="com.testek.api.features.supplierFeatures.UpdateSupplierTestCase" skipped="0" tests="2" time="4.14" timestamp="2024-10-07 10:19:33"><testcase classname="com.testek.api.features.supplierFeatures.UpdateSupplierTestCase" name="updateSupplierSuccess(SupplierModel, String, int)"/></testsuite>

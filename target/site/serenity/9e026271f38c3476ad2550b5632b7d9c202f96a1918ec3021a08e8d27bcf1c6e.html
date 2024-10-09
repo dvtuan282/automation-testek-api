@@ -1,0 +1,1571 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>updateSupplierSuccess(SupplierModel, String, int)</title>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff"><link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0.min.js"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- JQuery-UI -->
+<link type="text/css" href="jqueryui/1.11.2-start/jquery-ui.min.css" rel="Stylesheet" />
+<script type="text/javascript" src="jqueryui/1.11.2-start/jquery-ui.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<!-- ImgPreview -->
+<script src="scripts/imgpreview.full.jquery.js" type="text/javascript"></script>
+</head>
+
+<body class="results-page">
+
+
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Serenity BDD Report</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+        <span class="breadcrumbs">
+            <a href="index.html" class="breadcrumbs">Home</a>
+
+ <!-- inflection.of(breadcrumb.displayName).asATitle()-->
+            > <a href="f4f387a3a7c8162d2c5573cffd878cb9ccf28c2d1afef2cd73f3e3aac7031190.html">Com</a>
+ <!-- inflection.of(breadcrumb.displayName).asATitle()-->
+            > <a href="b1e068e320c6f7af0a01efd50507cd9cf62deddce09a21903806b2f2e9dc4f3f.html">Testek</a>
+ <!-- inflection.of(breadcrumb.displayName).asATitle()-->
+            > <a href="a950aab7572c8e856b7a76be22502cf41ac879c8373b659bcba34146f874a6fa.html">Api</a>
+ <!-- inflection.of(breadcrumb.displayName).asATitle()-->
+            > <a href="82f3c7fb32d32602df449db4a56da96e34fd87f7a46eb4e5ef9c82fd3fd5c2ab.html">Features</a>
+ <!-- inflection.of(breadcrumb.displayName).asATitle()-->
+            > <a href="9f505aef75607b987999bf2093708b155a5e4322c74f6dff0dc53b298598b841.html">Supplier features</a>
+ <!-- inflection.of(breadcrumb.displayName).asATitle()-->
+            > <a href="51a45fe8463a2b9db0569a263a9876deaf149bd34281053d6fe4db4fd190dd24.html">Update supplier test case</a>
+        > Updatesuppliersuccess(suppliermodel, string, int)
+        </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="7ea0a5e2d679b9deeda9910ae4a9bcd3a281e0d908303a9e16e486103e98880c.html"><i class="bi bi-chat-text"></i> Capabilities</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+        <li >
+            <a href="2a4631d87648e59c428d4cf0e9247f9d286e4679f436ca2ce872e931eb4dfd58.html"><i class="bi bi-chat-text"></i> Stories</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 09-10-2024 11:28</span>
+    <br style="clear:left"/>
+</div>
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                                <div>
+                                    <h3 class="discreet-story-header">
+                                        <i class="fs-2 bi bi-chat-left-quote title-icon"></i>
+                                        <span class="story-header-title">Update Supplier Test Case </span>
+                                    </h3>
+
+                                </div>
+
+                        </td>
+                        <td valign="top">
+                            <p class="tag">
+                                    <span class="badge example-tag tag-badge" style="background:default;">
+                                    <i class="bi bi-tag-fill"></i>&nbsp;
+                                        <a class="tagLink" style="background:default;"
+                                           href="6c5512236937b92cd7a296b24edb966c2bd94be46b8910f8b129a42d6150eb25.html">1 To 10 Seconds
+                                              (Duration)
+                                        </a>
+                                </span>
+                                    
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">
+                                    updateSupplierSuccess(SupplierModel, String, int)
+                                        <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+
+
+</div>
+</div>
+
+<div class="clr"></div>
+
+    <div class="story-title">
+        <h3 class="story-header">Scenario Outline</h3>
+
+        <div class="scenario">tuanTester executes a POST on the resource /login-with-local<br>tuanTester executes a POST on the resource /supplier<br>tuanTester executes a PUT on the resource /supplier/{id}<br>tuanTester should see &lt;arg1&gt; that is equal to: &lt;200&gt;<br>tuanTester executes a DELETE on the resource /supplier/{supplierId}</div>
+
+    </div>
+
+<div id="beforetable"></div>
+
+
+        <h3 class="story-header">Examples:&nbsp;</h3>
+            <div class="requirementNarrative"></div>
+
+
+            <p class="example-tag">
+            </p>
+
+        <div class="example-table test-report">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>#</th>
+                        <th>Arg0</th>
+                        <th>Arg1</th>
+                        <th>Arg2</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="test-SUCCESS"><a href="#0">1</a></td>
+                            <td class="test-SUCCESS"><a
+                                        href="#0">{supAddress=Phổ Y&ecirc;n1, supCity=Th&aacute;i Nguy&ecirc;n2, supContactName=Cty A3, supCountry=Việt Nam4, supPhone=09876543215, supPostalCode=54356, supName=C&ocirc;ng ty b17}</a>
+                            </td>
+                            <td class="test-SUCCESS"><a
+                                        href="#0">Update supplier with data valid</a>
+                            </td>
+                            <td class="test-SUCCESS"><a
+                                        href="#0">200.0</a>
+                            </td>
+                    </tr>
+                    <tr>
+                        <td class="test-SUCCESS"><a href="#1">2</a></td>
+                            <td class="test-SUCCESS"><a
+                                        href="#1">{supAddress=Phổ Y&ecirc;n1, supContactName=Cty A3, supPhone=09876543215, supName=C&ocirc;ng ty b17}</a>
+                            </td>
+                            <td class="test-SUCCESS"><a
+                                        href="#1">Update supplier when field option is null</a>
+                            </td>
+                            <td class="test-SUCCESS"><a
+                                        href="#1">200.0</a>
+                            </td>
+                    </tr>
+                    <tr>
+                        <td class="test-SUCCESS"><a href="#2">3</a></td>
+                            <td class="test-SUCCESS"><a
+                                        href="#2">{supAddress=Phổ Y&ecirc;n1, supCity= , supContactName=Cty A3, supCountry= , supPhone=09876543215, supPostalCode= , supName=C&ocirc;ng ty b17}</a>
+                            </td>
+                            <td class="test-SUCCESS"><a
+                                        href="#2">Update supplier when field option is blank</a>
+                            </td>
+                            <td class="test-SUCCESS"><a
+                                        href="#2">200.0</a>
+                            </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+<div id="tablecontents">
+    <div>
+        <table class="step-table">
+            <tr class="step-titles">
+                <th width="65">
+                </th>
+                <th class="step-description-column greentext">
+                    Steps
+                </th>
+
+                <th width="130" class="greentext">Outcome</th>
+                <th width="100" class="greentext"><i title="Duration" class="bi bi-stopwatch"></i></th>
+            </tr>
+            <tr class="step-table-separator">
+                <td colspan="5"></td>
+            </tr>
+
+                <tr class="test-SUCCESS">
+
+                    <td width="50" class="step-icon">
+                        <a name="0"></a>
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0')"
+                               style="display:block">
+                                <i class="bi bi-caret-right-square imgstepSection0 success-icon"
+                                   style="margin-left: 20px; float:left; padding-right:5px"></i>
+                            </a>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0')"
+                               style="display:block;">
+                                <span class="top-level-step">
+                                                Update supplier success[1] com.testek.api.models.SupplierModel@4930213b, Update supplier with data valid, 200
+                                        </span>
+                            </a>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="top-level-step">SUCCESS</span></td>
+                    <td width="100"><span class="top-level-step">1s 428ms</span></td>
+                </tr>
+                    <tr>
+                        <td colspan="5">
+                            <table id="stepSection0" class="step-table-nested" style="display:none;">
+                <tr class="test-SUCCESS">
+
+                    <td width="70" class="step-icon">
+                        <a name="0-0"></a>
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-0')"
+                               style="display:block">
+                                <i class="bi bi-caret-right-square imgstepSection0-0 success-icon"
+                                   style="margin-left: 40px; float:left; padding-right:5px"></i>
+                            </a>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-0')"
+                               style="display:block;">
+                                <span class="nested-step">
+                                                tuanTester executes a POST on the resource /login-with-local
+                                        </span>
+                            </a>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="nested-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-step">993ms</span></td>
+                </tr>
+                    <tr>
+                        <td colspan="5">
+                            <table id="stepSection0-0" class="step-table-nested" style="display:none;">
+                <tr class="test-SUCCESS">
+
+                    <td width="90" class="step-icon">
+                        <a name="0-0-0"></a>
+                            <span style="margin-left: 60px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="nested-group-step">
+                                                POST http://tapi.testek.vn/api/v0/prod-man/login-with-local
+                                        </span>
+                            <span class="evidence">
+                                        <span class="piece-of-evidence">
+                <span>
+                        <button type="button" class="btn btn-success btn-sm" data-toggle="collapse"
+                                data-target="#restModal-REST-3">
+                            REST Query
+                        </button>
+                    </span>
+                <!-- Modal -->
+                <div class="rest-query-details">
+                    <div class="collapse multi-collapse" id="restModal-REST-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4>Response</h4>
+                                    <p>URL: http://tapi.testek.vn/api/v0/prod-man/login-with-local</p>
+                                    <p>Status code: 200</p>
+                                    <p>Content Type: application/json</p>
+                                    <h4>Request Headers</h4>
+                                    <pre>Accept=*/*<br>Content-Type=application/json</pre>
+                                    <h4>Content Body</h4>
+                                    <pre>{<br>    &quot;username&quot;: &quot;testek&quot;,<br>    &quot;password&quot;: &quot;admin&quot;<br>}</pre>
+                                    <h4>Response Headers</h4>
+                                    <pre>Vary: Origin<br>Vary: Access-Control-Request-Method<br>Vary: Access-Control-Request-Headers<br>X-Content-Type-Options: nosniff<br>X-XSS-Protection: 1; mode=block<br>Cache-Control: no-cache, no-store, max-age=0, must-revalidate<br>Pragma: no-cache<br>Expires: 0<br>X-Frame-Options: DENY<br>Content-Type: application/json<br>Transfer-Encoding: chunked<br>Date: Wed, 09 Oct 2024 04:28:44 GMT<br>Keep-Alive: timeout=60<br>Connection: keep-alive</pre>
+                                <h4>Response Body</h4>
+                                    <pre>{<br>    &quot;access_token&quot;: &quot;eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmYmRlMDliNS1iYzJkLTRmNTEtYjQ2Zi01MTE2MWZhNWJiNDYiLCJhdWQiOlsib2F1dGgyLXJlc291cmNlIl0sInVzZXJfbmFtZSI6ImZiZGUwOWI1LWJjMmQtNGY1MS1iNDZmLTUxMTYxZmE1YmI0NiIsInNjb3BlIjpbInJlYWQiXSwiZXhwIjoxNzI4NDUxNzI0LCJpYXQiOjE3Mjg0NDgxMjQsImp0aSI6IjQ3MmM1ZDA0LTI3ZWEtNDYwZS1iZDBkLWNjZDMzNTk5NDE0MCIsImNsaWVudF9pZCI6ImYxMzU0OTg2LWU2OTgtNDcxMi1iYTk0LWU5NGIxMGJmMWI1OCJ9.IjAopGDCPjYq4fh-1WzmIUfTukmt0c2GT8oOuXXotQt7UiXtEPhmQSRRrAiYQtTWIY9ugVYsZ0vd-2mc8L6xR0LHCKciufU71zZXSTOGGI_Q-Y3qamHZz4REjmnMUUZwTSu5WSLjlnYyq0Ew_aRfwdi2tgx8dVE2Z632_qwoQAiDNn4eRWkH1cHr_kS1xUDX2qoTO4yRdnuK_D-GIGQRcrv86iUNpnGHbamFauMxcJyiCYxcPa8k7HygRuhZpn2Io-bkT5dOGxQ2v57f0oYbltTFP7JvbVlWEs04T57hsZ6cLU0OUEksgY-7-6dHlDVCSyGbFadO2El2ebFEOdacWQ&quot;,<br>    &quot;refresh_token&quot;: &quot;eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmYmRlMDliNS1iYzJkLTRmNTEtYjQ2Zi01MTE2MWZhNWJiNDYiLCJhdWQiOlsib2F1dGgyLXJlc291cmNlIl0sInVzZXJfbmFtZSI6ImZiZGUwOWI1LWJjMmQtNGY1MS1iNDZmLTUxMTYxZmE1YmI0NiIsInNjb3BlIjpbInJlYWQiXSwiYXRpIjoiNDcyYzVkMDQtMjdlYS00NjBlLWJkMGQtY2NkMzM1OTk0MTQwIiwiZXhwIjoxNzMxMDQwMTIzLCJpYXQiOjE3Mjg0NDgxMjQsImp0aSI6ImY2ZDcwOTU2LTMyZTktNGJmMS04NTE5LTUyZGU5MzAwMWFmZCIsImNsaWVudF9pZCI6ImYxMzU0OTg2LWU2OTgtNDcxMi1iYTk0LWU5NGIxMGJmMWI1OCJ9.CDmy3EzHuTXtp3F-J64vnl-aRGxvAJAgvdbYjTFPAIGfu-HniHPRS4r6FhTsPojrMkgOz-5mQVB6JdnsATLGbKM_eMg0taqqCarurLMGcKaTqPNhSaKZguPWLVQcbL6XvmdBxK_iawJcGaXy9i_wlxZfiAz0-aAequWGf5XrUvVrFUSiUNO7bJk3TNMecU5fcOPuL2tXVMFD6dlEaorwBu_jMcq_l3H-xq0mjN0L8tKA5RQUuzzjDib4plAYa832SfIjFKxSFiyi5Ki6Y2ilE_ig2u1luC0eWQpe6SbZZD2HylrlZVq288_sd7ElZFzs1n7c3AezzBkh-EykR31MQA&quot;,<br>    &quot;expires_in&quot;: 3599,<br>    &quot;token_type&quot;: &quot;bearer&quot;<br>}</pre>
+                                    <h4>Response Cookies</h4>
+                                    <pre></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                        </span>
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">005ms</span></td>
+                </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+                <tr class="test-SUCCESS">
+
+                    <td width="70" class="step-icon">
+                        <a name="0-1"></a>
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-1')"
+                               style="display:block">
+                                <i class="bi bi-caret-right-square imgstepSection0-1 success-icon"
+                                   style="margin-left: 40px; float:left; padding-right:5px"></i>
+                            </a>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-1')"
+                               style="display:block;">
+                                <span class="nested-step">
+                                                tuanTester executes a POST on the resource /supplier
+                                        </span>
+                            </a>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="nested-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-step">127ms</span></td>
+                </tr>
+                    <tr>
+                        <td colspan="5">
+                            <table id="stepSection0-1" class="step-table-nested" style="display:none;">
+                <tr class="test-SUCCESS">
+
+                    <td width="90" class="step-icon">
+                        <a name="0-1-0"></a>
+                            <span style="margin-left: 60px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="nested-group-step">
+                                                POST http://tapi.testek.vn/api/v0/prod-man/supplier
+                                        </span>
+                            <span class="evidence">
+                                        <span class="piece-of-evidence">
+                <span>
+                        <button type="button" class="btn btn-success btn-sm" data-toggle="collapse"
+                                data-target="#restModal-REST-5">
+                            REST Query
+                        </button>
+                    </span>
+                <!-- Modal -->
+                <div class="rest-query-details">
+                    <div class="collapse multi-collapse" id="restModal-REST-5">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4>Response</h4>
+                                    <p>URL: http://tapi.testek.vn/api/v0/prod-man/supplier</p>
+                                    <p>Status code: 201</p>
+                                    <p>Content Type: application/json</p>
+                                    <h4>Request Headers</h4>
+                                    <pre>Authorization=Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmYmRlMDliNS1iYzJkLTRmNTEtYjQ2Zi01MTE2MWZhNWJiNDYiLCJhdWQiOlsib2F1dGgyLXJlc291cmNlIl0sInVzZXJfbmFtZSI6ImZiZGUwOWI1LWJjMmQtNGY1MS1iNDZmLTUxMTYxZmE1YmI0NiIsInNjb3BlIjpbInJlYWQiXSwiZXhwIjoxNzI4NDUxNzI0LCJpYXQiOjE3Mjg0NDgxMjQsImp0aSI6IjQ3MmM1ZDA0LTI3ZWEtNDYwZS1iZDBkLWNjZDMzNTk5NDE0MCIsImNsaWVudF9pZCI6ImYxMzU0OTg2LWU2OTgtNDcxMi1iYTk0LWU5NGIxMGJmMWI1OCJ9.IjAopGDCPjYq4fh-1WzmIUfTukmt0c2GT8oOuXXotQt7UiXtEPhmQSRRrAiYQtTWIY9ugVYsZ0vd-2mc8L6xR0LHCKciufU71zZXSTOGGI_Q-Y3qamHZz4REjmnMUUZwTSu5WSLjlnYyq0Ew_aRfwdi2tgx8dVE2Z632_qwoQAiDNn4eRWkH1cHr_kS1xUDX2qoTO4yRdnuK_D-GIGQRcrv86iUNpnGHbamFauMxcJyiCYxcPa8k7HygRuhZpn2Io-bkT5dOGxQ2v57f0oYbltTFP7JvbVlWEs04T57hsZ6cLU0OUEksgY-7-6dHlDVCSyGbFadO2El2ebFEOdacWQ<br>Accept=*/*<br>Content-Type=application/json</pre>
+                                    <h4>Content Body</h4>
+                                    <pre>{<br>    &quot;supAddress&quot;: &quot;Phổ Yên&quot;,<br>    &quot;supCity&quot;: &quot;Thái Nguyên&quot;,<br>    &quot;supContactName&quot;: &quot;Cty A&quot;,<br>    &quot;supCountry&quot;: &quot;Việt Nam&quot;,<br>    &quot;supPhone&quot;: &quot;09876543232&quot;,<br>    &quot;supPostalCode&quot;: &quot;5435&quot;,<br>    &quot;supName&quot;: &quot;Công ty up102&quot;<br>}</pre>
+                                    <h4>Response Headers</h4>
+                                    <pre>Vary: Origin<br>Vary: Access-Control-Request-Method<br>Vary: Access-Control-Request-Headers<br>X-Content-Type-Options: nosniff<br>X-XSS-Protection: 1; mode=block<br>Cache-Control: no-cache, no-store, max-age=0, must-revalidate<br>Pragma: no-cache<br>Expires: 0<br>X-Frame-Options: DENY<br>Content-Type: application/json<br>Transfer-Encoding: chunked<br>Date: Wed, 09 Oct 2024 04:28:44 GMT<br>Keep-Alive: timeout=60<br>Connection: keep-alive</pre>
+                                <h4>Response Body</h4>
+                                    <pre>{<br>    &quot;code&quot;: 200,<br>    &quot;data&quot;: {<br>        &quot;id&quot;: &quot;98fced76-2cfd-4663-ad14-6f5428f46337&quot;,<br>        &quot;supName&quot;: &quot;Công ty up102&quot;,<br>        &quot;supContactName&quot;: &quot;Cty A&quot;,<br>        &quot;supAddress&quot;: &quot;Phổ Yên&quot;,<br>        &quot;supCity&quot;: &quot;Thái Nguyên&quot;,<br>        &quot;supPostalCode&quot;: &quot;5435&quot;,<br>        &quot;supCountry&quot;: &quot;Việt Nam&quot;,<br>        &quot;supPhone&quot;: &quot;09876543232&quot;<br>    }<br>}</pre>
+                                    <h4>Response Cookies</h4>
+                                    <pre></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                        </span>
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">005ms</span></td>
+                </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+                <tr class="test-SUCCESS">
+
+                    <td width="70" class="step-icon">
+                        <a name="0-2"></a>
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-2')"
+                               style="display:block">
+                                <i class="bi bi-caret-right-square imgstepSection0-2 success-icon"
+                                   style="margin-left: 40px; float:left; padding-right:5px"></i>
+                            </a>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-2')"
+                               style="display:block;">
+                                <span class="nested-step">
+                                                tuanTester executes a PUT on the resource /supplier/{id}
+                                        </span>
+                            </a>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="nested-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-step">151ms</span></td>
+                </tr>
+                    <tr>
+                        <td colspan="5">
+                            <table id="stepSection0-2" class="step-table-nested" style="display:none;">
+                <tr class="test-SUCCESS">
+
+                    <td width="90" class="step-icon">
+                        <a name="0-2-0"></a>
+                            <span style="margin-left: 60px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="nested-group-step">
+                                                PUT http://tapi.testek.vn/api/v0/prod-man/supplier/98fced76-2cfd-4663-ad14-6f5428f46337
+                                        </span>
+                            <span class="evidence">
+                                        <span class="piece-of-evidence">
+                <span>
+                        <button type="button" class="btn btn-success btn-sm" data-toggle="collapse"
+                                data-target="#restModal-REST-7">
+                            REST Query
+                        </button>
+                    </span>
+                <!-- Modal -->
+                <div class="rest-query-details">
+                    <div class="collapse multi-collapse" id="restModal-REST-7">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4>Response</h4>
+                                    <p>URL: http://tapi.testek.vn/api/v0/prod-man/supplier/98fced76-2cfd-4663-ad14-6f5428f46337</p>
+                                    <p>Status code: 200</p>
+                                    <p>Content Type: application/json</p>
+                                    <h4>Request Headers</h4>
+                                    <pre>authorization=Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmYmRlMDliNS1iYzJkLTRmNTEtYjQ2Zi01MTE2MWZhNWJiNDYiLCJhdWQiOlsib2F1dGgyLXJlc291cmNlIl0sInVzZXJfbmFtZSI6ImZiZGUwOWI1LWJjMmQtNGY1MS1iNDZmLTUxMTYxZmE1YmI0NiIsInNjb3BlIjpbInJlYWQiXSwiZXhwIjoxNzI4NDUxNzI0LCJpYXQiOjE3Mjg0NDgxMjQsImp0aSI6IjQ3MmM1ZDA0LTI3ZWEtNDYwZS1iZDBkLWNjZDMzNTk5NDE0MCIsImNsaWVudF9pZCI6ImYxMzU0OTg2LWU2OTgtNDcxMi1iYTk0LWU5NGIxMGJmMWI1OCJ9.IjAopGDCPjYq4fh-1WzmIUfTukmt0c2GT8oOuXXotQt7UiXtEPhmQSRRrAiYQtTWIY9ugVYsZ0vd-2mc8L6xR0LHCKciufU71zZXSTOGGI_Q-Y3qamHZz4REjmnMUUZwTSu5WSLjlnYyq0Ew_aRfwdi2tgx8dVE2Z632_qwoQAiDNn4eRWkH1cHr_kS1xUDX2qoTO4yRdnuK_D-GIGQRcrv86iUNpnGHbamFauMxcJyiCYxcPa8k7HygRuhZpn2Io-bkT5dOGxQ2v57f0oYbltTFP7JvbVlWEs04T57hsZ6cLU0OUEksgY-7-6dHlDVCSyGbFadO2El2ebFEOdacWQ<br>Accept=*/*<br>Content-Type=application/json</pre>
+                                    <h4>Content Body</h4>
+                                    <pre>{<br>    &quot;supAddress&quot;: &quot;Phổ Yên1&quot;,<br>    &quot;supCity&quot;: &quot;Thái Nguyên2&quot;,<br>    &quot;supContactName&quot;: &quot;Cty A3&quot;,<br>    &quot;supCountry&quot;: &quot;Việt Nam4&quot;,<br>    &quot;supPhone&quot;: &quot;09876543215&quot;,<br>    &quot;supPostalCode&quot;: &quot;54356&quot;,<br>    &quot;supName&quot;: &quot;Công ty b17&quot;<br>}</pre>
+                                    <h4>Response Headers</h4>
+                                    <pre>Vary: Origin<br>Vary: Access-Control-Request-Method<br>Vary: Access-Control-Request-Headers<br>X-Content-Type-Options: nosniff<br>X-XSS-Protection: 1; mode=block<br>Cache-Control: no-cache, no-store, max-age=0, must-revalidate<br>Pragma: no-cache<br>Expires: 0<br>X-Frame-Options: DENY<br>Content-Type: application/json<br>Transfer-Encoding: chunked<br>Date: Wed, 09 Oct 2024 04:28:44 GMT<br>Keep-Alive: timeout=60<br>Connection: keep-alive</pre>
+                                <h4>Response Body</h4>
+                                    <pre>{<br>    &quot;code&quot;: 200,<br>    &quot;data&quot;: {<br>        &quot;id&quot;: &quot;98fced76-2cfd-4663-ad14-6f5428f46337&quot;,<br>        &quot;supName&quot;: &quot;Công ty up102&quot;,<br>        &quot;supContactName&quot;: &quot;Cty A3&quot;,<br>        &quot;supAddress&quot;: &quot;Phổ Yên1&quot;,<br>        &quot;supCity&quot;: &quot;Thái Nguyên2&quot;,<br>        &quot;supPostalCode&quot;: &quot;54356&quot;,<br>        &quot;supCountry&quot;: &quot;Việt Nam4&quot;,<br>        &quot;supPhone&quot;: &quot;09876543232&quot;<br>    }<br>}</pre>
+                                    <h4>Response Cookies</h4>
+                                    <pre></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                        </span>
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">006ms</span></td>
+                </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+                <tr class="test-SUCCESS">
+
+                    <td width="70" class="step-icon">
+                        <a name="0-3"></a>
+                            <span style="margin-left: 40px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="nested-group-step">
+                                                tuanTester should see Update supplier with data valid that is equal to: &lt;200&gt;
+                                        </span>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">010ms</span></td>
+                </tr>
+                <tr class="test-SUCCESS">
+
+                    <td width="70" class="step-icon">
+                        <a name="0-4"></a>
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-4')"
+                               style="display:block">
+                                <i class="bi bi-caret-right-square imgstepSection0-4 success-icon"
+                                   style="margin-left: 40px; float:left; padding-right:5px"></i>
+                            </a>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-4')"
+                               style="display:block;">
+                                <span class="nested-step">
+                                                tuanTester executes a DELETE on the resource /supplier/{supplierId}
+                                        </span>
+                            </a>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="nested-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-step">147ms</span></td>
+                </tr>
+                    <tr>
+                        <td colspan="5">
+                            <table id="stepSection0-4" class="step-table-nested" style="display:none;">
+                <tr class="test-SUCCESS">
+
+                    <td width="90" class="step-icon">
+                        <a name="0-4-0"></a>
+                            <span style="margin-left: 60px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="nested-group-step">
+                                                DELETE http://tapi.testek.vn/api/v0/prod-man/supplier/98fced76-2cfd-4663-ad14-6f5428f46337
+                                        </span>
+                            <span class="evidence">
+                                        <span class="piece-of-evidence">
+                <span>
+                        <button type="button" class="btn btn-success btn-sm" data-toggle="collapse"
+                                data-target="#restModal-REST-10">
+                            REST Query
+                        </button>
+                    </span>
+                <!-- Modal -->
+                <div class="rest-query-details">
+                    <div class="collapse multi-collapse" id="restModal-REST-10">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4>Response</h4>
+                                    <p>URL: http://tapi.testek.vn/api/v0/prod-man/supplier/98fced76-2cfd-4663-ad14-6f5428f46337</p>
+                                    <p>Status code: 200</p>
+                                    <p>Content Type: application/json</p>
+                                    <h4>Request Headers</h4>
+                                    <pre>Authorization=Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmYmRlMDliNS1iYzJkLTRmNTEtYjQ2Zi01MTE2MWZhNWJiNDYiLCJhdWQiOlsib2F1dGgyLXJlc291cmNlIl0sInVzZXJfbmFtZSI6ImZiZGUwOWI1LWJjMmQtNGY1MS1iNDZmLTUxMTYxZmE1YmI0NiIsInNjb3BlIjpbInJlYWQiXSwiZXhwIjoxNzI4NDUxNzI0LCJpYXQiOjE3Mjg0NDgxMjQsImp0aSI6IjQ3MmM1ZDA0LTI3ZWEtNDYwZS1iZDBkLWNjZDMzNTk5NDE0MCIsImNsaWVudF9pZCI6ImYxMzU0OTg2LWU2OTgtNDcxMi1iYTk0LWU5NGIxMGJmMWI1OCJ9.IjAopGDCPjYq4fh-1WzmIUfTukmt0c2GT8oOuXXotQt7UiXtEPhmQSRRrAiYQtTWIY9ugVYsZ0vd-2mc8L6xR0LHCKciufU71zZXSTOGGI_Q-Y3qamHZz4REjmnMUUZwTSu5WSLjlnYyq0Ew_aRfwdi2tgx8dVE2Z632_qwoQAiDNn4eRWkH1cHr_kS1xUDX2qoTO4yRdnuK_D-GIGQRcrv86iUNpnGHbamFauMxcJyiCYxcPa8k7HygRuhZpn2Io-bkT5dOGxQ2v57f0oYbltTFP7JvbVlWEs04T57hsZ6cLU0OUEksgY-7-6dHlDVCSyGbFadO2El2ebFEOdacWQ<br>Accept=*/*<br>Content-Type=application/json</pre>
+                                    <h4>Response Headers</h4>
+                                    <pre>Vary: Origin<br>Vary: Access-Control-Request-Method<br>Vary: Access-Control-Request-Headers<br>X-Content-Type-Options: nosniff<br>X-XSS-Protection: 1; mode=block<br>Cache-Control: no-cache, no-store, max-age=0, must-revalidate<br>Pragma: no-cache<br>Expires: 0<br>X-Frame-Options: DENY<br>Content-Type: application/json<br>Transfer-Encoding: chunked<br>Date: Wed, 09 Oct 2024 04:28:44 GMT<br>Keep-Alive: timeout=60<br>Connection: keep-alive</pre>
+                                <h4>Response Body</h4>
+                                    <pre>{<br>    &quot;code&quot;: 200,<br>    &quot;data&quot;: &quot;Success&quot;<br>}</pre>
+                                    <h4>Response Cookies</h4>
+                                    <pre></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                        </span>
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">005ms</span></td>
+                </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+                <tr class="test-SUCCESS">
+
+                    <td width="50" class="step-icon">
+                        <a name="1"></a>
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1')"
+                               style="display:block">
+                                <i class="bi bi-caret-right-square imgstepSection1 success-icon"
+                                   style="margin-left: 20px; float:left; padding-right:5px"></i>
+                            </a>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1')"
+                               style="display:block;">
+                                <span class="top-level-step">
+                                                Update supplier success[2] com.testek.api.models.SupplierModel@7022fb5c, Update supplier when field option is null, 200
+                                        </span>
+                            </a>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="top-level-step">SUCCESS</span></td>
+                    <td width="100"><span class="top-level-step">1s 783ms</span></td>
+                </tr>
+                    <tr>
+                        <td colspan="5">
+                            <table id="stepSection1" class="step-table-nested" style="display:none;">
+                <tr class="test-SUCCESS">
+
+                    <td width="70" class="step-icon">
+                        <a name="1-0"></a>
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1-0')"
+                               style="display:block">
+                                <i class="bi bi-caret-right-square imgstepSection1-0 success-icon"
+                                   style="margin-left: 40px; float:left; padding-right:5px"></i>
+                            </a>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1-0')"
+                               style="display:block;">
+                                <span class="nested-step">
+                                                tuanTester executes a POST on the resource /login-with-local
+                                        </span>
+                            </a>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="nested-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-step">991ms</span></td>
+                </tr>
+                    <tr>
+                        <td colspan="5">
+                            <table id="stepSection1-0" class="step-table-nested" style="display:none;">
+                <tr class="test-SUCCESS">
+
+                    <td width="90" class="step-icon">
+                        <a name="1-0-0"></a>
+                            <span style="margin-left: 60px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="nested-group-step">
+                                                POST http://tapi.testek.vn/api/v0/prod-man/login-with-local
+                                        </span>
+                            <span class="evidence">
+                                        <span class="piece-of-evidence">
+                <span>
+                        <button type="button" class="btn btn-success btn-sm" data-toggle="collapse"
+                                data-target="#restModal-REST-13">
+                            REST Query
+                        </button>
+                    </span>
+                <!-- Modal -->
+                <div class="rest-query-details">
+                    <div class="collapse multi-collapse" id="restModal-REST-13">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4>Response</h4>
+                                    <p>URL: http://tapi.testek.vn/api/v0/prod-man/login-with-local</p>
+                                    <p>Status code: 200</p>
+                                    <p>Content Type: application/json</p>
+                                    <h4>Request Headers</h4>
+                                    <pre>Accept=*/*<br>Content-Type=application/json</pre>
+                                    <h4>Content Body</h4>
+                                    <pre>{<br>    &quot;username&quot;: &quot;testek&quot;,<br>    &quot;password&quot;: &quot;admin&quot;<br>}</pre>
+                                    <h4>Response Headers</h4>
+                                    <pre>Vary: Origin<br>Vary: Access-Control-Request-Method<br>Vary: Access-Control-Request-Headers<br>X-Content-Type-Options: nosniff<br>X-XSS-Protection: 1; mode=block<br>Cache-Control: no-cache, no-store, max-age=0, must-revalidate<br>Pragma: no-cache<br>Expires: 0<br>X-Frame-Options: DENY<br>Content-Type: application/json<br>Transfer-Encoding: chunked<br>Date: Wed, 09 Oct 2024 04:28:45 GMT<br>Keep-Alive: timeout=60<br>Connection: keep-alive</pre>
+                                <h4>Response Body</h4>
+                                    <pre>{<br>    &quot;access_token&quot;: &quot;eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmYmRlMDliNS1iYzJkLTRmNTEtYjQ2Zi01MTE2MWZhNWJiNDYiLCJhdWQiOlsib2F1dGgyLXJlc291cmNlIl0sInVzZXJfbmFtZSI6ImZiZGUwOWI1LWJjMmQtNGY1MS1iNDZmLTUxMTYxZmE1YmI0NiIsInNjb3BlIjpbInJlYWQiXSwiZXhwIjoxNzI4NDUxNzI1LCJpYXQiOjE3Mjg0NDgxMjUsImp0aSI6ImVlZDgwZDkwLTE2NmItNDFjMS1iY2I0LWU2MjA3NGRhODNlNyIsImNsaWVudF9pZCI6ImYxMzU0OTg2LWU2OTgtNDcxMi1iYTk0LWU5NGIxMGJmMWI1OCJ9.ZkbZOwJA7UiDfmdJK-HgLR6ynSicJqLkv1laGq10QgHoTB1X9cAat91THbQxxcXelWozGOoBlEcyvQR3YxZfos9SMsaaDJgzOlN28dWomAY1OOXtBso8fjKpsqldoT5p0w1rlVWW0WWjjs3RUKF5yNu61wWJU5rEWt7Y6NL_rCUB045sK5vnTU_za9N98I-B8Pvfy53MREuTjc2k51ti2dyu3LEpBXELAvExhHsoSMSheUiolbkU2_AJqOgDvwoJbXvNcMK-pqnlOTICHMQFhIqLPrcC7zyReNADT7Tq6TGGwGdXx0tQMzY5NTwFTVHJb8iGa2LrW0rvthgRgOmDhQ&quot;,<br>    &quot;refresh_token&quot;: &quot;eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmYmRlMDliNS1iYzJkLTRmNTEtYjQ2Zi01MTE2MWZhNWJiNDYiLCJhdWQiOlsib2F1dGgyLXJlc291cmNlIl0sInVzZXJfbmFtZSI6ImZiZGUwOWI1LWJjMmQtNGY1MS1iNDZmLTUxMTYxZmE1YmI0NiIsInNjb3BlIjpbInJlYWQiXSwiYXRpIjoiZWVkODBkOTAtMTY2Yi00MWMxLWJjYjQtZTYyMDc0ZGE4M2U3IiwiZXhwIjoxNzMxMDQwMTI1LCJpYXQiOjE3Mjg0NDgxMjUsImp0aSI6IjcyNjg2ZDdhLTUxMjctNDEzMC1hYWExLWE2NTdlZTczMjlmNyIsImNsaWVudF9pZCI6ImYxMzU0OTg2LWU2OTgtNDcxMi1iYTk0LWU5NGIxMGJmMWI1OCJ9.LWUcfa9ufyV8ZJNlEwP63Z6nswy8A73TfDy8woTQozZ6C6XtFc2iuomL_ZBqXtKcmXA3Jcugsn-TBWsiNWSERDMEdNSy04kXabOImAKW_x-_mZZRx2UgCOzYz7avRiCSAUJupuoII_DIAWdJmxqe96u9GTs-JbQc2E9YzwRxtFHJcHWdJ6DOWf5qJRZPqS3rJkT4AlphXmtCDMn7UiEDVVeY9gWlzrEX3fG0eXa_SxUOZSHnPF5oUMJqfPMWuhzkyBFfjR4nJz05FCxusiNbkEDeLt14zyhsiBeG-06LEDuoBBd3h33WvFJHXymwCY2wMb7p2C4NPzxaVZIf5EecFA&quot;,<br>    &quot;expires_in&quot;: 3599,<br>    &quot;token_type&quot;: &quot;bearer&quot;<br>}</pre>
+                                    <h4>Response Cookies</h4>
+                                    <pre></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                        </span>
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">007ms</span></td>
+                </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+                <tr class="test-SUCCESS">
+
+                    <td width="70" class="step-icon">
+                        <a name="1-1"></a>
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1-1')"
+                               style="display:block">
+                                <i class="bi bi-caret-right-square imgstepSection1-1 success-icon"
+                                   style="margin-left: 40px; float:left; padding-right:5px"></i>
+                            </a>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1-1')"
+                               style="display:block;">
+                                <span class="nested-step">
+                                                tuanTester executes a POST on the resource /supplier
+                                        </span>
+                            </a>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="nested-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-step">145ms</span></td>
+                </tr>
+                    <tr>
+                        <td colspan="5">
+                            <table id="stepSection1-1" class="step-table-nested" style="display:none;">
+                <tr class="test-SUCCESS">
+
+                    <td width="90" class="step-icon">
+                        <a name="1-1-0"></a>
+                            <span style="margin-left: 60px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="nested-group-step">
+                                                POST http://tapi.testek.vn/api/v0/prod-man/supplier
+                                        </span>
+                            <span class="evidence">
+                                        <span class="piece-of-evidence">
+                <span>
+                        <button type="button" class="btn btn-success btn-sm" data-toggle="collapse"
+                                data-target="#restModal-REST-15">
+                            REST Query
+                        </button>
+                    </span>
+                <!-- Modal -->
+                <div class="rest-query-details">
+                    <div class="collapse multi-collapse" id="restModal-REST-15">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4>Response</h4>
+                                    <p>URL: http://tapi.testek.vn/api/v0/prod-man/supplier</p>
+                                    <p>Status code: 201</p>
+                                    <p>Content Type: application/json</p>
+                                    <h4>Request Headers</h4>
+                                    <pre>Authorization=Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmYmRlMDliNS1iYzJkLTRmNTEtYjQ2Zi01MTE2MWZhNWJiNDYiLCJhdWQiOlsib2F1dGgyLXJlc291cmNlIl0sInVzZXJfbmFtZSI6ImZiZGUwOWI1LWJjMmQtNGY1MS1iNDZmLTUxMTYxZmE1YmI0NiIsInNjb3BlIjpbInJlYWQiXSwiZXhwIjoxNzI4NDUxNzI1LCJpYXQiOjE3Mjg0NDgxMjUsImp0aSI6ImVlZDgwZDkwLTE2NmItNDFjMS1iY2I0LWU2MjA3NGRhODNlNyIsImNsaWVudF9pZCI6ImYxMzU0OTg2LWU2OTgtNDcxMi1iYTk0LWU5NGIxMGJmMWI1OCJ9.ZkbZOwJA7UiDfmdJK-HgLR6ynSicJqLkv1laGq10QgHoTB1X9cAat91THbQxxcXelWozGOoBlEcyvQR3YxZfos9SMsaaDJgzOlN28dWomAY1OOXtBso8fjKpsqldoT5p0w1rlVWW0WWjjs3RUKF5yNu61wWJU5rEWt7Y6NL_rCUB045sK5vnTU_za9N98I-B8Pvfy53MREuTjc2k51ti2dyu3LEpBXELAvExhHsoSMSheUiolbkU2_AJqOgDvwoJbXvNcMK-pqnlOTICHMQFhIqLPrcC7zyReNADT7Tq6TGGwGdXx0tQMzY5NTwFTVHJb8iGa2LrW0rvthgRgOmDhQ<br>Accept=*/*<br>Content-Type=application/json</pre>
+                                    <h4>Content Body</h4>
+                                    <pre>{<br>    &quot;supAddress&quot;: &quot;Phổ Yên&quot;,<br>    &quot;supCity&quot;: &quot;Thái Nguyên&quot;,<br>    &quot;supContactName&quot;: &quot;Cty A&quot;,<br>    &quot;supCountry&quot;: &quot;Việt Nam&quot;,<br>    &quot;supPhone&quot;: &quot;09876543232&quot;,<br>    &quot;supPostalCode&quot;: &quot;5435&quot;,<br>    &quot;supName&quot;: &quot;Công ty up102&quot;<br>}</pre>
+                                    <h4>Response Headers</h4>
+                                    <pre>Vary: Origin<br>Vary: Access-Control-Request-Method<br>Vary: Access-Control-Request-Headers<br>X-Content-Type-Options: nosniff<br>X-XSS-Protection: 1; mode=block<br>Cache-Control: no-cache, no-store, max-age=0, must-revalidate<br>Pragma: no-cache<br>Expires: 0<br>X-Frame-Options: DENY<br>Content-Type: application/json<br>Transfer-Encoding: chunked<br>Date: Wed, 09 Oct 2024 04:28:45 GMT<br>Keep-Alive: timeout=60<br>Connection: keep-alive</pre>
+                                <h4>Response Body</h4>
+                                    <pre>{<br>    &quot;code&quot;: 200,<br>    &quot;data&quot;: {<br>        &quot;id&quot;: &quot;b353119d-5eae-447f-9dd0-2a078883670a&quot;,<br>        &quot;supName&quot;: &quot;Công ty up102&quot;,<br>        &quot;supContactName&quot;: &quot;Cty A&quot;,<br>        &quot;supAddress&quot;: &quot;Phổ Yên&quot;,<br>        &quot;supCity&quot;: &quot;Thái Nguyên&quot;,<br>        &quot;supPostalCode&quot;: &quot;5435&quot;,<br>        &quot;supCountry&quot;: &quot;Việt Nam&quot;,<br>        &quot;supPhone&quot;: &quot;09876543232&quot;<br>    }<br>}</pre>
+                                    <h4>Response Cookies</h4>
+                                    <pre></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                        </span>
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">005ms</span></td>
+                </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+                <tr class="test-SUCCESS">
+
+                    <td width="70" class="step-icon">
+                        <a name="1-2"></a>
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1-2')"
+                               style="display:block">
+                                <i class="bi bi-caret-right-square imgstepSection1-2 success-icon"
+                                   style="margin-left: 40px; float:left; padding-right:5px"></i>
+                            </a>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1-2')"
+                               style="display:block;">
+                                <span class="nested-step">
+                                                tuanTester executes a PUT on the resource /supplier/{id}
+                                        </span>
+                            </a>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="nested-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-step">486ms</span></td>
+                </tr>
+                    <tr>
+                        <td colspan="5">
+                            <table id="stepSection1-2" class="step-table-nested" style="display:none;">
+                <tr class="test-SUCCESS">
+
+                    <td width="90" class="step-icon">
+                        <a name="1-2-0"></a>
+                            <span style="margin-left: 60px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="nested-group-step">
+                                                PUT http://tapi.testek.vn/api/v0/prod-man/supplier/b353119d-5eae-447f-9dd0-2a078883670a
+                                        </span>
+                            <span class="evidence">
+                                        <span class="piece-of-evidence">
+                <span>
+                        <button type="button" class="btn btn-success btn-sm" data-toggle="collapse"
+                                data-target="#restModal-REST-17">
+                            REST Query
+                        </button>
+                    </span>
+                <!-- Modal -->
+                <div class="rest-query-details">
+                    <div class="collapse multi-collapse" id="restModal-REST-17">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4>Response</h4>
+                                    <p>URL: http://tapi.testek.vn/api/v0/prod-man/supplier/b353119d-5eae-447f-9dd0-2a078883670a</p>
+                                    <p>Status code: 200</p>
+                                    <p>Content Type: application/json</p>
+                                    <h4>Request Headers</h4>
+                                    <pre>authorization=Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmYmRlMDliNS1iYzJkLTRmNTEtYjQ2Zi01MTE2MWZhNWJiNDYiLCJhdWQiOlsib2F1dGgyLXJlc291cmNlIl0sInVzZXJfbmFtZSI6ImZiZGUwOWI1LWJjMmQtNGY1MS1iNDZmLTUxMTYxZmE1YmI0NiIsInNjb3BlIjpbInJlYWQiXSwiZXhwIjoxNzI4NDUxNzI1LCJpYXQiOjE3Mjg0NDgxMjUsImp0aSI6ImVlZDgwZDkwLTE2NmItNDFjMS1iY2I0LWU2MjA3NGRhODNlNyIsImNsaWVudF9pZCI6ImYxMzU0OTg2LWU2OTgtNDcxMi1iYTk0LWU5NGIxMGJmMWI1OCJ9.ZkbZOwJA7UiDfmdJK-HgLR6ynSicJqLkv1laGq10QgHoTB1X9cAat91THbQxxcXelWozGOoBlEcyvQR3YxZfos9SMsaaDJgzOlN28dWomAY1OOXtBso8fjKpsqldoT5p0w1rlVWW0WWjjs3RUKF5yNu61wWJU5rEWt7Y6NL_rCUB045sK5vnTU_za9N98I-B8Pvfy53MREuTjc2k51ti2dyu3LEpBXELAvExhHsoSMSheUiolbkU2_AJqOgDvwoJbXvNcMK-pqnlOTICHMQFhIqLPrcC7zyReNADT7Tq6TGGwGdXx0tQMzY5NTwFTVHJb8iGa2LrW0rvthgRgOmDhQ<br>Accept=*/*<br>Content-Type=application/json</pre>
+                                    <h4>Content Body</h4>
+                                    <pre>{<br>    &quot;supAddress&quot;: &quot;Phổ Yên1&quot;,<br>    &quot;supCity&quot;: null,<br>    &quot;supContactName&quot;: &quot;Cty A3&quot;,<br>    &quot;supCountry&quot;: null,<br>    &quot;supPhone&quot;: &quot;09876543215&quot;,<br>    &quot;supPostalCode&quot;: null,<br>    &quot;supName&quot;: &quot;Công ty b17&quot;<br>}</pre>
+                                    <h4>Response Headers</h4>
+                                    <pre>Vary: Origin<br>Vary: Access-Control-Request-Method<br>Vary: Access-Control-Request-Headers<br>X-Content-Type-Options: nosniff<br>X-XSS-Protection: 1; mode=block<br>Cache-Control: no-cache, no-store, max-age=0, must-revalidate<br>Pragma: no-cache<br>Expires: 0<br>X-Frame-Options: DENY<br>Content-Type: application/json<br>Transfer-Encoding: chunked<br>Date: Wed, 09 Oct 2024 04:28:45 GMT<br>Keep-Alive: timeout=60<br>Connection: keep-alive</pre>
+                                <h4>Response Body</h4>
+                                    <pre>{<br>    &quot;code&quot;: 200,<br>    &quot;data&quot;: {<br>        &quot;id&quot;: &quot;b353119d-5eae-447f-9dd0-2a078883670a&quot;,<br>        &quot;supName&quot;: &quot;Công ty up102&quot;,<br>        &quot;supContactName&quot;: &quot;Cty A3&quot;,<br>        &quot;supAddress&quot;: &quot;Phổ Yên1&quot;,<br>        &quot;supCity&quot;: &quot;Thái Nguyên&quot;,<br>        &quot;supPostalCode&quot;: &quot;5435&quot;,<br>        &quot;supCountry&quot;: &quot;Việt Nam&quot;,<br>        &quot;supPhone&quot;: &quot;09876543232&quot;<br>    }<br>}</pre>
+                                    <h4>Response Cookies</h4>
+                                    <pre></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                        </span>
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">011ms</span></td>
+                </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+                <tr class="test-SUCCESS">
+
+                    <td width="70" class="step-icon">
+                        <a name="1-3"></a>
+                            <span style="margin-left: 40px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="nested-group-step">
+                                                tuanTester should see Update supplier when field option is null that is equal to: &lt;200&gt;
+                                        </span>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">010ms</span></td>
+                </tr>
+                <tr class="test-SUCCESS">
+
+                    <td width="70" class="step-icon">
+                        <a name="1-4"></a>
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1-4')"
+                               style="display:block">
+                                <i class="bi bi-caret-right-square imgstepSection1-4 success-icon"
+                                   style="margin-left: 40px; float:left; padding-right:5px"></i>
+                            </a>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1-4')"
+                               style="display:block;">
+                                <span class="nested-step">
+                                                tuanTester executes a DELETE on the resource /supplier/{supplierId}
+                                        </span>
+                            </a>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="nested-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-step">151ms</span></td>
+                </tr>
+                    <tr>
+                        <td colspan="5">
+                            <table id="stepSection1-4" class="step-table-nested" style="display:none;">
+                <tr class="test-SUCCESS">
+
+                    <td width="90" class="step-icon">
+                        <a name="1-4-0"></a>
+                            <span style="margin-left: 60px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="nested-group-step">
+                                                DELETE http://tapi.testek.vn/api/v0/prod-man/supplier/b353119d-5eae-447f-9dd0-2a078883670a
+                                        </span>
+                            <span class="evidence">
+                                        <span class="piece-of-evidence">
+                <span>
+                        <button type="button" class="btn btn-success btn-sm" data-toggle="collapse"
+                                data-target="#restModal-REST-20">
+                            REST Query
+                        </button>
+                    </span>
+                <!-- Modal -->
+                <div class="rest-query-details">
+                    <div class="collapse multi-collapse" id="restModal-REST-20">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4>Response</h4>
+                                    <p>URL: http://tapi.testek.vn/api/v0/prod-man/supplier/b353119d-5eae-447f-9dd0-2a078883670a</p>
+                                    <p>Status code: 200</p>
+                                    <p>Content Type: application/json</p>
+                                    <h4>Request Headers</h4>
+                                    <pre>Authorization=Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmYmRlMDliNS1iYzJkLTRmNTEtYjQ2Zi01MTE2MWZhNWJiNDYiLCJhdWQiOlsib2F1dGgyLXJlc291cmNlIl0sInVzZXJfbmFtZSI6ImZiZGUwOWI1LWJjMmQtNGY1MS1iNDZmLTUxMTYxZmE1YmI0NiIsInNjb3BlIjpbInJlYWQiXSwiZXhwIjoxNzI4NDUxNzI1LCJpYXQiOjE3Mjg0NDgxMjUsImp0aSI6ImVlZDgwZDkwLTE2NmItNDFjMS1iY2I0LWU2MjA3NGRhODNlNyIsImNsaWVudF9pZCI6ImYxMzU0OTg2LWU2OTgtNDcxMi1iYTk0LWU5NGIxMGJmMWI1OCJ9.ZkbZOwJA7UiDfmdJK-HgLR6ynSicJqLkv1laGq10QgHoTB1X9cAat91THbQxxcXelWozGOoBlEcyvQR3YxZfos9SMsaaDJgzOlN28dWomAY1OOXtBso8fjKpsqldoT5p0w1rlVWW0WWjjs3RUKF5yNu61wWJU5rEWt7Y6NL_rCUB045sK5vnTU_za9N98I-B8Pvfy53MREuTjc2k51ti2dyu3LEpBXELAvExhHsoSMSheUiolbkU2_AJqOgDvwoJbXvNcMK-pqnlOTICHMQFhIqLPrcC7zyReNADT7Tq6TGGwGdXx0tQMzY5NTwFTVHJb8iGa2LrW0rvthgRgOmDhQ<br>Accept=*/*<br>Content-Type=application/json</pre>
+                                    <h4>Response Headers</h4>
+                                    <pre>Vary: Origin<br>Vary: Access-Control-Request-Method<br>Vary: Access-Control-Request-Headers<br>X-Content-Type-Options: nosniff<br>X-XSS-Protection: 1; mode=block<br>Cache-Control: no-cache, no-store, max-age=0, must-revalidate<br>Pragma: no-cache<br>Expires: 0<br>X-Frame-Options: DENY<br>Content-Type: application/json<br>Transfer-Encoding: chunked<br>Date: Wed, 09 Oct 2024 04:28:45 GMT<br>Keep-Alive: timeout=60<br>Connection: keep-alive</pre>
+                                <h4>Response Body</h4>
+                                    <pre>{<br>    &quot;code&quot;: 200,<br>    &quot;data&quot;: &quot;Success&quot;<br>}</pre>
+                                    <h4>Response Cookies</h4>
+                                    <pre></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                        </span>
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">003ms</span></td>
+                </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+                <tr class="test-SUCCESS">
+
+                    <td width="50" class="step-icon">
+                        <a name="2"></a>
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection2')"
+                               style="display:block">
+                                <i class="bi bi-caret-right-square imgstepSection2 success-icon"
+                                   style="margin-left: 20px; float:left; padding-right:5px"></i>
+                            </a>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection2')"
+                               style="display:block;">
+                                <span class="top-level-step">
+                                                Update supplier success[3] com.testek.api.models.SupplierModel@37fd496a, Update supplier when field option is blank, 200
+                                        </span>
+                            </a>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="top-level-step">SUCCESS</span></td>
+                    <td width="100"><span class="top-level-step">1s 429ms</span></td>
+                </tr>
+                    <tr>
+                        <td colspan="5">
+                            <table id="stepSection2" class="step-table-nested" style="display:none;">
+                <tr class="test-SUCCESS">
+
+                    <td width="70" class="step-icon">
+                        <a name="2-0"></a>
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection2-0')"
+                               style="display:block">
+                                <i class="bi bi-caret-right-square imgstepSection2-0 success-icon"
+                                   style="margin-left: 40px; float:left; padding-right:5px"></i>
+                            </a>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection2-0')"
+                               style="display:block;">
+                                <span class="nested-step">
+                                                tuanTester executes a POST on the resource /login-with-local
+                                        </span>
+                            </a>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="nested-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-step">983ms</span></td>
+                </tr>
+                    <tr>
+                        <td colspan="5">
+                            <table id="stepSection2-0" class="step-table-nested" style="display:none;">
+                <tr class="test-SUCCESS">
+
+                    <td width="90" class="step-icon">
+                        <a name="2-0-0"></a>
+                            <span style="margin-left: 60px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="nested-group-step">
+                                                POST http://tapi.testek.vn/api/v0/prod-man/login-with-local
+                                        </span>
+                            <span class="evidence">
+                                        <span class="piece-of-evidence">
+                <span>
+                        <button type="button" class="btn btn-success btn-sm" data-toggle="collapse"
+                                data-target="#restModal-REST-23">
+                            REST Query
+                        </button>
+                    </span>
+                <!-- Modal -->
+                <div class="rest-query-details">
+                    <div class="collapse multi-collapse" id="restModal-REST-23">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4>Response</h4>
+                                    <p>URL: http://tapi.testek.vn/api/v0/prod-man/login-with-local</p>
+                                    <p>Status code: 200</p>
+                                    <p>Content Type: application/json</p>
+                                    <h4>Request Headers</h4>
+                                    <pre>Accept=*/*<br>Content-Type=application/json</pre>
+                                    <h4>Content Body</h4>
+                                    <pre>{<br>    &quot;username&quot;: &quot;testek&quot;,<br>    &quot;password&quot;: &quot;admin&quot;<br>}</pre>
+                                    <h4>Response Headers</h4>
+                                    <pre>Vary: Origin<br>Vary: Access-Control-Request-Method<br>Vary: Access-Control-Request-Headers<br>X-Content-Type-Options: nosniff<br>X-XSS-Protection: 1; mode=block<br>Cache-Control: no-cache, no-store, max-age=0, must-revalidate<br>Pragma: no-cache<br>Expires: 0<br>X-Frame-Options: DENY<br>Content-Type: application/json<br>Transfer-Encoding: chunked<br>Date: Wed, 09 Oct 2024 04:28:47 GMT<br>Keep-Alive: timeout=60<br>Connection: keep-alive</pre>
+                                <h4>Response Body</h4>
+                                    <pre>{<br>    &quot;access_token&quot;: &quot;eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmYmRlMDliNS1iYzJkLTRmNTEtYjQ2Zi01MTE2MWZhNWJiNDYiLCJhdWQiOlsib2F1dGgyLXJlc291cmNlIl0sInVzZXJfbmFtZSI6ImZiZGUwOWI1LWJjMmQtNGY1MS1iNDZmLTUxMTYxZmE1YmI0NiIsInNjb3BlIjpbInJlYWQiXSwiZXhwIjoxNzI4NDUxNzI3LCJpYXQiOjE3Mjg0NDgxMjcsImp0aSI6IjgwODE3OGJiLWQ1NGUtNDIwOC1iNTEyLWJkNGRhYmI1MjlkMCIsImNsaWVudF9pZCI6ImYxMzU0OTg2LWU2OTgtNDcxMi1iYTk0LWU5NGIxMGJmMWI1OCJ9.aSjte1ijWZsOAgoXv7fXOewAAUQ2EmJuLU2X_z0qCRDXijzl1k3O-KIs8X8Qw94Df9oxrvfFBE4DY23-kao6zG0-206IRxrUvCY8-WVDm5nY4JCyXDPYUq1DY0DWKb9TNPqDAZAdoN-oq_DHmC2cLymMRzMj4oaoo1_sHhGs_Jz95T50lFT-alhMMUmv2NUmlqGimNHppEH3srLQ3-kUAmKOCVUgg93T9gE9Re8e5e2zYeoB5TX3Is2iBLx32yI6D7GuM7_BvT6eu4GNSwNEeouC7VUtoLXhPg4yj0WlraEOuCIX7--tIps_IkVfGk_CL0GdCxvfNouML9uEsI2UuA&quot;,<br>    &quot;refresh_token&quot;: &quot;eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmYmRlMDliNS1iYzJkLTRmNTEtYjQ2Zi01MTE2MWZhNWJiNDYiLCJhdWQiOlsib2F1dGgyLXJlc291cmNlIl0sInVzZXJfbmFtZSI6ImZiZGUwOWI1LWJjMmQtNGY1MS1iNDZmLTUxMTYxZmE1YmI0NiIsInNjb3BlIjpbInJlYWQiXSwiYXRpIjoiODA4MTc4YmItZDU0ZS00MjA4LWI1MTItYmQ0ZGFiYjUyOWQwIiwiZXhwIjoxNzMxMDQwMTI3LCJpYXQiOjE3Mjg0NDgxMjcsImp0aSI6ImVjYTdjM2FlLWE1ODItNDllYS04YWIwLTUxZmE2NWZkYWEzNiIsImNsaWVudF9pZCI6ImYxMzU0OTg2LWU2OTgtNDcxMi1iYTk0LWU5NGIxMGJmMWI1OCJ9.QzL2mNJwTX5cVAd5EB6W6UsiMNhtZMCGzsW-pi7GN4Wmyj_-86VEO4JWgXSbjOu3PaZZQmi24FIxRJJparrSmpjZw3Mn5GsA48vAOfvxs-TbDaSgbu5vJu_VMMvT7YV0LRsoeJsBw0-OItNfAy0Wdc6arKY4Gtn5YL5MOKKr0AnvHyyn7eE1i1K0lhvACY4J9pGMHKMe3N4QRTPBoI8HWsuaaYW-HgldjqwAKoU5VjVTe-8cHdsZtEErwSQeMd6YfVcd3Ny4oxTlaQue0efKEQGLLhnGJIt8jU303_Fl8WyDy7YRYQDxjOt9oo539q4-oUNXY6IkxyXk_V9dwR2u3Q&quot;,<br>    &quot;expires_in&quot;: 3599,<br>    &quot;token_type&quot;: &quot;bearer&quot;<br>}</pre>
+                                    <h4>Response Cookies</h4>
+                                    <pre></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                        </span>
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">006ms</span></td>
+                </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+                <tr class="test-SUCCESS">
+
+                    <td width="70" class="step-icon">
+                        <a name="2-1"></a>
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection2-1')"
+                               style="display:block">
+                                <i class="bi bi-caret-right-square imgstepSection2-1 success-icon"
+                                   style="margin-left: 40px; float:left; padding-right:5px"></i>
+                            </a>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection2-1')"
+                               style="display:block;">
+                                <span class="nested-step">
+                                                tuanTester executes a POST on the resource /supplier
+                                        </span>
+                            </a>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="nested-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-step">157ms</span></td>
+                </tr>
+                    <tr>
+                        <td colspan="5">
+                            <table id="stepSection2-1" class="step-table-nested" style="display:none;">
+                <tr class="test-SUCCESS">
+
+                    <td width="90" class="step-icon">
+                        <a name="2-1-0"></a>
+                            <span style="margin-left: 60px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="nested-group-step">
+                                                POST http://tapi.testek.vn/api/v0/prod-man/supplier
+                                        </span>
+                            <span class="evidence">
+                                        <span class="piece-of-evidence">
+                <span>
+                        <button type="button" class="btn btn-success btn-sm" data-toggle="collapse"
+                                data-target="#restModal-REST-25">
+                            REST Query
+                        </button>
+                    </span>
+                <!-- Modal -->
+                <div class="rest-query-details">
+                    <div class="collapse multi-collapse" id="restModal-REST-25">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4>Response</h4>
+                                    <p>URL: http://tapi.testek.vn/api/v0/prod-man/supplier</p>
+                                    <p>Status code: 201</p>
+                                    <p>Content Type: application/json</p>
+                                    <h4>Request Headers</h4>
+                                    <pre>Authorization=Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmYmRlMDliNS1iYzJkLTRmNTEtYjQ2Zi01MTE2MWZhNWJiNDYiLCJhdWQiOlsib2F1dGgyLXJlc291cmNlIl0sInVzZXJfbmFtZSI6ImZiZGUwOWI1LWJjMmQtNGY1MS1iNDZmLTUxMTYxZmE1YmI0NiIsInNjb3BlIjpbInJlYWQiXSwiZXhwIjoxNzI4NDUxNzI3LCJpYXQiOjE3Mjg0NDgxMjcsImp0aSI6IjgwODE3OGJiLWQ1NGUtNDIwOC1iNTEyLWJkNGRhYmI1MjlkMCIsImNsaWVudF9pZCI6ImYxMzU0OTg2LWU2OTgtNDcxMi1iYTk0LWU5NGIxMGJmMWI1OCJ9.aSjte1ijWZsOAgoXv7fXOewAAUQ2EmJuLU2X_z0qCRDXijzl1k3O-KIs8X8Qw94Df9oxrvfFBE4DY23-kao6zG0-206IRxrUvCY8-WVDm5nY4JCyXDPYUq1DY0DWKb9TNPqDAZAdoN-oq_DHmC2cLymMRzMj4oaoo1_sHhGs_Jz95T50lFT-alhMMUmv2NUmlqGimNHppEH3srLQ3-kUAmKOCVUgg93T9gE9Re8e5e2zYeoB5TX3Is2iBLx32yI6D7GuM7_BvT6eu4GNSwNEeouC7VUtoLXhPg4yj0WlraEOuCIX7--tIps_IkVfGk_CL0GdCxvfNouML9uEsI2UuA<br>Accept=*/*<br>Content-Type=application/json</pre>
+                                    <h4>Content Body</h4>
+                                    <pre>{<br>    &quot;supAddress&quot;: &quot;Phổ Yên&quot;,<br>    &quot;supCity&quot;: &quot;Thái Nguyên&quot;,<br>    &quot;supContactName&quot;: &quot;Cty A&quot;,<br>    &quot;supCountry&quot;: &quot;Việt Nam&quot;,<br>    &quot;supPhone&quot;: &quot;09876543232&quot;,<br>    &quot;supPostalCode&quot;: &quot;5435&quot;,<br>    &quot;supName&quot;: &quot;Công ty up102&quot;<br>}</pre>
+                                    <h4>Response Headers</h4>
+                                    <pre>Vary: Origin<br>Vary: Access-Control-Request-Method<br>Vary: Access-Control-Request-Headers<br>X-Content-Type-Options: nosniff<br>X-XSS-Protection: 1; mode=block<br>Cache-Control: no-cache, no-store, max-age=0, must-revalidate<br>Pragma: no-cache<br>Expires: 0<br>X-Frame-Options: DENY<br>Content-Type: application/json<br>Transfer-Encoding: chunked<br>Date: Wed, 09 Oct 2024 04:28:47 GMT<br>Keep-Alive: timeout=60<br>Connection: keep-alive</pre>
+                                <h4>Response Body</h4>
+                                    <pre>{<br>    &quot;code&quot;: 200,<br>    &quot;data&quot;: {<br>        &quot;id&quot;: &quot;81084c48-5ab3-4ed1-bf65-4198b5488d40&quot;,<br>        &quot;supName&quot;: &quot;Công ty up102&quot;,<br>        &quot;supContactName&quot;: &quot;Cty A&quot;,<br>        &quot;supAddress&quot;: &quot;Phổ Yên&quot;,<br>        &quot;supCity&quot;: &quot;Thái Nguyên&quot;,<br>        &quot;supPostalCode&quot;: &quot;5435&quot;,<br>        &quot;supCountry&quot;: &quot;Việt Nam&quot;,<br>        &quot;supPhone&quot;: &quot;09876543232&quot;<br>    }<br>}</pre>
+                                    <h4>Response Cookies</h4>
+                                    <pre></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                        </span>
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">005ms</span></td>
+                </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+                <tr class="test-SUCCESS">
+
+                    <td width="70" class="step-icon">
+                        <a name="2-2"></a>
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection2-2')"
+                               style="display:block">
+                                <i class="bi bi-caret-right-square imgstepSection2-2 success-icon"
+                                   style="margin-left: 40px; float:left; padding-right:5px"></i>
+                            </a>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection2-2')"
+                               style="display:block;">
+                                <span class="nested-step">
+                                                tuanTester executes a PUT on the resource /supplier/{id}
+                                        </span>
+                            </a>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="nested-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-step">139ms</span></td>
+                </tr>
+                    <tr>
+                        <td colspan="5">
+                            <table id="stepSection2-2" class="step-table-nested" style="display:none;">
+                <tr class="test-SUCCESS">
+
+                    <td width="90" class="step-icon">
+                        <a name="2-2-0"></a>
+                            <span style="margin-left: 60px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="nested-group-step">
+                                                PUT http://tapi.testek.vn/api/v0/prod-man/supplier/81084c48-5ab3-4ed1-bf65-4198b5488d40
+                                        </span>
+                            <span class="evidence">
+                                        <span class="piece-of-evidence">
+                <span>
+                        <button type="button" class="btn btn-success btn-sm" data-toggle="collapse"
+                                data-target="#restModal-REST-27">
+                            REST Query
+                        </button>
+                    </span>
+                <!-- Modal -->
+                <div class="rest-query-details">
+                    <div class="collapse multi-collapse" id="restModal-REST-27">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4>Response</h4>
+                                    <p>URL: http://tapi.testek.vn/api/v0/prod-man/supplier/81084c48-5ab3-4ed1-bf65-4198b5488d40</p>
+                                    <p>Status code: 200</p>
+                                    <p>Content Type: application/json</p>
+                                    <h4>Request Headers</h4>
+                                    <pre>authorization=Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmYmRlMDliNS1iYzJkLTRmNTEtYjQ2Zi01MTE2MWZhNWJiNDYiLCJhdWQiOlsib2F1dGgyLXJlc291cmNlIl0sInVzZXJfbmFtZSI6ImZiZGUwOWI1LWJjMmQtNGY1MS1iNDZmLTUxMTYxZmE1YmI0NiIsInNjb3BlIjpbInJlYWQiXSwiZXhwIjoxNzI4NDUxNzI3LCJpYXQiOjE3Mjg0NDgxMjcsImp0aSI6IjgwODE3OGJiLWQ1NGUtNDIwOC1iNTEyLWJkNGRhYmI1MjlkMCIsImNsaWVudF9pZCI6ImYxMzU0OTg2LWU2OTgtNDcxMi1iYTk0LWU5NGIxMGJmMWI1OCJ9.aSjte1ijWZsOAgoXv7fXOewAAUQ2EmJuLU2X_z0qCRDXijzl1k3O-KIs8X8Qw94Df9oxrvfFBE4DY23-kao6zG0-206IRxrUvCY8-WVDm5nY4JCyXDPYUq1DY0DWKb9TNPqDAZAdoN-oq_DHmC2cLymMRzMj4oaoo1_sHhGs_Jz95T50lFT-alhMMUmv2NUmlqGimNHppEH3srLQ3-kUAmKOCVUgg93T9gE9Re8e5e2zYeoB5TX3Is2iBLx32yI6D7GuM7_BvT6eu4GNSwNEeouC7VUtoLXhPg4yj0WlraEOuCIX7--tIps_IkVfGk_CL0GdCxvfNouML9uEsI2UuA<br>Accept=*/*<br>Content-Type=application/json</pre>
+                                    <h4>Content Body</h4>
+                                    <pre>{<br>    &quot;supAddress&quot;: &quot;Phổ Yên1&quot;,<br>    &quot;supCity&quot;: &quot; &quot;,<br>    &quot;supContactName&quot;: &quot;Cty A3&quot;,<br>    &quot;supCountry&quot;: &quot; &quot;,<br>    &quot;supPhone&quot;: &quot;09876543215&quot;,<br>    &quot;supPostalCode&quot;: &quot; &quot;,<br>    &quot;supName&quot;: &quot;Công ty b17&quot;<br>}</pre>
+                                    <h4>Response Headers</h4>
+                                    <pre>Vary: Origin<br>Vary: Access-Control-Request-Method<br>Vary: Access-Control-Request-Headers<br>X-Content-Type-Options: nosniff<br>X-XSS-Protection: 1; mode=block<br>Cache-Control: no-cache, no-store, max-age=0, must-revalidate<br>Pragma: no-cache<br>Expires: 0<br>X-Frame-Options: DENY<br>Content-Type: application/json<br>Transfer-Encoding: chunked<br>Date: Wed, 09 Oct 2024 04:28:47 GMT<br>Keep-Alive: timeout=60<br>Connection: keep-alive</pre>
+                                <h4>Response Body</h4>
+                                    <pre>{<br>    &quot;code&quot;: 200,<br>    &quot;data&quot;: {<br>        &quot;id&quot;: &quot;81084c48-5ab3-4ed1-bf65-4198b5488d40&quot;,<br>        &quot;supName&quot;: &quot;Công ty up102&quot;,<br>        &quot;supContactName&quot;: &quot;Cty A3&quot;,<br>        &quot;supAddress&quot;: &quot;Phổ Yên1&quot;,<br>        &quot;supCity&quot;: &quot;&quot;,<br>        &quot;supPostalCode&quot;: &quot;&quot;,<br>        &quot;supCountry&quot;: &quot;&quot;,<br>        &quot;supPhone&quot;: &quot;09876543232&quot;<br>    }<br>}</pre>
+                                    <h4>Response Cookies</h4>
+                                    <pre></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                        </span>
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">005ms</span></td>
+                </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+                <tr class="test-SUCCESS">
+
+                    <td width="70" class="step-icon">
+                        <a name="2-3"></a>
+                            <span style="margin-left: 40px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="nested-group-step">
+                                                tuanTester should see Update supplier when field option is blank that is equal to: &lt;200&gt;
+                                        </span>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">011ms</span></td>
+                </tr>
+                <tr class="test-SUCCESS">
+
+                    <td width="70" class="step-icon">
+                        <a name="2-4"></a>
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection2-4')"
+                               style="display:block">
+                                <i class="bi bi-caret-right-square imgstepSection2-4 success-icon"
+                                   style="margin-left: 40px; float:left; padding-right:5px"></i>
+                            </a>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection2-4')"
+                               style="display:block;">
+                                <span class="nested-step">
+                                                tuanTester executes a DELETE on the resource /supplier/{supplierId}
+                                        </span>
+                            </a>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="nested-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-step">139ms</span></td>
+                </tr>
+                    <tr>
+                        <td colspan="5">
+                            <table id="stepSection2-4" class="step-table-nested" style="display:none;">
+                <tr class="test-SUCCESS">
+
+                    <td width="90" class="step-icon">
+                        <a name="2-4-0"></a>
+                            <span style="margin-left: 60px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="nested-group-step">
+                                                DELETE http://tapi.testek.vn/api/v0/prod-man/supplier/81084c48-5ab3-4ed1-bf65-4198b5488d40
+                                        </span>
+                            <span class="evidence">
+                                        <span class="piece-of-evidence">
+                <span>
+                        <button type="button" class="btn btn-success btn-sm" data-toggle="collapse"
+                                data-target="#restModal-REST-30">
+                            REST Query
+                        </button>
+                    </span>
+                <!-- Modal -->
+                <div class="rest-query-details">
+                    <div class="collapse multi-collapse" id="restModal-REST-30">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4>Response</h4>
+                                    <p>URL: http://tapi.testek.vn/api/v0/prod-man/supplier/81084c48-5ab3-4ed1-bf65-4198b5488d40</p>
+                                    <p>Status code: 200</p>
+                                    <p>Content Type: application/json</p>
+                                    <h4>Request Headers</h4>
+                                    <pre>Authorization=Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmYmRlMDliNS1iYzJkLTRmNTEtYjQ2Zi01MTE2MWZhNWJiNDYiLCJhdWQiOlsib2F1dGgyLXJlc291cmNlIl0sInVzZXJfbmFtZSI6ImZiZGUwOWI1LWJjMmQtNGY1MS1iNDZmLTUxMTYxZmE1YmI0NiIsInNjb3BlIjpbInJlYWQiXSwiZXhwIjoxNzI4NDUxNzI3LCJpYXQiOjE3Mjg0NDgxMjcsImp0aSI6IjgwODE3OGJiLWQ1NGUtNDIwOC1iNTEyLWJkNGRhYmI1MjlkMCIsImNsaWVudF9pZCI6ImYxMzU0OTg2LWU2OTgtNDcxMi1iYTk0LWU5NGIxMGJmMWI1OCJ9.aSjte1ijWZsOAgoXv7fXOewAAUQ2EmJuLU2X_z0qCRDXijzl1k3O-KIs8X8Qw94Df9oxrvfFBE4DY23-kao6zG0-206IRxrUvCY8-WVDm5nY4JCyXDPYUq1DY0DWKb9TNPqDAZAdoN-oq_DHmC2cLymMRzMj4oaoo1_sHhGs_Jz95T50lFT-alhMMUmv2NUmlqGimNHppEH3srLQ3-kUAmKOCVUgg93T9gE9Re8e5e2zYeoB5TX3Is2iBLx32yI6D7GuM7_BvT6eu4GNSwNEeouC7VUtoLXhPg4yj0WlraEOuCIX7--tIps_IkVfGk_CL0GdCxvfNouML9uEsI2UuA<br>Accept=*/*<br>Content-Type=application/json</pre>
+                                    <h4>Response Headers</h4>
+                                    <pre>Vary: Origin<br>Vary: Access-Control-Request-Method<br>Vary: Access-Control-Request-Headers<br>X-Content-Type-Options: nosniff<br>X-XSS-Protection: 1; mode=block<br>Cache-Control: no-cache, no-store, max-age=0, must-revalidate<br>Pragma: no-cache<br>Expires: 0<br>X-Frame-Options: DENY<br>Content-Type: application/json<br>Transfer-Encoding: chunked<br>Date: Wed, 09 Oct 2024 04:28:47 GMT<br>Keep-Alive: timeout=60<br>Connection: keep-alive</pre>
+                                <h4>Response Body</h4>
+                                    <pre>{<br>    &quot;code&quot;: 200,<br>    &quot;data&quot;: &quot;Success&quot;<br>}</pre>
+                                    <h4>Response Cookies</h4>
+                                    <pre></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                        </span>
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">006ms</span></td>
+                </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+            <tr class="test-SUCCESS">
+                    <td colspan="2"></td>
+                <td width="130"><span class="top-level-step"><em>SUCCESS</em></span></td>
+                <td width="100"><span class="top-level-step"><em>1.78s</em></span></td>
+            </tr>
+
+        </table>
+    </div>
+</div>
+
+<div id="beforefooter"></div>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <span class="version">Serenity BDD version 4.1.14</span>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    function toggleDiv(divId) {
+        $("#" + divId).toggle();
+        var $icon = $(".img" + divId);
+        $icon.toggleClass("bi-caret-right-square");
+        $icon.toggleClass("bi-caret-down-square");
+    }
+</script>
+
+
+<script type="text/javascript">
+    //<![CDATA[
+
+    $(document).ready(function () {
+        $('img.screenshot').imgPreview({
+            imgCSS: {
+                width: '500px'
+            },
+            distanceFromCursor: {top: 10, left: -200}
+        });
+    });
+
+    //]]>
+</script>
+<div id="imgPreviewContainer" style="position: absolute; top: 612px; left: 355px; display: none; " class=""><img
+            src="" style="display: none; "></div>
+<div id="imgPreviewContainer2" style="position: absolute; top: 925px; left: 320px; display: none; " class="">
+    <img style="width: 200px; display: none; " src=""></div>
+<div id="imgPreviewWithStyles" style="position: absolute; top: 1272px; left: 321px; display: none; " class="">
+    <img style="height: 200px; opacity: 1; display: none; " src=""></div>
+<div id="imgPreviewWithStyles2" style="display: none; position: absolute; "><img style="height: 200px; "></div>
+<div id="imgPreviewWithStyles3" style="display: none; position: absolute; "><img style="height: 200px; "></div>
+
+</div>
+</body>
+</html>

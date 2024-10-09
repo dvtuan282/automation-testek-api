@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="2" name="com.testek.api.features.CreateCategoryTestCase" skipped="0" tests="2" time="5.89" timestamp="2024-10-09 02:16:15"><testcase classname="com.testek.api.features.CreateCategoryTestCase" name="CreateCateSuccess(CategoryModel, String)"><failure type="java.lang.AssertionError"/><system-err>null&#13;
+com.testek.api.features.CreateCategoryTestCase.CreateCateSuccess(CreateCategoryTestCase.java:61)&#13;
+</system-err></testcase></testsuite>
