@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="4" name="com.testek.api.features.projectFeatures.CreateProductTestCase" skipped="0" tests="4" time="17.85" timestamp="2024-10-08 10:43:36"><testcase classname="com.testek.api.features.projectFeatures.CreateProductTestCase" name="createProductSuccess(ProductModel)"><failure message="Expected:  that is equal to: &lt;200&gt;&#10;Actual:   &lt;201&gt;" type="java.lang.AssertionError">Expected:  that is equal to: &lt;200&gt;
+Actual:   &lt;201&gt;</failure><system-err>Expected:  that is equal to: &lt;200&gt;
+Actual:   &lt;201&gt;&#13;
+com.testek.api.features.projectFeatures.CreateProductTestCase.createProductSuccess(CreateProductTestCase.java:47)&#13;
+</system-err></testcase></testsuite>

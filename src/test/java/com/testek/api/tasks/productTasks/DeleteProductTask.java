@@ -8,9 +8,11 @@ import net.serenitybdd.screenplay.rest.interactions.Delete;
 
 public class DeleteProductTask implements Task {
     private final String productId;
+    private final boolean isSoft;
 
-    public DeleteProductTask(String productId) {
+    public DeleteProductTask(String productId, boolean isSoft) {
         this.productId = productId;
+        this.isSoft = isSoft;
     }
 
     @Override
@@ -23,6 +25,7 @@ public class DeleteProductTask implements Task {
                             req.contentType(ContentType.JSON);
                             req.header("Authorization", access_token);
                             req.pathParam("productId", productId);
+                            req.queryParam("isSoft", isSoft);
                             req.log().uri();
                             req.then().log().body();
                             req.then().log().status();
@@ -33,7 +36,7 @@ public class DeleteProductTask implements Task {
         );
     }
 
-    public static DeleteProductTask withProductId(String productId) {
-        return new DeleteProductTask(productId);
+    public static DeleteProductTask withProductId(String productId, boolean isSoft) {
+        return new DeleteProductTask(productId, isSoft);
     }
 }

@@ -1,21 +1,20 @@
 package com.testek.api.models;
 
-import java.util.UUID;
 
 public class ProductModel {
-    private UUID category;
-    private UUID supplier;
+    private String category;
+    private String supplier;
     private String description;
     private String name;
     private Double price;
-    private int quantity;
+    private Object quantity;
     private String unit;
     private String code;
 
     public ProductModel() {
     }
 
-    public ProductModel(UUID category, UUID supplier, String description, String name, Double price, int quantity, String unit, String code) {
+    public ProductModel(String category, String supplier, String description, String name, Double price, Object quantity, String unit, String code) {
         this.category = category;
         this.supplier = supplier;
         this.description = description;
@@ -26,19 +25,19 @@ public class ProductModel {
         this.code = code;
     }
 
-    public UUID getCategory() {
+    public String getCategory() {
         return category;
     }
 
-    public void setCategory(UUID category) {
+    public void setCategory(String category) {
         this.category = category;
     }
 
-    public UUID getSupplier() {
+    public String getSupplier() {
         return supplier;
     }
 
-    public void setSupplier(UUID supplier) {
+    public void setSupplier(String supplier) {
         this.supplier = supplier;
     }
 
@@ -66,11 +65,11 @@ public class ProductModel {
         this.price = price;
     }
 
-    public int getQuantity() {
+    public Object getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(int quantity) {
+    public void setQuantity(Object quantity) {
         this.quantity = quantity;
     }
 
