@@ -4,6 +4,7 @@ import com.testek.api.models.AccountModel;
 import com.testek.api.models.SupplierModel;
 import com.testek.api.questions.BodyResponse;
 import com.testek.api.questions.StatusCodeResponse;
+import com.testek.api.questions.SupplierQuestion;
 import com.testek.api.tasks.LoginTask;
 import com.testek.api.tasks.supplierTasks.CreateSupplierTask;
 import com.testek.api.tasks.supplierTasks.DeleteSupplierTask;
@@ -59,7 +60,8 @@ public class UpdateSupplierTestCase {
                 Ensure.that(description, StatusCodeResponse.responseStatus()).isEqualTo(statusCodeExpected)
         );
         actor.attemptsTo(
-                GetSupplierTask.withSupplierId(idSupplier)
+                GetSupplierTask.withSupplierId(idSupplier),
+                Ensure.that(SupplierQuestion.responseSupp(supplierRequest)).isEqualTo("supplierRes match supplierReq")
         );
     }
 

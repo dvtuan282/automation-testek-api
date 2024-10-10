@@ -3,6 +3,7 @@ package com.testek.api.features;
 import com.testek.api.models.AccountModel;
 import com.testek.api.models.CategoryModel;
 import com.testek.api.questions.BodyResponse;
+import com.testek.api.questions.CategoryQuestion;
 import com.testek.api.questions.StatusCodeResponse;
 import com.testek.api.tasks.*;
 import com.testek.api.utilities.Endpoints;
@@ -41,7 +42,6 @@ public class UpdateCategoryTestCase {
         );
         // lấy path từ body đã tạo thành công
         pathParam = actor.asksFor(BodyResponse.bodyResponse("data.id")).toString();
-
     }
 
     @ParameterizedTest
@@ -58,8 +58,7 @@ public class UpdateCategoryTestCase {
         System.out.println("=======Compare data=======");
         actor.attemptsTo(
                 GetCategoryTask.withCategoryId(pathParam),
-                Ensure.that(description, BodyResponse.bodyResponse("data.cateDesc").asString()).isEqualTo(categoryUpdate.getCateDesc()),
-                Ensure.that(description, BodyResponse.bodyResponse("data.status").asString()).isEqualTo(categoryUpdate.getStatus())
+                Ensure.that(description, CategoryQuestion.responseBody(categoryUpdate)).isEqualTo("supplierRes match supplierReq")
         );
     }
 
