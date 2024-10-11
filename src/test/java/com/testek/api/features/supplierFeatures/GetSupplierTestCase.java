@@ -7,7 +7,7 @@ import com.testek.api.questions.StatusCodeResponse;
 import com.testek.api.tasks.LoginTask;
 import com.testek.api.tasks.supplierTasks.CreateSupplierTask;
 import com.testek.api.tasks.supplierTasks.DeleteSupplierTask;
-import com.testek.api.tasks.supplierTasks.GetSupplierTask;
+import com.testek.api.tasks.supplierTasks.GetDetailSupplierTask;
 import com.testek.api.utilities.Endpoints;
 import net.serenitybdd.junit5.SerenityJUnit5Extension;
 import net.serenitybdd.screenplay.Actor;
@@ -45,7 +45,7 @@ public class GetSupplierTestCase {
     @Test
     void GetDetailSupplierSuccess() {
         actor.attemptsTo(
-                GetSupplierTask.withSupplierId(idSupplier),
+                GetDetailSupplierTask.withSupplierId(idSupplier),
                 Ensure.that("Status code is 200 when get details supplier success", StatusCodeResponse.responseStatus()).isEqualTo(200),
                 Ensure.that("Id supplier equals id supplier response", BodyResponse.bodyResponse("data.id").asString()).isEqualTo(idSupplier)
         );
@@ -53,7 +53,7 @@ public class GetSupplierTestCase {
     @Test
     void GetDetailSupplierNotSuccess() {
         actor.attemptsTo(
-                GetSupplierTask.withSupplierId(idSupplier),
+                GetDetailSupplierTask.withSupplierId(idSupplier),
                 Ensure.that("Status code is 200 when get details supplier success", StatusCodeResponse.responseStatus()).isEqualTo(400),
                 Ensure.that("Id supplier equals id supplier response", BodyResponse.bodyResponse("error").asString()).isEqualTo(idSupplier)
         );

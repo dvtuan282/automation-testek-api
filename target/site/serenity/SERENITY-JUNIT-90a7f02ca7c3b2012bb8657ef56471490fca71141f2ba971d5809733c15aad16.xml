@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="1" name="com.testek.api.features.productFeatures.UpdateProductTestCase" skipped="0" tests="1" time="5.47" timestamp="2024-10-09 11:00:55"><testcase classname="com.testek.api.features.productFeatures.UpdateProductTestCase" name="Update project success"><failure message="Expected:  that is equal to: &lt;400&gt;&#10;Actual:   &lt;200&gt;" type="java.lang.AssertionError">Expected:  that is equal to: &lt;400&gt;
-Actual:   &lt;200&gt;</failure><system-err>Expected:  that is equal to: &lt;400&gt;
-Actual:   &lt;200&gt;&#13;
-com.testek.api.features.productFeatures.UpdateProductTestCase.updateProjectSuccess(UpdateProductTestCase.java:67)&#13;
-</system-err></testcase></testsuite>

@@ -4,10 +4,11 @@ import com.testek.api.models.AccountModel;
 import com.testek.api.models.SupplierModel;
 import com.testek.api.questions.BodyResponse;
 import com.testek.api.questions.StatusCodeResponse;
+import com.testek.api.questions.SupplierResponse;
 import com.testek.api.tasks.LoginTask;
 import com.testek.api.tasks.supplierTasks.CreateSupplierTask;
 import com.testek.api.tasks.supplierTasks.DeleteSupplierTask;
-import com.testek.api.tasks.supplierTasks.GetSupplierTask;
+import com.testek.api.tasks.supplierTasks.GetDetailSupplierTask;
 import com.testek.api.tasks.supplierTasks.UpdateSupplierTask;
 import com.testek.api.utilities.Endpoints;
 import net.serenitybdd.junit5.SerenityJUnit5Extension;
@@ -59,7 +60,8 @@ public class UpdateSupplierTestCase {
                 Ensure.that(description, StatusCodeResponse.responseStatus()).isEqualTo(statusCodeExpected)
         );
         actor.attemptsTo(
-                GetSupplierTask.withSupplierId(idSupplier)
+                GetDetailSupplierTask.withSupplierId(idSupplier),
+                Ensure.that(SupplierResponse.responseSupp(supplierRequest)).isEqualTo("supplierRes match supplierReq")
         );
     }
 

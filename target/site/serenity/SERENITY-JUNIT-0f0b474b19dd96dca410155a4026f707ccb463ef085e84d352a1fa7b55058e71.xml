@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="7" name="com.testek.api.features.supplierFeatures.UpdateSupplierTestCase" skipped="0" tests="10" time="5.53" timestamp="2024-10-09 10:34:12"><testcase classname="com.testek.api.features.supplierFeatures.UpdateSupplierTestCase" name="updateSupplierNotSuccess(SupplierModel, int)"><failure message="Expected: a value that is equal to: &lt;400&gt;&#10;Actual:   &lt;200&gt;" type="java.lang.AssertionError">Expected: a value that is equal to: &lt;400&gt;
-Actual:   &lt;200&gt;</failure><system-err>Expected: a value that is equal to: &lt;400&gt;
-Actual:   &lt;200&gt;&#13;
-com.testek.api.features.supplierFeatures.UpdateSupplierTestCase.updateSupplierNotSuccess(UpdateSupplierTestCase.java:73)&#13;
-</system-err></testcase><testcase classname="com.testek.api.features.supplierFeatures.UpdateSupplierTestCase" name="updateSupplierSuccess(SupplierModel, String, int)"/></testsuite>

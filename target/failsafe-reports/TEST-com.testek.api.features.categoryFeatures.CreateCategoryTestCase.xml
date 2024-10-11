@@ -1,0 +1,833 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-failsafe-plugin/xsd/failsafe-test-report-3.0.xsd" version="3.0" name="com.testek.api.features.categoryFeatures.CreateCategoryTestCase" time="18.337" tests="8" errors="0" skipped="0" failures="1">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\tuandv\project\automation-testek-api\target\test-classes;C:\Users\tuandv\.m2\repository\net\serenity-bdd\serenity-core\4.1.14\serenity-core-4.1.14.jar;C:\Users\tuandv\.m2\repository\net\serenity-bdd\serenity-model\4.1.14\serenity-model-4.1.14.jar;C:\Users\tuandv\.m2\repository\org\apache\commons\commons-text\1.11.0\commons-text-1.11.0.jar;C:\Users\tuandv\.m2\repository\commons-net\commons-net\3.10.0\commons-net-3.10.0.jar;C:\Users\tuandv\.m2\repository\com\google\guava\guava\33.1.0-jre\guava-33.1.0-jre.jar;C:\Users\tuandv\.m2\repository\com\google\guava\failureaccess\1.0.2\failureaccess-1.0.2.jar;C:\Users\tuandv\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\tuandv\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\tuandv\.m2\repository\org\checkerframework\checker-qual\3.42.0\checker-qual-3.42.0.jar;C:\Users\tuandv\.m2\repository\com\google\errorprone\error_prone_annotations\2.26.1\error_prone_annotations-2.26.1.jar;C:\Users\tuandv\.m2\repository\com\google\j2objc\j2objc-annotations\3.0.0\j2objc-annotations-3.0.0.jar;C:\Users\tuandv\.m2\repository\org\jsoup\jsoup\1.15.4\jsoup-1.15.4.jar;C:\Users\tuandv\.m2\repository\com\thoughtworks\xstream\xstream\1.4.20\xstream-1.4.20.jar;C:\Users\tuandv\.m2\repository\io\github\x-stream\mxparser\1.2.2\mxparser-1.2.2.jar;C:\Users\tuandv\.m2\repository\xmlpull\xmlpull\1.1.3.1\xmlpull-1.1.3.1.jar;C:\Users\tuandv\.m2\repository\io\cucumber\cucumber-core\7.17.0\cucumber-core-7.17.0.jar;C:\Users\tuandv\.m2\repository\io\cucumber\cucumber-gherkin\7.17.0\cucumber-gherkin-7.17.0.jar;C:\Users\tuandv\.m2\repository\io\cucumber\cucumber-gherkin-messages\7.17.0\cucumber-gherkin-messages-7.17.0.jar;C:\Users\tuandv\.m2\repository\io\cucumber\gherkin\28.0.0\gherkin-28.0.0.jar;C:\Users\tuandv\.m2\repository\io\cucumber\messages\24.1.0\messages-24.1.0.jar;C:\Users\tuandv\.m2\repository\io\cucumber\testng-xml-formatter\0.1.0\testng-xml-formatter-0.1.0.jar;C:\Users\tuandv\.m2\repository\io\cucumber\query\12.2.0\query-12.2.0.jar;C:\Users\tuandv\.m2\repository\io\cucumber\tag-expressions\6.1.0\tag-expressions-6.1.0.jar;C:\Users\tuandv\.m2\repository\io\cucumber\cucumber-expressions\17.1.0\cucumber-expressions-17.1.0.jar;C:\Users\tuandv\.m2\repository\io\cucumber\datatable\7.17.0\datatable-7.17.0.jar;C:\Users\tuandv\.m2\repository\io\cucumber\cucumber-plugin\7.17.0\cucumber-plugin-7.17.0.jar;C:\Users\tuandv\.m2\repository\io\cucumber\docstring\7.17.0\docstring-7.17.0.jar;C:\Users\tuandv\.m2\repository\io\cucumber\html-formatter\21.3.1\html-formatter-21.3.1.jar;C:\Users\tuandv\.m2\repository\io\cucumber\junit-xml-formatter\0.4.0\junit-xml-formatter-0.4.0.jar;C:\Users\tuandv\.m2\repository\io\cucumber\ci-environment\10.0.1\ci-environment-10.0.1.jar;C:\Users\tuandv\.m2\repository\io\cucumber\cucumber-java\7.17.0\cucumber-java-7.17.0.jar;C:\Users\tuandv\.m2\repository\com\typesafe\config\1.4.3\config-1.4.3.jar;C:\Users\tuandv\.m2\repository\org\imgscalr\imgscalr-lib\4.2\imgscalr-lib-4.2.jar;C:\Users\tuandv\.m2\repository\org\awaitility\awaitility\4.2.0\awaitility-4.2.0.jar;C:\Users\tuandv\.m2\repository\org\freemarker\freemarker\2.3.32\freemarker-2.3.32.jar;C:\Users\tuandv\.m2\repository\io\github\classgraph\classgraph\4.8.157\classgraph-4.8.157.jar;C:\Users\tuandv\.m2\repository\com\github\ben-manes\caffeine\caffeine\2.9.2\caffeine-2.9.2.jar;C:\Users\tuandv\.m2\repository\org\ehcache\ehcache\3.10.8\ehcache-3.10.8.jar;C:\Users\tuandv\.m2\repository\javax\cache\cache-api\1.1.0\cache-api-1.1.0.jar;C:\Users\tuandv\.m2\repository\net\sourceforge\jexcelapi\jxl\2.6.12\jxl-2.6.12.jar;C:\Users\tuandv\.m2\repository\net\bytebuddy\byte-buddy\1.14.15\byte-buddy-1.14.15.jar;C:\Users\tuandv\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.15\byte-buddy-agent-1.14.15.jar;C:\Users\tuandv\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-all\0.64.8\flexmark-all-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark\0.64.8\flexmark-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-abbreviation\0.64.8\flexmark-ext-abbreviation-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-admonition\0.64.8\flexmark-ext-admonition-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-anchorlink\0.64.8\flexmark-ext-anchorlink-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-aside\0.64.8\flexmark-ext-aside-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-attributes\0.64.8\flexmark-ext-attributes-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-autolink\0.64.8\flexmark-ext-autolink-0.64.8.jar;C:\Users\tuandv\.m2\repository\org\nibor\autolink\autolink\0.6.0\autolink-0.6.0.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-definition\0.64.8\flexmark-ext-definition-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-emoji\0.64.8\flexmark-ext-emoji-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-enumerated-reference\0.64.8\flexmark-ext-enumerated-reference-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-escaped-character\0.64.8\flexmark-ext-escaped-character-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-footnotes\0.64.8\flexmark-ext-footnotes-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-gfm-issues\0.64.8\flexmark-ext-gfm-issues-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-gfm-strikethrough\0.64.8\flexmark-ext-gfm-strikethrough-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-gfm-tasklist\0.64.8\flexmark-ext-gfm-tasklist-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-gfm-users\0.64.8\flexmark-ext-gfm-users-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-gitlab\0.64.8\flexmark-ext-gitlab-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-jekyll-front-matter\0.64.8\flexmark-ext-jekyll-front-matter-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-jekyll-tag\0.64.8\flexmark-ext-jekyll-tag-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-media-tags\0.64.8\flexmark-ext-media-tags-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-macros\0.64.8\flexmark-ext-macros-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-ins\0.64.8\flexmark-ext-ins-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-xwiki-macros\0.64.8\flexmark-ext-xwiki-macros-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-superscript\0.64.8\flexmark-ext-superscript-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-toc\0.64.8\flexmark-ext-toc-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-typographic\0.64.8\flexmark-ext-typographic-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-wikilink\0.64.8\flexmark-ext-wikilink-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-yaml-front-matter\0.64.8\flexmark-ext-yaml-front-matter-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-youtube-embedded\0.64.8\flexmark-ext-youtube-embedded-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-html2md-converter\0.64.8\flexmark-html2md-converter-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-jira-converter\0.64.8\flexmark-jira-converter-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-pdf-converter\0.64.8\flexmark-pdf-converter-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\openhtmltopdf\openhtmltopdf-core\1.0.10\openhtmltopdf-core-1.0.10.jar;C:\Users\tuandv\.m2\repository\com\openhtmltopdf\openhtmltopdf-pdfbox\1.0.10\openhtmltopdf-pdfbox-1.0.10.jar;C:\Users\tuandv\.m2\repository\org\apache\pdfbox\pdfbox\2.0.24\pdfbox-2.0.24.jar;C:\Users\tuandv\.m2\repository\org\apache\pdfbox\fontbox\2.0.24\fontbox-2.0.24.jar;C:\Users\tuandv\.m2\repository\org\apache\pdfbox\xmpbox\2.0.24\xmpbox-2.0.24.jar;C:\Users\tuandv\.m2\repository\de\rototor\pdfbox\graphics2d\0.32\graphics2d-0.32.jar;C:\Users\tuandv\.m2\repository\com\openhtmltopdf\openhtmltopdf-rtl-support\1.0.10\openhtmltopdf-rtl-support-1.0.10.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-profile-pegdown\0.64.8\flexmark-profile-pegdown-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-util-ast\0.64.8\flexmark-util-ast-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-util-builder\0.64.8\flexmark-util-builder-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-util-collection\0.64.8\flexmark-util-collection-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-util-data\0.64.8\flexmark-util-data-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-util-dependency\0.64.8\flexmark-util-dependency-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-util-format\0.64.8\flexmark-util-format-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-util-html\0.64.8\flexmark-util-html-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-util-misc\0.64.8\flexmark-util-misc-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-util-options\0.64.8\flexmark-util-options-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-util-sequence\0.64.8\flexmark-util-sequence-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-util-visitor\0.64.8\flexmark-util-visitor-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-youtrack-converter\0.64.8\flexmark-youtrack-converter-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-resizable-image\0.64.8\flexmark-ext-resizable-image-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-tables\0.64.8\flexmark-ext-tables-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-util\0.64.8\flexmark-util-0.64.8.jar;C:\Users\tuandv\.m2\repository\net\serenity-bdd\serenity-reports\4.1.14\serenity-reports-4.1.14.jar;C:\Users\tuandv\.m2\repository\net\serenity-bdd\serenity-stats\4.1.14\serenity-stats-4.1.14.jar;C:\Users\tuandv\.m2\repository\net\serenity-bdd\serenity-reports-configuration\4.1.14\serenity-reports-configuration-4.1.14.jar;C:\Users\tuandv\.m2\repository\com\ibm\icu\icu4j\72.1\icu4j-72.1.jar;C:\Users\tuandv\.m2\repository\es\nitaur\markdown\txtmark\0.16\txtmark-0.16.jar;C:\Users\tuandv\.m2\repository\net\serenity-bdd\serenity-report-resources\4.1.14\serenity-report-resources-4.1.14.jar;C:\Users\tuandv\.m2\repository\com\google\code\gson\gson\2.10.1\gson-2.10.1.jar;C:\Users\tuandv\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.17.0\jackson-core-2.17.0.jar;C:\Users\tuandv\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.17.0\jackson-databind-2.17.0.jar;C:\Users\tuandv\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.17.0\jackson-annotations-2.17.0.jar;C:\Users\tuandv\.m2\repository\commons-codec\commons-codec\1.16.1\commons-codec-1.16.1.jar;C:\Users\tuandv\.m2\repository\commons-io\commons-io\2.15.1\commons-io-2.15.1.jar;C:\Users\tuandv\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\tuandv\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\tuandv\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\tuandv\.m2\repository\org\seleniumhq\selenium\selenium-java\4.21.0\selenium-java-4.21.0.jar;C:\Users\tuandv\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v123\4.21.0\selenium-devtools-v123-4.21.0.jar;C:\Users\tuandv\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v124\4.21.0\selenium-devtools-v124-4.21.0.jar;C:\Users\tuandv\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v125\4.21.0\selenium-devtools-v125-4.21.0.jar;C:\Users\tuandv\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v85\4.21.0\selenium-devtools-v85-4.21.0.jar;C:\Users\tuandv\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.21.0\selenium-remote-driver-4.21.0.jar;C:\Users\tuandv\.m2\repository\io\opentelemetry\semconv\opentelemetry-semconv\1.25.0-alpha\opentelemetry-semconv-1.25.0-alpha.jar;C:\Users\tuandv\.m2\repository\io\opentelemetry\opentelemetry-api\1.38.0\opentelemetry-api-1.38.0.jar;C:\Users\tuandv\.m2\repository\io\opentelemetry\opentelemetry-context\1.38.0\opentelemetry-context-1.38.0.jar;C:\Users\tuandv\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.38.0\opentelemetry-exporter-logging-1.38.0.jar;C:\Users\tuandv\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.38.0\opentelemetry-sdk-common-1.38.0.jar;C:\Users\tuandv\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.38.0\opentelemetry-sdk-extension-autoconfigure-spi-1.38.0.jar;C:\Users\tuandv\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.38.0\opentelemetry-sdk-extension-autoconfigure-1.38.0.jar;C:\Users\tuandv\.m2\repository\io\opentelemetry\opentelemetry-api-incubator\1.38.0-alpha\opentelemetry-api-incubator-1.38.0-alpha.jar;C:\Users\tuandv\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.38.0\opentelemetry-sdk-trace-1.38.0.jar;C:\Users\tuandv\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.38.0\opentelemetry-sdk-1.38.0.jar;C:\Users\tuandv\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.38.0\opentelemetry-sdk-metrics-1.38.0.jar;C:\Users\tuandv\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.38.0\opentelemetry-sdk-logs-1.38.0.jar;C:\Users\tuandv\.m2\repository\org\seleniumhq\selenium\selenium-os\4.21.0\selenium-os-4.21.0.jar;C:\Users\tuandv\.m2\repository\org\apache\commons\commons-exec\1.4.0\commons-exec-1.4.0.jar;C:\Users\tuandv\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.21.0\selenium-safari-driver-4.21.0.jar;C:\Users\tuandv\.m2\repository\org\seleniumhq\selenium\selenium-api\4.21.0\selenium-api-4.21.0.jar;C:\Users\tuandv\.m2\repository\org\seleniumhq\selenium\selenium-support\4.21.0\selenium-support-4.21.0.jar;C:\Users\tuandv\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\tuandv\.m2\repository\org\seleniumhq\selenium\selenium-json\4.21.0\selenium-json-4.21.0.jar;C:\Users\tuandv\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.21.0\selenium-chrome-driver-4.21.0.jar;C:\Users\tuandv\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.21.0\selenium-chromium-driver-4.21.0.jar;C:\Users\tuandv\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.21.0\selenium-manager-4.21.0.jar;C:\Users\tuandv\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.21.0\selenium-firefox-driver-4.21.0.jar;C:\Users\tuandv\.m2\repository\org\seleniumhq\selenium\selenium-http\4.21.0\selenium-http-4.21.0.jar;C:\Users\tuandv\.m2\repository\dev\failsafe\failsafe\3.3.2\failsafe-3.3.2.jar;C:\Users\tuandv\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.21.0\selenium-edge-driver-4.21.0.jar;C:\Users\tuandv\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.21.0\selenium-ie-driver-4.21.0.jar;C:\Users\tuandv\.m2\repository\org\htmlunit\htmlunit\4.1.0\htmlunit-4.1.0.jar;C:\Users\tuandv\.m2\repository\org\htmlunit\htmlunit-core-js\4.1.0\htmlunit-core-js-4.1.0.jar;C:\Users\tuandv\.m2\repository\org\htmlunit\neko-htmlunit\4.1.0\neko-htmlunit-4.1.0.jar;C:\Users\tuandv\.m2\repository\org\htmlunit\htmlunit-cssparser\4.1.0\htmlunit-cssparser-4.1.0.jar;C:\Users\tuandv\.m2\repository\org\htmlunit\htmlunit-xpath\4.1.0\htmlunit-xpath-4.1.0.jar;C:\Users\tuandv\.m2\repository\org\htmlunit\htmlunit-csp\4.1.0\htmlunit-csp-4.1.0.jar;C:\Users\tuandv\.m2\repository\org\htmlunit\htmlunit-websocket-client\4.1.0\htmlunit-websocket-client-4.1.0.jar;C:\Users\tuandv\.m2\repository\org\brotli\dec\0.1.2\dec-0.1.2.jar;C:\Users\tuandv\.m2\repository\org\seleniumhq\selenium\htmlunit3-driver\4.21.0\htmlunit3-driver-4.21.0.jar;C:\Users\tuandv\.m2\repository\io\appium\java-client\9.2.2\java-client-9.2.2.jar;C:\Users\tuandv\.m2\repository\org\apache\groovy\groovy\4.0.13\groovy-4.0.13.jar;C:\Users\tuandv\.m2\repository\net\sf\opencsv\opencsv\2.1\opencsv-2.1.jar;C:\Users\tuandv\.m2\repository\org\apache\commons\commons-lang3\3.14.0\commons-lang3-3.14.0.jar;C:\Users\tuandv\.m2\repository\org\apache\commons\commons-compress\1.26.0\commons-compress-1.26.0.jar;C:\Users\tuandv\.m2\repository\org\fluentlenium\fluentlenium-core\0.10.2\fluentlenium-core-0.10.2.jar;C:\Users\tuandv\.m2\repository\com\jhlabs\filters\2.0.235\filters-2.0.235.jar;C:\Users\tuandv\.m2\repository\com\paulhammant\ngwebdriver\1.1.6\ngwebdriver-1.1.6.jar;C:\Users\tuandv\.m2\repository\joda-time\joda-time\2.12.7\joda-time-2.12.7.jar;C:\Users\tuandv\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\tuandv\.m2\repository\com\google\jimfs\jimfs\1.3.0\jimfs-1.3.0.jar;C:\Users\tuandv\.m2\repository\org\mockito\mockito-core\3.3.3\mockito-core-3.3.3.jar;C:\Users\tuandv\.m2\repository\javax\xml\bind\jaxb-api\2.3.1\jaxb-api-2.3.1.jar;C:\Users\tuandv\.m2\repository\javax\activation\javax.activation-api\1.2.0\javax.activation-api-1.2.0.jar;C:\Users\tuandv\.m2\repository\com\sun\xml\bind\jaxb-core\2.3.0.1\jaxb-core-2.3.0.1.jar;C:\Users\tuandv\.m2\repository\com\sun\xml\bind\jaxb-impl\2.3.3\jaxb-impl-2.3.3.jar;C:\Users\tuandv\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\2.3.3\jakarta.xml.bind-api-2.3.3.jar;C:\Users\tuandv\.m2\repository\com\sun\activation\jakarta.activation\1.2.2\jakarta.activation-1.2.2.jar;C:\Users\tuandv\.m2\repository\javax\activation\activation\1.1.1\activation-1.1.1.jar;C:\Users\tuandv\.m2\repository\net\serenity-bdd\serenity-screenplay\4.1.14\serenity-screenplay-4.1.14.jar;C:\Users\tuandv\.m2\repository\net\serenity-bdd\serenity-screenplay-rest\4.1.20\serenity-screenplay-rest-4.1.20.jar;C:\Users\tuandv\.m2\repository\net\serenity-bdd\serenity-rest-assured\4.1.20\serenity-rest-assured-4.1.20.jar;C:\Users\tuandv\.m2\repository\org\apache\groovy\groovy-json\4.0.13\groovy-json-4.0.13.jar;C:\Users\tuandv\.m2\repository\org\assertj\assertj-core\3.25.3\assertj-core-3.25.3.jar;C:\Users\tuandv\.m2\repository\net\serenity-bdd\serenity-junit5\4.1.20\serenity-junit5-4.1.20.jar;C:\Users\tuandv\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.2\junit-jupiter-params-5.10.2.jar;C:\Users\tuandv\.m2\repository\org\junit\platform\junit-platform-launcher\1.10.2\junit-platform-launcher-1.10.2.jar;C:\Users\tuandv\.m2\repository\net\serenity-bdd\serenity-ensure\4.1.14\serenity-ensure-4.1.14.jar;C:\Users\tuandv\.m2\repository\net\serenity-bdd\serenity-screenplay-webdriver\4.1.14\serenity-screenplay-webdriver-4.1.14.jar;C:\Users\tuandv\.m2\repository\org\jetbrains\kotlin\kotlin-stdlib\1.9.24\kotlin-stdlib-1.9.24.jar;C:\Users\tuandv\.m2\repository\org\jetbrains\annotations\13.0\annotations-13.0.jar;C:\Users\tuandv\.m2\repository\io\rest-assured\rest-assured\5.3.0\rest-assured-5.3.0.jar;C:\Users\tuandv\.m2\repository\org\apache\groovy\groovy-xml\4.0.6\groovy-xml-4.0.6.jar;C:\Users\tuandv\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\tuandv\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\tuandv\.m2\repository\io\rest-assured\json-path\5.3.0\json-path-5.3.0.jar;C:\Users\tuandv\.m2\repository\io\rest-assured\rest-assured-common\5.3.0\rest-assured-common-5.3.0.jar;C:\Users\tuandv\.m2\repository\io\rest-assured\xml-path\5.3.0\xml-path-5.3.0.jar;C:\Users\tuandv\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\tuandv\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\tuandv\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\tuandv\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\tuandv\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\tuandv\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;C:\Users\tuandv\.m2\repository\ch\qos\logback\logback-classic\1.5.6\logback-classic-1.5.6.jar;C:\Users\tuandv\.m2\repository\ch\qos\logback\logback-core\1.5.6\logback-core-1.5.6.jar;C:\Users\tuandv\.m2\repository\org\slf4j\slf4j-api\2.0.13\slf4j-api-2.0.13.jar;C:\Users\tuandv\.m2\repository\org\projectlombok\lombok\1.18.30\lombok-1.18.30.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Asia/Bangkok"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17\bin"/>
+    <property name="sun.java.command" value="org.apache.maven.surefire.booter.ForkedBooter C:\Users\tuandv\AppData\Local\Temp\surefire7631664396032197853 2024-10-11T13-37-55_448-jvmRun1 surefire17055972665095499314tmp surefire_09712856226087618445tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\tuandv\project\automation-testek-api\target\test-classes;C:\Users\tuandv\.m2\repository\net\serenity-bdd\serenity-core\4.1.14\serenity-core-4.1.14.jar;C:\Users\tuandv\.m2\repository\net\serenity-bdd\serenity-model\4.1.14\serenity-model-4.1.14.jar;C:\Users\tuandv\.m2\repository\org\apache\commons\commons-text\1.11.0\commons-text-1.11.0.jar;C:\Users\tuandv\.m2\repository\commons-net\commons-net\3.10.0\commons-net-3.10.0.jar;C:\Users\tuandv\.m2\repository\com\google\guava\guava\33.1.0-jre\guava-33.1.0-jre.jar;C:\Users\tuandv\.m2\repository\com\google\guava\failureaccess\1.0.2\failureaccess-1.0.2.jar;C:\Users\tuandv\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\tuandv\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\tuandv\.m2\repository\org\checkerframework\checker-qual\3.42.0\checker-qual-3.42.0.jar;C:\Users\tuandv\.m2\repository\com\google\errorprone\error_prone_annotations\2.26.1\error_prone_annotations-2.26.1.jar;C:\Users\tuandv\.m2\repository\com\google\j2objc\j2objc-annotations\3.0.0\j2objc-annotations-3.0.0.jar;C:\Users\tuandv\.m2\repository\org\jsoup\jsoup\1.15.4\jsoup-1.15.4.jar;C:\Users\tuandv\.m2\repository\com\thoughtworks\xstream\xstream\1.4.20\xstream-1.4.20.jar;C:\Users\tuandv\.m2\repository\io\github\x-stream\mxparser\1.2.2\mxparser-1.2.2.jar;C:\Users\tuandv\.m2\repository\xmlpull\xmlpull\1.1.3.1\xmlpull-1.1.3.1.jar;C:\Users\tuandv\.m2\repository\io\cucumber\cucumber-core\7.17.0\cucumber-core-7.17.0.jar;C:\Users\tuandv\.m2\repository\io\cucumber\cucumber-gherkin\7.17.0\cucumber-gherkin-7.17.0.jar;C:\Users\tuandv\.m2\repository\io\cucumber\cucumber-gherkin-messages\7.17.0\cucumber-gherkin-messages-7.17.0.jar;C:\Users\tuandv\.m2\repository\io\cucumber\gherkin\28.0.0\gherkin-28.0.0.jar;C:\Users\tuandv\.m2\repository\io\cucumber\messages\24.1.0\messages-24.1.0.jar;C:\Users\tuandv\.m2\repository\io\cucumber\testng-xml-formatter\0.1.0\testng-xml-formatter-0.1.0.jar;C:\Users\tuandv\.m2\repository\io\cucumber\query\12.2.0\query-12.2.0.jar;C:\Users\tuandv\.m2\repository\io\cucumber\tag-expressions\6.1.0\tag-expressions-6.1.0.jar;C:\Users\tuandv\.m2\repository\io\cucumber\cucumber-expressions\17.1.0\cucumber-expressions-17.1.0.jar;C:\Users\tuandv\.m2\repository\io\cucumber\datatable\7.17.0\datatable-7.17.0.jar;C:\Users\tuandv\.m2\repository\io\cucumber\cucumber-plugin\7.17.0\cucumber-plugin-7.17.0.jar;C:\Users\tuandv\.m2\repository\io\cucumber\docstring\7.17.0\docstring-7.17.0.jar;C:\Users\tuandv\.m2\repository\io\cucumber\html-formatter\21.3.1\html-formatter-21.3.1.jar;C:\Users\tuandv\.m2\repository\io\cucumber\junit-xml-formatter\0.4.0\junit-xml-formatter-0.4.0.jar;C:\Users\tuandv\.m2\repository\io\cucumber\ci-environment\10.0.1\ci-environment-10.0.1.jar;C:\Users\tuandv\.m2\repository\io\cucumber\cucumber-java\7.17.0\cucumber-java-7.17.0.jar;C:\Users\tuandv\.m2\repository\com\typesafe\config\1.4.3\config-1.4.3.jar;C:\Users\tuandv\.m2\repository\org\imgscalr\imgscalr-lib\4.2\imgscalr-lib-4.2.jar;C:\Users\tuandv\.m2\repository\org\awaitility\awaitility\4.2.0\awaitility-4.2.0.jar;C:\Users\tuandv\.m2\repository\org\freemarker\freemarker\2.3.32\freemarker-2.3.32.jar;C:\Users\tuandv\.m2\repository\io\github\classgraph\classgraph\4.8.157\classgraph-4.8.157.jar;C:\Users\tuandv\.m2\repository\com\github\ben-manes\caffeine\caffeine\2.9.2\caffeine-2.9.2.jar;C:\Users\tuandv\.m2\repository\org\ehcache\ehcache\3.10.8\ehcache-3.10.8.jar;C:\Users\tuandv\.m2\repository\javax\cache\cache-api\1.1.0\cache-api-1.1.0.jar;C:\Users\tuandv\.m2\repository\net\sourceforge\jexcelapi\jxl\2.6.12\jxl-2.6.12.jar;C:\Users\tuandv\.m2\repository\net\bytebuddy\byte-buddy\1.14.15\byte-buddy-1.14.15.jar;C:\Users\tuandv\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.15\byte-buddy-agent-1.14.15.jar;C:\Users\tuandv\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-all\0.64.8\flexmark-all-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark\0.64.8\flexmark-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-abbreviation\0.64.8\flexmark-ext-abbreviation-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-admonition\0.64.8\flexmark-ext-admonition-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-anchorlink\0.64.8\flexmark-ext-anchorlink-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-aside\0.64.8\flexmark-ext-aside-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-attributes\0.64.8\flexmark-ext-attributes-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-autolink\0.64.8\flexmark-ext-autolink-0.64.8.jar;C:\Users\tuandv\.m2\repository\org\nibor\autolink\autolink\0.6.0\autolink-0.6.0.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-definition\0.64.8\flexmark-ext-definition-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-emoji\0.64.8\flexmark-ext-emoji-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-enumerated-reference\0.64.8\flexmark-ext-enumerated-reference-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-escaped-character\0.64.8\flexmark-ext-escaped-character-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-footnotes\0.64.8\flexmark-ext-footnotes-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-gfm-issues\0.64.8\flexmark-ext-gfm-issues-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-gfm-strikethrough\0.64.8\flexmark-ext-gfm-strikethrough-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-gfm-tasklist\0.64.8\flexmark-ext-gfm-tasklist-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-gfm-users\0.64.8\flexmark-ext-gfm-users-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-gitlab\0.64.8\flexmark-ext-gitlab-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-jekyll-front-matter\0.64.8\flexmark-ext-jekyll-front-matter-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-jekyll-tag\0.64.8\flexmark-ext-jekyll-tag-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-media-tags\0.64.8\flexmark-ext-media-tags-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-macros\0.64.8\flexmark-ext-macros-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-ins\0.64.8\flexmark-ext-ins-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-xwiki-macros\0.64.8\flexmark-ext-xwiki-macros-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-superscript\0.64.8\flexmark-ext-superscript-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-toc\0.64.8\flexmark-ext-toc-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-typographic\0.64.8\flexmark-ext-typographic-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-wikilink\0.64.8\flexmark-ext-wikilink-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-yaml-front-matter\0.64.8\flexmark-ext-yaml-front-matter-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-youtube-embedded\0.64.8\flexmark-ext-youtube-embedded-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-html2md-converter\0.64.8\flexmark-html2md-converter-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-jira-converter\0.64.8\flexmark-jira-converter-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-pdf-converter\0.64.8\flexmark-pdf-converter-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\openhtmltopdf\openhtmltopdf-core\1.0.10\openhtmltopdf-core-1.0.10.jar;C:\Users\tuandv\.m2\repository\com\openhtmltopdf\openhtmltopdf-pdfbox\1.0.10\openhtmltopdf-pdfbox-1.0.10.jar;C:\Users\tuandv\.m2\repository\org\apache\pdfbox\pdfbox\2.0.24\pdfbox-2.0.24.jar;C:\Users\tuandv\.m2\repository\org\apache\pdfbox\fontbox\2.0.24\fontbox-2.0.24.jar;C:\Users\tuandv\.m2\repository\org\apache\pdfbox\xmpbox\2.0.24\xmpbox-2.0.24.jar;C:\Users\tuandv\.m2\repository\de\rototor\pdfbox\graphics2d\0.32\graphics2d-0.32.jar;C:\Users\tuandv\.m2\repository\com\openhtmltopdf\openhtmltopdf-rtl-support\1.0.10\openhtmltopdf-rtl-support-1.0.10.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-profile-pegdown\0.64.8\flexmark-profile-pegdown-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-util-ast\0.64.8\flexmark-util-ast-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-util-builder\0.64.8\flexmark-util-builder-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-util-collection\0.64.8\flexmark-util-collection-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-util-data\0.64.8\flexmark-util-data-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-util-dependency\0.64.8\flexmark-util-dependency-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-util-format\0.64.8\flexmark-util-format-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-util-html\0.64.8\flexmark-util-html-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-util-misc\0.64.8\flexmark-util-misc-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-util-options\0.64.8\flexmark-util-options-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-util-sequence\0.64.8\flexmark-util-sequence-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-util-visitor\0.64.8\flexmark-util-visitor-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-youtrack-converter\0.64.8\flexmark-youtrack-converter-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-resizable-image\0.64.8\flexmark-ext-resizable-image-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-tables\0.64.8\flexmark-ext-tables-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-util\0.64.8\flexmark-util-0.64.8.jar;C:\Users\tuandv\.m2\repository\net\serenity-bdd\serenity-reports\4.1.14\serenity-reports-4.1.14.jar;C:\Users\tuandv\.m2\repository\net\serenity-bdd\serenity-stats\4.1.14\serenity-stats-4.1.14.jar;C:\Users\tuandv\.m2\repository\net\serenity-bdd\serenity-reports-configuration\4.1.14\serenity-reports-configuration-4.1.14.jar;C:\Users\tuandv\.m2\repository\com\ibm\icu\icu4j\72.1\icu4j-72.1.jar;C:\Users\tuandv\.m2\repository\es\nitaur\markdown\txtmark\0.16\txtmark-0.16.jar;C:\Users\tuandv\.m2\repository\net\serenity-bdd\serenity-report-resources\4.1.14\serenity-report-resources-4.1.14.jar;C:\Users\tuandv\.m2\repository\com\google\code\gson\gson\2.10.1\gson-2.10.1.jar;C:\Users\tuandv\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.17.0\jackson-core-2.17.0.jar;C:\Users\tuandv\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.17.0\jackson-databind-2.17.0.jar;C:\Users\tuandv\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.17.0\jackson-annotations-2.17.0.jar;C:\Users\tuandv\.m2\repository\commons-codec\commons-codec\1.16.1\commons-codec-1.16.1.jar;C:\Users\tuandv\.m2\repository\commons-io\commons-io\2.15.1\commons-io-2.15.1.jar;C:\Users\tuandv\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\tuandv\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\tuandv\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\tuandv\.m2\repository\org\seleniumhq\selenium\selenium-java\4.21.0\selenium-java-4.21.0.jar;C:\Users\tuandv\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v123\4.21.0\selenium-devtools-v123-4.21.0.jar;C:\Users\tuandv\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v124\4.21.0\selenium-devtools-v124-4.21.0.jar;C:\Users\tuandv\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v125\4.21.0\selenium-devtools-v125-4.21.0.jar;C:\Users\tuandv\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v85\4.21.0\selenium-devtools-v85-4.21.0.jar;C:\Users\tuandv\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.21.0\selenium-remote-driver-4.21.0.jar;C:\Users\tuandv\.m2\repository\io\opentelemetry\semconv\opentelemetry-semconv\1.25.0-alpha\opentelemetry-semconv-1.25.0-alpha.jar;C:\Users\tuandv\.m2\repository\io\opentelemetry\opentelemetry-api\1.38.0\opentelemetry-api-1.38.0.jar;C:\Users\tuandv\.m2\repository\io\opentelemetry\opentelemetry-context\1.38.0\opentelemetry-context-1.38.0.jar;C:\Users\tuandv\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.38.0\opentelemetry-exporter-logging-1.38.0.jar;C:\Users\tuandv\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.38.0\opentelemetry-sdk-common-1.38.0.jar;C:\Users\tuandv\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.38.0\opentelemetry-sdk-extension-autoconfigure-spi-1.38.0.jar;C:\Users\tuandv\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.38.0\opentelemetry-sdk-extension-autoconfigure-1.38.0.jar;C:\Users\tuandv\.m2\repository\io\opentelemetry\opentelemetry-api-incubator\1.38.0-alpha\opentelemetry-api-incubator-1.38.0-alpha.jar;C:\Users\tuandv\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.38.0\opentelemetry-sdk-trace-1.38.0.jar;C:\Users\tuandv\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.38.0\opentelemetry-sdk-1.38.0.jar;C:\Users\tuandv\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.38.0\opentelemetry-sdk-metrics-1.38.0.jar;C:\Users\tuandv\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.38.0\opentelemetry-sdk-logs-1.38.0.jar;C:\Users\tuandv\.m2\repository\org\seleniumhq\selenium\selenium-os\4.21.0\selenium-os-4.21.0.jar;C:\Users\tuandv\.m2\repository\org\apache\commons\commons-exec\1.4.0\commons-exec-1.4.0.jar;C:\Users\tuandv\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.21.0\selenium-safari-driver-4.21.0.jar;C:\Users\tuandv\.m2\repository\org\seleniumhq\selenium\selenium-api\4.21.0\selenium-api-4.21.0.jar;C:\Users\tuandv\.m2\repository\org\seleniumhq\selenium\selenium-support\4.21.0\selenium-support-4.21.0.jar;C:\Users\tuandv\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\tuandv\.m2\repository\org\seleniumhq\selenium\selenium-json\4.21.0\selenium-json-4.21.0.jar;C:\Users\tuandv\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.21.0\selenium-chrome-driver-4.21.0.jar;C:\Users\tuandv\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.21.0\selenium-chromium-driver-4.21.0.jar;C:\Users\tuandv\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.21.0\selenium-manager-4.21.0.jar;C:\Users\tuandv\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.21.0\selenium-firefox-driver-4.21.0.jar;C:\Users\tuandv\.m2\repository\org\seleniumhq\selenium\selenium-http\4.21.0\selenium-http-4.21.0.jar;C:\Users\tuandv\.m2\repository\dev\failsafe\failsafe\3.3.2\failsafe-3.3.2.jar;C:\Users\tuandv\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.21.0\selenium-edge-driver-4.21.0.jar;C:\Users\tuandv\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.21.0\selenium-ie-driver-4.21.0.jar;C:\Users\tuandv\.m2\repository\org\htmlunit\htmlunit\4.1.0\htmlunit-4.1.0.jar;C:\Users\tuandv\.m2\repository\org\htmlunit\htmlunit-core-js\4.1.0\htmlunit-core-js-4.1.0.jar;C:\Users\tuandv\.m2\repository\org\htmlunit\neko-htmlunit\4.1.0\neko-htmlunit-4.1.0.jar;C:\Users\tuandv\.m2\repository\org\htmlunit\htmlunit-cssparser\4.1.0\htmlunit-cssparser-4.1.0.jar;C:\Users\tuandv\.m2\repository\org\htmlunit\htmlunit-xpath\4.1.0\htmlunit-xpath-4.1.0.jar;C:\Users\tuandv\.m2\repository\org\htmlunit\htmlunit-csp\4.1.0\htmlunit-csp-4.1.0.jar;C:\Users\tuandv\.m2\repository\org\htmlunit\htmlunit-websocket-client\4.1.0\htmlunit-websocket-client-4.1.0.jar;C:\Users\tuandv\.m2\repository\org\brotli\dec\0.1.2\dec-0.1.2.jar;C:\Users\tuandv\.m2\repository\org\seleniumhq\selenium\htmlunit3-driver\4.21.0\htmlunit3-driver-4.21.0.jar;C:\Users\tuandv\.m2\repository\io\appium\java-client\9.2.2\java-client-9.2.2.jar;C:\Users\tuandv\.m2\repository\org\apache\groovy\groovy\4.0.13\groovy-4.0.13.jar;C:\Users\tuandv\.m2\repository\net\sf\opencsv\opencsv\2.1\opencsv-2.1.jar;C:\Users\tuandv\.m2\repository\org\apache\commons\commons-lang3\3.14.0\commons-lang3-3.14.0.jar;C:\Users\tuandv\.m2\repository\org\apache\commons\commons-compress\1.26.0\commons-compress-1.26.0.jar;C:\Users\tuandv\.m2\repository\org\fluentlenium\fluentlenium-core\0.10.2\fluentlenium-core-0.10.2.jar;C:\Users\tuandv\.m2\repository\com\jhlabs\filters\2.0.235\filters-2.0.235.jar;C:\Users\tuandv\.m2\repository\com\paulhammant\ngwebdriver\1.1.6\ngwebdriver-1.1.6.jar;C:\Users\tuandv\.m2\repository\joda-time\joda-time\2.12.7\joda-time-2.12.7.jar;C:\Users\tuandv\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\tuandv\.m2\repository\com\google\jimfs\jimfs\1.3.0\jimfs-1.3.0.jar;C:\Users\tuandv\.m2\repository\org\mockito\mockito-core\3.3.3\mockito-core-3.3.3.jar;C:\Users\tuandv\.m2\repository\javax\xml\bind\jaxb-api\2.3.1\jaxb-api-2.3.1.jar;C:\Users\tuandv\.m2\repository\javax\activation\javax.activation-api\1.2.0\javax.activation-api-1.2.0.jar;C:\Users\tuandv\.m2\repository\com\sun\xml\bind\jaxb-core\2.3.0.1\jaxb-core-2.3.0.1.jar;C:\Users\tuandv\.m2\repository\com\sun\xml\bind\jaxb-impl\2.3.3\jaxb-impl-2.3.3.jar;C:\Users\tuandv\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\2.3.3\jakarta.xml.bind-api-2.3.3.jar;C:\Users\tuandv\.m2\repository\com\sun\activation\jakarta.activation\1.2.2\jakarta.activation-1.2.2.jar;C:\Users\tuandv\.m2\repository\javax\activation\activation\1.1.1\activation-1.1.1.jar;C:\Users\tuandv\.m2\repository\net\serenity-bdd\serenity-screenplay\4.1.14\serenity-screenplay-4.1.14.jar;C:\Users\tuandv\.m2\repository\net\serenity-bdd\serenity-screenplay-rest\4.1.20\serenity-screenplay-rest-4.1.20.jar;C:\Users\tuandv\.m2\repository\net\serenity-bdd\serenity-rest-assured\4.1.20\serenity-rest-assured-4.1.20.jar;C:\Users\tuandv\.m2\repository\org\apache\groovy\groovy-json\4.0.13\groovy-json-4.0.13.jar;C:\Users\tuandv\.m2\repository\org\assertj\assertj-core\3.25.3\assertj-core-3.25.3.jar;C:\Users\tuandv\.m2\repository\net\serenity-bdd\serenity-junit5\4.1.20\serenity-junit5-4.1.20.jar;C:\Users\tuandv\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.2\junit-jupiter-params-5.10.2.jar;C:\Users\tuandv\.m2\repository\org\junit\platform\junit-platform-launcher\1.10.2\junit-platform-launcher-1.10.2.jar;C:\Users\tuandv\.m2\repository\net\serenity-bdd\serenity-ensure\4.1.14\serenity-ensure-4.1.14.jar;C:\Users\tuandv\.m2\repository\net\serenity-bdd\serenity-screenplay-webdriver\4.1.14\serenity-screenplay-webdriver-4.1.14.jar;C:\Users\tuandv\.m2\repository\org\jetbrains\kotlin\kotlin-stdlib\1.9.24\kotlin-stdlib-1.9.24.jar;C:\Users\tuandv\.m2\repository\org\jetbrains\annotations\13.0\annotations-13.0.jar;C:\Users\tuandv\.m2\repository\io\rest-assured\rest-assured\5.3.0\rest-assured-5.3.0.jar;C:\Users\tuandv\.m2\repository\org\apache\groovy\groovy-xml\4.0.6\groovy-xml-4.0.6.jar;C:\Users\tuandv\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\tuandv\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\tuandv\.m2\repository\io\rest-assured\json-path\5.3.0\json-path-5.3.0.jar;C:\Users\tuandv\.m2\repository\io\rest-assured\rest-assured-common\5.3.0\rest-assured-common-5.3.0.jar;C:\Users\tuandv\.m2\repository\io\rest-assured\xml-path\5.3.0\xml-path-5.3.0.jar;C:\Users\tuandv\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\tuandv\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\tuandv\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\tuandv\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\tuandv\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\tuandv\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;C:\Users\tuandv\.m2\repository\ch\qos\logback\logback-classic\1.5.6\logback-classic-1.5.6.jar;C:\Users\tuandv\.m2\repository\ch\qos\logback\logback-core\1.5.6\logback-core-1.5.6.jar;C:\Users\tuandv\.m2\repository\org\slf4j\slf4j-api\2.0.13\slf4j-api-2.0.13.jar;C:\Users\tuandv\.m2\repository\org\projectlombok\lombok\1.18.30\lombok-1.18.30.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\tuandv"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="jdk.module.path" value="C:\Users\tuandv\project\automation-testek-api\target\automation-testek-api-1.0-SNAPSHOT.jar"/>
+    <property name="java.version.date" value="2024-04-16"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-17"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\tuandv\project\automation-testek-api"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\tuandv\.m2\repository\org\apache\maven\surefire\surefire-booter\3.0.0-M5\surefire-booter-3.0.0-M5.jar;C:\Users\tuandv\.m2\repository\org\apache\maven\surefire\surefire-api\3.0.0-M5\surefire-api-3.0.0-M5.jar;C:\Users\tuandv\.m2\repository\org\apache\maven\surefire\surefire-logger-api\3.0.0-M5\surefire-logger-api-3.0.0-M5.jar;C:\Users\tuandv\.m2\repository\org\apache\maven\surefire\surefire-shared-utils\3.0.0-M4\surefire-shared-utils-3.0.0-M4.jar;C:\Users\tuandv\.m2\repository\org\apache\maven\surefire\surefire-extensions-spi\3.0.0-M5\surefire-extensions-spi-3.0.0-M5.jar;C:\Users\tuandv\project\automation-testek-api\target\test-classes;C:\Users\tuandv\.m2\repository\net\serenity-bdd\serenity-core\4.1.14\serenity-core-4.1.14.jar;C:\Users\tuandv\.m2\repository\net\serenity-bdd\serenity-model\4.1.14\serenity-model-4.1.14.jar;C:\Users\tuandv\.m2\repository\org\apache\commons\commons-text\1.11.0\commons-text-1.11.0.jar;C:\Users\tuandv\.m2\repository\commons-net\commons-net\3.10.0\commons-net-3.10.0.jar;C:\Users\tuandv\.m2\repository\com\google\guava\guava\33.1.0-jre\guava-33.1.0-jre.jar;C:\Users\tuandv\.m2\repository\com\google\guava\failureaccess\1.0.2\failureaccess-1.0.2.jar;C:\Users\tuandv\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\tuandv\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\tuandv\.m2\repository\org\checkerframework\checker-qual\3.42.0\checker-qual-3.42.0.jar;C:\Users\tuandv\.m2\repository\com\google\errorprone\error_prone_annotations\2.26.1\error_prone_annotations-2.26.1.jar;C:\Users\tuandv\.m2\repository\com\google\j2objc\j2objc-annotations\3.0.0\j2objc-annotations-3.0.0.jar;C:\Users\tuandv\.m2\repository\org\jsoup\jsoup\1.15.4\jsoup-1.15.4.jar;C:\Users\tuandv\.m2\repository\com\thoughtworks\xstream\xstream\1.4.20\xstream-1.4.20.jar;C:\Users\tuandv\.m2\repository\io\github\x-stream\mxparser\1.2.2\mxparser-1.2.2.jar;C:\Users\tuandv\.m2\repository\xmlpull\xmlpull\1.1.3.1\xmlpull-1.1.3.1.jar;C:\Users\tuandv\.m2\repository\io\cucumber\cucumber-core\7.17.0\cucumber-core-7.17.0.jar;C:\Users\tuandv\.m2\repository\io\cucumber\cucumber-gherkin\7.17.0\cucumber-gherkin-7.17.0.jar;C:\Users\tuandv\.m2\repository\io\cucumber\cucumber-gherkin-messages\7.17.0\cucumber-gherkin-messages-7.17.0.jar;C:\Users\tuandv\.m2\repository\io\cucumber\gherkin\28.0.0\gherkin-28.0.0.jar;C:\Users\tuandv\.m2\repository\io\cucumber\messages\24.1.0\messages-24.1.0.jar;C:\Users\tuandv\.m2\repository\io\cucumber\testng-xml-formatter\0.1.0\testng-xml-formatter-0.1.0.jar;C:\Users\tuandv\.m2\repository\io\cucumber\query\12.2.0\query-12.2.0.jar;C:\Users\tuandv\.m2\repository\io\cucumber\tag-expressions\6.1.0\tag-expressions-6.1.0.jar;C:\Users\tuandv\.m2\repository\io\cucumber\cucumber-expressions\17.1.0\cucumber-expressions-17.1.0.jar;C:\Users\tuandv\.m2\repository\io\cucumber\datatable\7.17.0\datatable-7.17.0.jar;C:\Users\tuandv\.m2\repository\io\cucumber\cucumber-plugin\7.17.0\cucumber-plugin-7.17.0.jar;C:\Users\tuandv\.m2\repository\io\cucumber\docstring\7.17.0\docstring-7.17.0.jar;C:\Users\tuandv\.m2\repository\io\cucumber\html-formatter\21.3.1\html-formatter-21.3.1.jar;C:\Users\tuandv\.m2\repository\io\cucumber\junit-xml-formatter\0.4.0\junit-xml-formatter-0.4.0.jar;C:\Users\tuandv\.m2\repository\io\cucumber\ci-environment\10.0.1\ci-environment-10.0.1.jar;C:\Users\tuandv\.m2\repository\io\cucumber\cucumber-java\7.17.0\cucumber-java-7.17.0.jar;C:\Users\tuandv\.m2\repository\com\typesafe\config\1.4.3\config-1.4.3.jar;C:\Users\tuandv\.m2\repository\org\imgscalr\imgscalr-lib\4.2\imgscalr-lib-4.2.jar;C:\Users\tuandv\.m2\repository\org\awaitility\awaitility\4.2.0\awaitility-4.2.0.jar;C:\Users\tuandv\.m2\repository\org\freemarker\freemarker\2.3.32\freemarker-2.3.32.jar;C:\Users\tuandv\.m2\repository\io\github\classgraph\classgraph\4.8.157\classgraph-4.8.157.jar;C:\Users\tuandv\.m2\repository\com\github\ben-manes\caffeine\caffeine\2.9.2\caffeine-2.9.2.jar;C:\Users\tuandv\.m2\repository\org\ehcache\ehcache\3.10.8\ehcache-3.10.8.jar;C:\Users\tuandv\.m2\repository\javax\cache\cache-api\1.1.0\cache-api-1.1.0.jar;C:\Users\tuandv\.m2\repository\net\sourceforge\jexcelapi\jxl\2.6.12\jxl-2.6.12.jar;C:\Users\tuandv\.m2\repository\net\bytebuddy\byte-buddy\1.14.15\byte-buddy-1.14.15.jar;C:\Users\tuandv\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.15\byte-buddy-agent-1.14.15.jar;C:\Users\tuandv\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-all\0.64.8\flexmark-all-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark\0.64.8\flexmark-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-abbreviation\0.64.8\flexmark-ext-abbreviation-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-admonition\0.64.8\flexmark-ext-admonition-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-anchorlink\0.64.8\flexmark-ext-anchorlink-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-aside\0.64.8\flexmark-ext-aside-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-attributes\0.64.8\flexmark-ext-attributes-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-autolink\0.64.8\flexmark-ext-autolink-0.64.8.jar;C:\Users\tuandv\.m2\repository\org\nibor\autolink\autolink\0.6.0\autolink-0.6.0.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-definition\0.64.8\flexmark-ext-definition-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-emoji\0.64.8\flexmark-ext-emoji-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-enumerated-reference\0.64.8\flexmark-ext-enumerated-reference-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-escaped-character\0.64.8\flexmark-ext-escaped-character-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-footnotes\0.64.8\flexmark-ext-footnotes-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-gfm-issues\0.64.8\flexmark-ext-gfm-issues-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-gfm-strikethrough\0.64.8\flexmark-ext-gfm-strikethrough-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-gfm-tasklist\0.64.8\flexmark-ext-gfm-tasklist-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-gfm-users\0.64.8\flexmark-ext-gfm-users-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-gitlab\0.64.8\flexmark-ext-gitlab-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-jekyll-front-matter\0.64.8\flexmark-ext-jekyll-front-matter-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-jekyll-tag\0.64.8\flexmark-ext-jekyll-tag-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-media-tags\0.64.8\flexmark-ext-media-tags-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-macros\0.64.8\flexmark-ext-macros-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-ins\0.64.8\flexmark-ext-ins-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-xwiki-macros\0.64.8\flexmark-ext-xwiki-macros-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-superscript\0.64.8\flexmark-ext-superscript-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-toc\0.64.8\flexmark-ext-toc-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-typographic\0.64.8\flexmark-ext-typographic-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-wikilink\0.64.8\flexmark-ext-wikilink-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-yaml-front-matter\0.64.8\flexmark-ext-yaml-front-matter-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-youtube-embedded\0.64.8\flexmark-ext-youtube-embedded-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-html2md-converter\0.64.8\flexmark-html2md-converter-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-jira-converter\0.64.8\flexmark-jira-converter-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-pdf-converter\0.64.8\flexmark-pdf-converter-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\openhtmltopdf\openhtmltopdf-core\1.0.10\openhtmltopdf-core-1.0.10.jar;C:\Users\tuandv\.m2\repository\com\openhtmltopdf\openhtmltopdf-pdfbox\1.0.10\openhtmltopdf-pdfbox-1.0.10.jar;C:\Users\tuandv\.m2\repository\org\apache\pdfbox\pdfbox\2.0.24\pdfbox-2.0.24.jar;C:\Users\tuandv\.m2\repository\org\apache\pdfbox\fontbox\2.0.24\fontbox-2.0.24.jar;C:\Users\tuandv\.m2\repository\org\apache\pdfbox\xmpbox\2.0.24\xmpbox-2.0.24.jar;C:\Users\tuandv\.m2\repository\de\rototor\pdfbox\graphics2d\0.32\graphics2d-0.32.jar;C:\Users\tuandv\.m2\repository\com\openhtmltopdf\openhtmltopdf-rtl-support\1.0.10\openhtmltopdf-rtl-support-1.0.10.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-profile-pegdown\0.64.8\flexmark-profile-pegdown-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-util-ast\0.64.8\flexmark-util-ast-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-util-builder\0.64.8\flexmark-util-builder-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-util-collection\0.64.8\flexmark-util-collection-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-util-data\0.64.8\flexmark-util-data-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-util-dependency\0.64.8\flexmark-util-dependency-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-util-format\0.64.8\flexmark-util-format-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-util-html\0.64.8\flexmark-util-html-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-util-misc\0.64.8\flexmark-util-misc-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-util-options\0.64.8\flexmark-util-options-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-util-sequence\0.64.8\flexmark-util-sequence-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-util-visitor\0.64.8\flexmark-util-visitor-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-youtrack-converter\0.64.8\flexmark-youtrack-converter-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-resizable-image\0.64.8\flexmark-ext-resizable-image-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-ext-tables\0.64.8\flexmark-ext-tables-0.64.8.jar;C:\Users\tuandv\.m2\repository\com\vladsch\flexmark\flexmark-util\0.64.8\flexmark-util-0.64.8.jar;C:\Users\tuandv\.m2\repository\net\serenity-bdd\serenity-reports\4.1.14\serenity-reports-4.1.14.jar;C:\Users\tuandv\.m2\repository\net\serenity-bdd\serenity-stats\4.1.14\serenity-stats-4.1.14.jar;C:\Users\tuandv\.m2\repository\net\serenity-bdd\serenity-reports-configuration\4.1.14\serenity-reports-configuration-4.1.14.jar;C:\Users\tuandv\.m2\repository\com\ibm\icu\icu4j\72.1\icu4j-72.1.jar;C:\Users\tuandv\.m2\repository\es\nitaur\markdown\txtmark\0.16\txtmark-0.16.jar;C:\Users\tuandv\.m2\repository\net\serenity-bdd\serenity-report-resources\4.1.14\serenity-report-resources-4.1.14.jar;C:\Users\tuandv\.m2\repository\com\google\code\gson\gson\2.10.1\gson-2.10.1.jar;C:\Users\tuandv\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.17.0\jackson-core-2.17.0.jar;C:\Users\tuandv\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.17.0\jackson-databind-2.17.0.jar;C:\Users\tuandv\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.17.0\jackson-annotations-2.17.0.jar;C:\Users\tuandv\.m2\repository\commons-codec\commons-codec\1.16.1\commons-codec-1.16.1.jar;C:\Users\tuandv\.m2\repository\commons-io\commons-io\2.15.1\commons-io-2.15.1.jar;C:\Users\tuandv\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\tuandv\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\tuandv\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\tuandv\.m2\repository\org\seleniumhq\selenium\selenium-java\4.21.0\selenium-java-4.21.0.jar;C:\Users\tuandv\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v123\4.21.0\selenium-devtools-v123-4.21.0.jar;C:\Users\tuandv\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v124\4.21.0\selenium-devtools-v124-4.21.0.jar;C:\Users\tuandv\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v125\4.21.0\selenium-devtools-v125-4.21.0.jar;C:\Users\tuandv\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v85\4.21.0\selenium-devtools-v85-4.21.0.jar;C:\Users\tuandv\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.21.0\selenium-remote-driver-4.21.0.jar;C:\Users\tuandv\.m2\repository\io\opentelemetry\semconv\opentelemetry-semconv\1.25.0-alpha\opentelemetry-semconv-1.25.0-alpha.jar;C:\Users\tuandv\.m2\repository\io\opentelemetry\opentelemetry-api\1.38.0\opentelemetry-api-1.38.0.jar;C:\Users\tuandv\.m2\repository\io\opentelemetry\opentelemetry-context\1.38.0\opentelemetry-context-1.38.0.jar;C:\Users\tuandv\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.38.0\opentelemetry-exporter-logging-1.38.0.jar;C:\Users\tuandv\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.38.0\opentelemetry-sdk-common-1.38.0.jar;C:\Users\tuandv\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.38.0\opentelemetry-sdk-extension-autoconfigure-spi-1.38.0.jar;C:\Users\tuandv\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.38.0\opentelemetry-sdk-extension-autoconfigure-1.38.0.jar;C:\Users\tuandv\.m2\repository\io\opentelemetry\opentelemetry-api-incubator\1.38.0-alpha\opentelemetry-api-incubator-1.38.0-alpha.jar;C:\Users\tuandv\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.38.0\opentelemetry-sdk-trace-1.38.0.jar;C:\Users\tuandv\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.38.0\opentelemetry-sdk-1.38.0.jar;C:\Users\tuandv\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.38.0\opentelemetry-sdk-metrics-1.38.0.jar;C:\Users\tuandv\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.38.0\opentelemetry-sdk-logs-1.38.0.jar;C:\Users\tuandv\.m2\repository\org\seleniumhq\selenium\selenium-os\4.21.0\selenium-os-4.21.0.jar;C:\Users\tuandv\.m2\repository\org\apache\commons\commons-exec\1.4.0\commons-exec-1.4.0.jar;C:\Users\tuandv\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.21.0\selenium-safari-driver-4.21.0.jar;C:\Users\tuandv\.m2\repository\org\seleniumhq\selenium\selenium-api\4.21.0\selenium-api-4.21.0.jar;C:\Users\tuandv\.m2\repository\org\seleniumhq\selenium\selenium-support\4.21.0\selenium-support-4.21.0.jar;C:\Users\tuandv\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\tuandv\.m2\repository\org\seleniumhq\selenium\selenium-json\4.21.0\selenium-json-4.21.0.jar;C:\Users\tuandv\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.21.0\selenium-chrome-driver-4.21.0.jar;C:\Users\tuandv\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.21.0\selenium-chromium-driver-4.21.0.jar;C:\Users\tuandv\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.21.0\selenium-manager-4.21.0.jar;C:\Users\tuandv\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.21.0\selenium-firefox-driver-4.21.0.jar;C:\Users\tuandv\.m2\repository\org\seleniumhq\selenium\selenium-http\4.21.0\selenium-http-4.21.0.jar;C:\Users\tuandv\.m2\repository\dev\failsafe\failsafe\3.3.2\failsafe-3.3.2.jar;C:\Users\tuandv\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.21.0\selenium-edge-driver-4.21.0.jar;C:\Users\tuandv\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.21.0\selenium-ie-driver-4.21.0.jar;C:\Users\tuandv\.m2\repository\org\htmlunit\htmlunit\4.1.0\htmlunit-4.1.0.jar;C:\Users\tuandv\.m2\repository\org\htmlunit\htmlunit-core-js\4.1.0\htmlunit-core-js-4.1.0.jar;C:\Users\tuandv\.m2\repository\org\htmlunit\neko-htmlunit\4.1.0\neko-htmlunit-4.1.0.jar;C:\Users\tuandv\.m2\repository\org\htmlunit\htmlunit-cssparser\4.1.0\htmlunit-cssparser-4.1.0.jar;C:\Users\tuandv\.m2\repository\org\htmlunit\htmlunit-xpath\4.1.0\htmlunit-xpath-4.1.0.jar;C:\Users\tuandv\.m2\repository\org\htmlunit\htmlunit-csp\4.1.0\htmlunit-csp-4.1.0.jar;C:\Users\tuandv\.m2\repository\org\htmlunit\htmlunit-websocket-client\4.1.0\htmlunit-websocket-client-4.1.0.jar;C:\Users\tuandv\.m2\repository\org\brotli\dec\0.1.2\dec-0.1.2.jar;C:\Users\tuandv\.m2\repository\org\seleniumhq\selenium\htmlunit3-driver\4.21.0\htmlunit3-driver-4.21.0.jar;C:\Users\tuandv\.m2\repository\io\appium\java-client\9.2.2\java-client-9.2.2.jar;C:\Users\tuandv\.m2\repository\org\apache\groovy\groovy\4.0.13\groovy-4.0.13.jar;C:\Users\tuandv\.m2\repository\net\sf\opencsv\opencsv\2.1\opencsv-2.1.jar;C:\Users\tuandv\.m2\repository\org\apache\commons\commons-lang3\3.14.0\commons-lang3-3.14.0.jar;C:\Users\tuandv\.m2\repository\org\apache\commons\commons-compress\1.26.0\commons-compress-1.26.0.jar;C:\Users\tuandv\.m2\repository\org\fluentlenium\fluentlenium-core\0.10.2\fluentlenium-core-0.10.2.jar;C:\Users\tuandv\.m2\repository\com\jhlabs\filters\2.0.235\filters-2.0.235.jar;C:\Users\tuandv\.m2\repository\com\paulhammant\ngwebdriver\1.1.6\ngwebdriver-1.1.6.jar;C:\Users\tuandv\.m2\repository\joda-time\joda-time\2.12.7\joda-time-2.12.7.jar;C:\Users\tuandv\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\tuandv\.m2\repository\com\google\jimfs\jimfs\1.3.0\jimfs-1.3.0.jar;C:\Users\tuandv\.m2\repository\org\mockito\mockito-core\3.3.3\mockito-core-3.3.3.jar;C:\Users\tuandv\.m2\repository\javax\xml\bind\jaxb-api\2.3.1\jaxb-api-2.3.1.jar;C:\Users\tuandv\.m2\repository\javax\activation\javax.activation-api\1.2.0\javax.activation-api-1.2.0.jar;C:\Users\tuandv\.m2\repository\com\sun\xml\bind\jaxb-core\2.3.0.1\jaxb-core-2.3.0.1.jar;C:\Users\tuandv\.m2\repository\com\sun\xml\bind\jaxb-impl\2.3.3\jaxb-impl-2.3.3.jar;C:\Users\tuandv\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\2.3.3\jakarta.xml.bind-api-2.3.3.jar;C:\Users\tuandv\.m2\repository\com\sun\activation\jakarta.activation\1.2.2\jakarta.activation-1.2.2.jar;C:\Users\tuandv\.m2\repository\javax\activation\activation\1.1.1\activation-1.1.1.jar;C:\Users\tuandv\.m2\repository\net\serenity-bdd\serenity-screenplay\4.1.14\serenity-screenplay-4.1.14.jar;C:\Users\tuandv\.m2\repository\net\serenity-bdd\serenity-screenplay-rest\4.1.20\serenity-screenplay-rest-4.1.20.jar;C:\Users\tuandv\.m2\repository\net\serenity-bdd\serenity-rest-assured\4.1.20\serenity-rest-assured-4.1.20.jar;C:\Users\tuandv\.m2\repository\org\apache\groovy\groovy-json\4.0.13\groovy-json-4.0.13.jar;C:\Users\tuandv\.m2\repository\org\assertj\assertj-core\3.25.3\assertj-core-3.25.3.jar;C:\Users\tuandv\.m2\repository\net\serenity-bdd\serenity-junit5\4.1.20\serenity-junit5-4.1.20.jar;C:\Users\tuandv\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.2\junit-jupiter-params-5.10.2.jar;C:\Users\tuandv\.m2\repository\org\junit\platform\junit-platform-launcher\1.10.2\junit-platform-launcher-1.10.2.jar;C:\Users\tuandv\.m2\repository\net\serenity-bdd\serenity-ensure\4.1.14\serenity-ensure-4.1.14.jar;C:\Users\tuandv\.m2\repository\net\serenity-bdd\serenity-screenplay-webdriver\4.1.14\serenity-screenplay-webdriver-4.1.14.jar;C:\Users\tuandv\.m2\repository\org\jetbrains\kotlin\kotlin-stdlib\1.9.24\kotlin-stdlib-1.9.24.jar;C:\Users\tuandv\.m2\repository\org\jetbrains\annotations\13.0\annotations-13.0.jar;C:\Users\tuandv\.m2\repository\io\rest-assured\rest-assured\5.3.0\rest-assured-5.3.0.jar;C:\Users\tuandv\.m2\repository\org\apache\groovy\groovy-xml\4.0.6\groovy-xml-4.0.6.jar;C:\Users\tuandv\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\tuandv\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\tuandv\.m2\repository\io\rest-assured\json-path\5.3.0\json-path-5.3.0.jar;C:\Users\tuandv\.m2\repository\io\rest-assured\rest-assured-common\5.3.0\rest-assured-common-5.3.0.jar;C:\Users\tuandv\.m2\repository\io\rest-assured\xml-path\5.3.0\xml-path-5.3.0.jar;C:\Users\tuandv\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\tuandv\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\tuandv\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\tuandv\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\tuandv\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\tuandv\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;C:\Users\tuandv\.m2\repository\ch\qos\logback\logback-classic\1.5.6\logback-classic-1.5.6.jar;C:\Users\tuandv\.m2\repository\ch\qos\logback\logback-core\1.5.6\logback-core-1.5.6.jar;C:\Users\tuandv\.m2\repository\org\slf4j\slf4j-api\2.0.13\slf4j-api-2.0.13.jar;C:\Users\tuandv\.m2\repository\org\projectlombok\lombok\1.18.30\lombok-1.18.30.jar;C:\Users\tuandv\.m2\repository\org\apache\maven\surefire\surefire-junit-platform\3.0.0-M5\surefire-junit-platform-3.0.0-M5.jar;C:\Users\tuandv\.m2\repository\org\apache\maven\surefire\common-java5\3.0.0-M5\common-java5-3.0.0-M5.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="17.0.11+7-LTS-207"/>
+    <property name="user.name" value="tuandv"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\tuandv\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\tuandv\AppData\Local\Temp\"/>
+    <property name="java.version" value="17.0.11"/>
+    <property name="user.dir" value="C:\Users\tuandv\project\automation-testek-api"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-17\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\dotnet\;C:\Program Files (x86)\Sennheiser\SenncomSDK\;C:\Program Files\TortoiseGit\bin;C:\Program Files\Git\cmd;C:\Program Files\maven\apache-maven-3.6.3\bin;%JAVA_HOME%\bin;C:\Program Files\nodejs\;C:\Program Files\Redis\;C:\Users\tuandv\AppData\Local\Microsoft\WindowsApps;;."/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="17.0.11+7-LTS-207"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="61.0"/>
+  </properties>
+  <testcase name="CreateCateDuplicateName" classname="com.testek.api.features.categoryFeatures.CreateCategoryTestCase" time="7.069">
+    <system-out><![CDATA[13:37:59.526 [main] INFO net.serenitybdd.junit5.JUnit5DataDrivenAnnotations -- GetParameterTablesFromMethodSource: Put parameter dataTableName com.testek.api.features.categoryFeatures.CreateCategoryTestCase.CreateCateSuccess [[CategoryModel(id=null, cateDesc=testcase create category success, categoryName=CTT001, status=ACTIVE)], [CategoryModel(id=null, cateDesc=null, categoryName=CTT001, status=ACTIVE)], [CategoryModel(id=null, cateDesc=testcase create category success, categoryName=CTT001, status=INACTIVE)]]
+13:37:59.552 [main] INFO net.serenitybdd.junit5.JUnit5DataDrivenAnnotations -- GetParameterTablesFromMethodSource: Put parameter dataTableName com.testek.api.features.categoryFeatures.CreateCategoryTestCase.CreateCateWithNameInvalid [[CategoryModel(id=null, cateDesc=testcase create category not success, categoryName=null, status=ACTIVE)], [CategoryModel(id=null, cateDesc=testcase create category not success, categoryName=, status=ACTIVE)], [CategoryModel(id=null, cateDesc=testcase create category not success, categoryName= , status=ACTIVE)], [CategoryModel(id=null, cateDesc=testcase create category success, categoryName=CTT001, status=AHD)]]
+13:38:00.038 [main] INFO  -- 
+
+-------------------------------------------------------------------------------------
+     _______. _______ .______       _______ .__   __.  __  .___________.____    ____ 
+    /       ||   ____||   _  \     |   ____||  \ |  | |  | |           |\   \  /   / 
+   |   (----`|  |__   |  |_)  |    |  |__   |   \|  | |  | `---|  |----` \   \/   /  
+    \   \    |   __|  |      /     |   __|  |  . `  | |  |     |  |       \_    _/   
+.----)   |   |  |____ |  |\  \----.|  |____ |  |\   | |  |     |  |         |  |     
+|_______/    |_______|| _| `._____||_______||__| \__| |__|     |__|         |__|    
+                                                                                     
+ News and tutorials at https://serenity-bdd.info                                     
+ Documentation at https://serenity-bdd.github.io                                     
+ Test Automation Training and Coaching: https://www.serenity-dojo.com                
+ Commercial Support: https://www.serenity-dojo.com/serenity-bdd-enterprise-support   
+ Join the Serenity Community on Gitter: https://gitter.im/serenity-bdd/serenity-core 
+-------------------------------------------------------------------------------------
+
+13:38:00.043 [main] DEBUG net.thucydides.core.steps.StepEventBus -- Test suite started for CreateCategoryTestCase in class com.testek.api.features.categoryFeatures.CreateCategoryTestCase
+13:38:00.062 [main] INFO  -- Test Suite Started: CreateCategoryTestCase
+13:38:00.520 [main] DEBUG net.thucydides.core.steps.StepEventBus -- Test suite started for CreateCategoryTestCase in class com.testek.api.features.categoryFeatures.CreateCategoryTestCase
+13:38:00.521 [main] INFO  -- Test Suite Started: CreateCategoryTestCase
+13:38:00.522 [main] DEBUG net.serenitybdd.junit5.SerenityTestExecutionListener -- Thread[main,5,main] Test started TestIdentifier [uniqueId = [engine:junit-jupiter]/[class:com.testek.api.features.categoryFeatures.CreateCategoryTestCase]/[method:CreateCateDuplicateName()], parentId = [engine:junit-jupiter]/[class:com.testek.api.features.categoryFeatures.CreateCategoryTestCase], displayName = 'CreateCateDuplicateName()', legacyReportingName = 'CreateCateDuplicateName()', source = MethodSource [className = 'com.testek.api.features.categoryFeatures.CreateCategoryTestCase', methodName = 'CreateCateDuplicateName', methodParameterTypes = ''], tags = [], type = TEST]
+13:38:00.564 [main] INFO  -- 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+CreateCateDuplicateName()([engine:junit-jupiter]/[class:com.testek.api.features.categoryFeatures.CreateCategoryTestCase]/[method:CreateCateDuplicateName()])
+--------------------------------------------------------------------------------
+13:38:01.226 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: LoginTask.performAs - {0} executes a POST on the resource #resource
+Request URI:	http://tapi.testek.vn/api/v0/prod-man/login-with-local
+Body:
+{
+    "username": "testek",
+    "password": "admin"
+}
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Fri, 11 Oct 2024 06:38:06 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmYmRlMDliNS1iYzJkLTRmNTEtYjQ2Zi01MTE2MWZhNWJiNDYiLCJhdWQiOlsib2F1dGgyLXJlc291cmNlIl0sInVzZXJfbmFtZSI6ImZiZGUwOWI1LWJjMmQtNGY1MS1iNDZmLTUxMTYxZmE1YmI0NiIsInNjb3BlIjpbInJlYWQiXSwiZXhwIjoxNzI4NjMyMjg2LCJpYXQiOjE3Mjg2Mjg2ODYsImp0aSI6ImQ4OWNmMDhiLWEyMjQtNDA4NC1iZWI3LWExMmYxMDEzODllMSIsImNsaWVudF9pZCI6ImYxMzU0OTg2LWU2OTgtNDcxMi1iYTk0LWU5NGIxMGJmMWI1OCJ9.aWxDG1XDf0GzmbIQfqGeF90wXUdDsEos5XJUe2tjSz5oDiSuKmpTJz53hSoZHmvoWQ5zA_rhWaZ1wsoZ7XHx0HLEZEPDCia9IXNtWedM5DKB7GXW3R85TYZy5yvWpRXqplSArx-qNW_5cgDPtZthNlk3IlCg-iAdhQayu3lnJHInd9MW8qo7xvhzE38I7gflFZ4BNwyc7tDw7NCZbLKgpNLPKu8ZkZgEMsCsuSdHt5Y2WBT_cofGE6DgcmSonFBH_0DIiBSURpyXMuHDCsJVJB9YBhDTqQpbQOq9GHAsbM8pDrjy2nPNoopQyO3ivsJiN7QdsVOuTHOJ_lxum3COJQ",
+    "refresh_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmYmRlMDliNS1iYzJkLTRmNTEtYjQ2Zi01MTE2MWZhNWJiNDYiLCJhdWQiOlsib2F1dGgyLXJlc291cmNlIl0sInVzZXJfbmFtZSI6ImZiZGUwOWI1LWJjMmQtNGY1MS1iNDZmLTUxMTYxZmE1YmI0NiIsInNjb3BlIjpbInJlYWQiXSwiYXRpIjoiZDg5Y2YwOGItYTIyNC00MDg0LWJlYjctYTEyZjEwMTM4OWUxIiwiZXhwIjoxNzMxMjIwNjg2LCJpYXQiOjE3Mjg2Mjg2ODYsImp0aSI6ImQwMTk1MmVkLWZiZDYtNDRjZi1hYjZhLWRiYjgxMGYzZTcxYiIsImNsaWVudF9pZCI6ImYxMzU0OTg2LWU2OTgtNDcxMi1iYTk0LWU5NGIxMGJmMWI1OCJ9.WIWNM8iikOoSfS7wNq04eUveDrIcp0xUPfJQnb9kVmy3XQub3tTpnpmnaW6SmhF5DFo7AS7POtC3ooKwW92OftRlVUH001qZW2u91RbqAVW0V2OtS-WQqyAo05IOE5H6mtoj7R_8O05Ybkf5XmMrgtTCWtn2u0AThJxYglWo_3VqQDXQMJ5eMlCiNuWtjPbdHhv5ZnsJiHUVeyPlIUCyX5KczHzh8adFxjtbioU_zJtGNlJJ3LZA7jnUX94HD48CN-meQXYFzAalCE4PytOt56SuVJS-EeNnAwmTrs0vz2-QDMAEPTh2eio_dUPLgUPj3F1FK7tK6-TGBunoUP5QDA",
+    "expires_in": 3599,
+    "token_type": "bearer"
+}
+13:38:06.145 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: {0} executes a POST on the resource #resource
+get token in response
+13:38:06.933 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: CreateCategoryTask.performAs - {0} executes a POST on the resource #resource
+Request URI:	http://tapi.testek.vn/api/v0/prod-man/category
+Body:
+{
+    "id": null,
+    "cateDesc": "Create duplicate name",
+    "categoryName": "CTT001",
+    "status": "ACTIVE"
+}
+{
+    "code": 200,
+    "data": {
+        "id": "4a0af03c-8ee1-4dd0-9189-8ad19e0b411d",
+        "categoryName": "CTT001",
+        "cateDesc": "Create duplicate name",
+        "status": "ACTIVE"
+    }
+}
+HTTP/1.1 201 
+13:38:07.120 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: {0} executes a POST on the resource #resource
+13:38:07.208 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: CreateCategoryTask.performAs - {0} executes a POST on the resource #resource
+Request URI:	http://tapi.testek.vn/api/v0/prod-man/category
+Body:
+{
+    "id": null,
+    "cateDesc": "Create duplicate name",
+    "categoryName": "CTT001",
+    "status": "ACTIVE"
+}
+{
+    "code": 4001201,
+    "message": "Category already exists {0}",
+    "error": "CATEGORY_EXISTED"
+}
+HTTP/1.1 400 
+13:38:07.366 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: {0} executes a POST on the resource #resource
+13:38:07.385 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: CreateCategoryTestCase.CreateCateDuplicateName - {0} should see #description
+13:38:07.397 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: {0} should see #description
+13:38:07.401 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: CreateCategoryTestCase.CreateCateDuplicateName - {0} should see #description
+13:38:07.421 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: {0} should see #description
+13:38:07.425 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: CreateCategoryTestCase.CreateCateDuplicateName - {0} should see #description
+13:38:07.441 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: {0} should see #description
+13:38:07.470 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: DeleteCategoryTask.performAs - {0} executes a DELETE on the resource #resource
+Request URI:	http://tapi.testek.vn/api/v0/prod-man/category/4a0af03c-8ee1-4dd0-9189-8ad19e0b411d?isSoft=false
+Body:			<none>
+{
+    "code": 200,
+    "data": "Success"
+}
+HTTP/1.1 200 
+13:38:07.672 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: {0} executes a DELETE on the resource #resource
+]]></system-out>
+  </testcase>
+  <testcase name="CreateCateWithNameInvalid(CategoryModel)[1]" classname="com.testek.api.features.categoryFeatures.CreateCategoryTestCase" time="1.298">
+    <system-out><![CDATA[13:38:07.700 [main] INFO  -- 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Create cate duplicate name
+----------------------------------------------------------------------
+13:38:08.081 [main] DEBUG net.thucydides.core.steps.StepEventBus -- Test suite started for CreateCategoryTestCase in class com.testek.api.features.categoryFeatures.CreateCategoryTestCase
+13:38:08.082 [main] INFO  -- Test Suite Started: CreateCategoryTestCase
+13:38:08.082 [main] DEBUG net.serenitybdd.junit5.SerenityTestExecutionListener -- Thread[main,5,main] Test started TestIdentifier [uniqueId = [engine:junit-jupiter]/[class:com.testek.api.features.categoryFeatures.CreateCategoryTestCase]/[test-template:CreateCateWithNameInvalid(com.testek.api.models.CategoryModel)]/[test-template-invocation:#1], parentId = [engine:junit-jupiter]/[class:com.testek.api.features.categoryFeatures.CreateCategoryTestCase]/[test-template:CreateCateWithNameInvalid(com.testek.api.models.CategoryModel)], displayName = '[1] CategoryModel(id=null, cateDesc=testcase create category not success, categoryName=null, status=ACTIVE)', legacyReportingName = 'CreateCateWithNameInvalid(CategoryModel)[1]', source = MethodSource [className = 'com.testek.api.features.categoryFeatures.CreateCategoryTestCase', methodName = 'CreateCateWithNameInvalid', methodParameterTypes = 'com.testek.api.models.CategoryModel'], tags = [], type = TEST]
+13:38:08.090 [main] INFO  -- 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Create cate with name invalid[1] CategoryModel(id=null, cateDesc=testcase create category not success, categoryName=null, status=ACTIVE)([engine:junit-jupiter]/[class:com.testek.api.features.categoryFeatures.CreateCategoryTestCase]/[test-template:CreateCateWithNameInvalid(com.testek.api.models.CategoryModel)]/[test-template-invocation:#1])
+--------------------------------------------------------------------------------
+13:38:08.109 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: LoginTask.performAs - {0} executes a POST on the resource #resource
+Request URI:	http://tapi.testek.vn/api/v0/prod-man/login-with-local
+Body:
+{
+    "username": "testek",
+    "password": "admin"
+}
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Fri, 11 Oct 2024 06:38:09 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmYmRlMDliNS1iYzJkLTRmNTEtYjQ2Zi01MTE2MWZhNWJiNDYiLCJhdWQiOlsib2F1dGgyLXJlc291cmNlIl0sInVzZXJfbmFtZSI6ImZiZGUwOWI1LWJjMmQtNGY1MS1iNDZmLTUxMTYxZmE1YmI0NiIsInNjb3BlIjpbInJlYWQiXSwiZXhwIjoxNzI4NjMyMjg5LCJpYXQiOjE3Mjg2Mjg2ODksImp0aSI6Ijc5OWY4MTQ2LTAzZDMtNGFmMi1iMTQ2LTRjZTBlMGNkMzI1YyIsImNsaWVudF9pZCI6ImYxMzU0OTg2LWU2OTgtNDcxMi1iYTk0LWU5NGIxMGJmMWI1OCJ9.D7gnL81f5MfmpYMCj9g-x3sX4QfcxkkAvBsF1NPRLGGVV0y2caW0Cu6YcBM4voJj_apzRqJuOGGDJWgsi-dYhCWgg5yBBCkODH0TJ5rE8N5TB_mtFBKnSvilVpOCuHSDQ3IA9tsqRapk-rJMt-tzZdJyPnIKPcHz2DRJtSLTRR2a5-dWBg_5uUQgXpwUOhWGfoufzCreIF3Em9oCFcumNweIBGu81jCETQd7hfExsywjJoLE5o3vm0-S0bexAM6voWbSVLw0m-btzq9qTe3bTFa5IPOzW1Pr_EHYCCwDMv7JlQqASLCw0Qzy5LwCEz81HWTZrYI1gJYQ4M6ZrUv7vQ",
+    "refresh_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmYmRlMDliNS1iYzJkLTRmNTEtYjQ2Zi01MTE2MWZhNWJiNDYiLCJhdWQiOlsib2F1dGgyLXJlc291cmNlIl0sInVzZXJfbmFtZSI6ImZiZGUwOWI1LWJjMmQtNGY1MS1iNDZmLTUxMTYxZmE1YmI0NiIsInNjb3BlIjpbInJlYWQiXSwiYXRpIjoiNzk5ZjgxNDYtMDNkMy00YWYyLWIxNDYtNGNlMGUwY2QzMjVjIiwiZXhwIjoxNzMxMjIwNjg5LCJpYXQiOjE3Mjg2Mjg2ODksImp0aSI6ImRiMDJjMWYzLWY3NWUtNDMyYy1iOTg3LTg4ODRmMDY4NmYyZCIsImNsaWVudF9pZCI6ImYxMzU0OTg2LWU2OTgtNDcxMi1iYTk0LWU5NGIxMGJmMWI1OCJ9.NpAk6tbKkFV6nzlcBGcoWNgevzsmifftKZ8TczqFRzpmZA_gEO8bfFrKY2i6fnsQrs_u8vgkeoHMAP0lkiMgtZ_bN7AiNnrWfB5G0PlvxP6TIep1U_Bj6M-xiq4fk2UG2K3lA5L3yOnjCKrHn9zNyCXHUJS6OYNpPfDPpFKTq42WU4k7lb9DqrXMx0IWhlSthlwR0w402wOgy-K5coBGbbhZMD87tczoJ_GRcjJei90VYVzCFfIozFHKO3aXJSBln23LEYsyIIwBoH5L-jdh6H3wJOVf-l-Ux14-Ls_jy1UyEXpnvT_FqUhABnbeUeMtjBhEgHKWY6b8G1bElV_Y1A",
+    "expires_in": 3599,
+    "token_type": "bearer"
+}
+13:38:09.122 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: {0} executes a POST on the resource #resource
+get token in response
+13:38:09.177 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: CreateCategoryTask.performAs - {0} executes a POST on the resource #resource
+Request URI:	http://tapi.testek.vn/api/v0/prod-man/category
+Body:
+{
+    "id": null,
+    "cateDesc": "testcase create category not success",
+    "categoryName": null,
+    "status": "ACTIVE"
+}
+{
+    "code": 400,
+    "message": "Dữ liệu nhập không hợp lệ",
+    "error": "INVALID_INPUT",
+    "errors": [
+        {
+            "field": "categoryName",
+            "objectName": "createCategoryRequest",
+            "message": "CATEGORY_NAME_REQUIRED",
+            "error": "CATEGORY_NAME_REQUIRED"
+        }
+    ]
+}
+HTTP/1.1 400 
+13:38:09.329 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: {0} executes a POST on the resource #resource
+13:38:09.337 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: CreateCategoryTestCase.CreateCateWithNameInvalid - {0} should see #description
+13:38:09.347 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: {0} should see #description
+13:38:09.352 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: CreateCategoryTestCase.CreateCateWithNameInvalid - {0} should see #description
+13:38:09.371 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: {0} should see #description
+13:38:09.375 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: CreateCategoryTestCase.CreateCateWithNameInvalid - {0} should see #description
+13:38:09.394 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: {0} should see #description
+]]></system-out>
+  </testcase>
+  <testcase name="CreateCateWithNameInvalid(CategoryModel)[2]" classname="com.testek.api.features.categoryFeatures.CreateCategoryTestCase" time="1.272">
+    <system-out><![CDATA[13:38:09.402 [main] INFO  -- 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Create cate with name invalid[1] CategoryModel(id=null, cateDesc=testcase create category not success, categoryName=null, status=ACTIVE)
+----------------------------------------------------------------------
+13:38:09.430 [main] DEBUG net.thucydides.core.steps.StepEventBus -- Test suite started for CreateCategoryTestCase in class com.testek.api.features.categoryFeatures.CreateCategoryTestCase
+13:38:09.431 [main] INFO  -- Test Suite Started: CreateCategoryTestCase
+13:38:09.432 [main] DEBUG net.serenitybdd.junit5.SerenityTestExecutionListener -- Thread[main,5,main] Test started TestIdentifier [uniqueId = [engine:junit-jupiter]/[class:com.testek.api.features.categoryFeatures.CreateCategoryTestCase]/[test-template:CreateCateWithNameInvalid(com.testek.api.models.CategoryModel)]/[test-template-invocation:#2], parentId = [engine:junit-jupiter]/[class:com.testek.api.features.categoryFeatures.CreateCategoryTestCase]/[test-template:CreateCateWithNameInvalid(com.testek.api.models.CategoryModel)], displayName = '[2] CategoryModel(id=null, cateDesc=testcase create category not success, categoryName=, status=ACTIVE)', legacyReportingName = 'CreateCateWithNameInvalid(CategoryModel)[2]', source = MethodSource [className = 'com.testek.api.features.categoryFeatures.CreateCategoryTestCase', methodName = 'CreateCateWithNameInvalid', methodParameterTypes = 'com.testek.api.models.CategoryModel'], tags = [], type = TEST]
+13:38:09.438 [main] INFO  -- 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Create cate with name invalid[2] CategoryModel(id=null, cateDesc=testcase create category not success, categoryName=, status=ACTIVE)([engine:junit-jupiter]/[class:com.testek.api.features.categoryFeatures.CreateCategoryTestCase]/[test-template:CreateCateWithNameInvalid(com.testek.api.models.CategoryModel)]/[test-template-invocation:#2])
+--------------------------------------------------------------------------------
+13:38:09.447 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: LoginTask.performAs - {0} executes a POST on the resource #resource
+Request URI:	http://tapi.testek.vn/api/v0/prod-man/login-with-local
+Body:
+{
+    "username": "testek",
+    "password": "admin"
+}
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Fri, 11 Oct 2024 06:38:11 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmYmRlMDliNS1iYzJkLTRmNTEtYjQ2Zi01MTE2MWZhNWJiNDYiLCJhdWQiOlsib2F1dGgyLXJlc291cmNlIl0sInVzZXJfbmFtZSI6ImZiZGUwOWI1LWJjMmQtNGY1MS1iNDZmLTUxMTYxZmE1YmI0NiIsInNjb3BlIjpbInJlYWQiXSwiZXhwIjoxNzI4NjMyMjkxLCJpYXQiOjE3Mjg2Mjg2OTEsImp0aSI6IjlhMDNlNmNjLWE4ZDEtNDkwMy05Yjk2LTQyOTBiYmZiZGI3MyIsImNsaWVudF9pZCI6ImYxMzU0OTg2LWU2OTgtNDcxMi1iYTk0LWU5NGIxMGJmMWI1OCJ9.LtDOF9cPzh6T1Vr3XjrtXPOPuSp32AbRl4SyaRb_t_ml2AXVpwIKqBUcFSknpUzG4XmsIkfF3VQ34IGAOpzdHhPIJoeVFPUAfAf9DwRWPditp8g9d2oLrt7QrsrBB6e8A8o6T95gpAo8r42Xp_kEdMAgq6JzKZQObvFSRtwsLXAgKb8v24FGYs_17WCS_xZ9BiS91V-asK44QnSo8BJObwovrJwWP0X5No_Fx2wwWn-9p6GlcLY72SzuAyz46bzn4GwNJtagmHFN_Ra94ojYbDS3hTSlJKAUUwdQCPM4HDyZFKcZeM5---IyFehSyYYn511xmqqLpgth_W5ff4G6gw",
+    "refresh_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmYmRlMDliNS1iYzJkLTRmNTEtYjQ2Zi01MTE2MWZhNWJiNDYiLCJhdWQiOlsib2F1dGgyLXJlc291cmNlIl0sInVzZXJfbmFtZSI6ImZiZGUwOWI1LWJjMmQtNGY1MS1iNDZmLTUxMTYxZmE1YmI0NiIsInNjb3BlIjpbInJlYWQiXSwiYXRpIjoiOWEwM2U2Y2MtYThkMS00OTAzLTliOTYtNDI5MGJiZmJkYjczIiwiZXhwIjoxNzMxMjIwNjkwLCJpYXQiOjE3Mjg2Mjg2OTEsImp0aSI6ImJjMjJhOTg4LTJiM2MtNDM0My05YjBmLWU1ZTRjYjBlNjJjYiIsImNsaWVudF9pZCI6ImYxMzU0OTg2LWU2OTgtNDcxMi1iYTk0LWU5NGIxMGJmMWI1OCJ9.QF4rf-Lzir47QnBYuItTfpAZkcSeSQJg68vlIpRj6OyFFq6YN9VnLFwY48yglxQ7NDSewaSaxRFYS6ZxjrFnSb2Ln0gTnczpTI2v9Q5-wA7end8R-oOSzQYhqQgieqROM9J7BSq6fj7yuTG1mSW3qBqYt1Qcb9riDDsetOceT3iKah0RQSiKfg9rqxBgcMlv2Y_njhSEYWIyqQlWGJTXV1XD3-FSHol3PTF2REvHqgugFIbC5xFjs3ycpnydmj9yl7KWPRuTIJKwlGU_mNI4CKb44w_Lf7G8I8Jo9BLmaY3GUHuUQ6uTuAWbCiRgt44EhjNqIFpmXR9_MgyfA5A17g",
+    "expires_in": 3599,
+    "token_type": "bearer"
+}
+13:38:10.456 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: {0} executes a POST on the resource #resource
+get token in response
+13:38:10.476 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: CreateCategoryTask.performAs - {0} executes a POST on the resource #resource
+Request URI:	http://tapi.testek.vn/api/v0/prod-man/category
+Body:
+{
+    "id": null,
+    "cateDesc": "testcase create category not success",
+    "categoryName": "",
+    "status": "ACTIVE"
+}
+{
+    "code": 400,
+    "message": "Dữ liệu nhập không hợp lệ",
+    "error": "INVALID_INPUT",
+    "errors": [
+        {
+            "field": "categoryName",
+            "objectName": "createCategoryRequest",
+            "message": "CATEGORY_NAME",
+            "error": "CATEGORY_NAME"
+        },
+        {
+            "field": "categoryName",
+            "objectName": "createCategoryRequest",
+            "message": "CATEGORY_NAME_REQUIRED",
+            "error": "CATEGORY_NAME_REQUIRED"
+        }
+    ]
+}
+HTTP/1.1 400 
+13:38:10.643 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: {0} executes a POST on the resource #resource
+13:38:10.648 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: CreateCategoryTestCase.CreateCateWithNameInvalid - {0} should see #description
+13:38:10.657 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: {0} should see #description
+13:38:10.662 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: CreateCategoryTestCase.CreateCateWithNameInvalid - {0} should see #description
+13:38:10.685 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: {0} should see #description
+13:38:10.689 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: CreateCategoryTestCase.CreateCateWithNameInvalid - {0} should see #description
+13:38:10.710 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: {0} should see #description
+]]></system-out>
+  </testcase>
+  <testcase name="CreateCateWithNameInvalid(CategoryModel)[3]" classname="com.testek.api.features.categoryFeatures.CreateCategoryTestCase" time="1.307">
+    <system-out><![CDATA[13:38:10.717 [main] INFO  -- 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Create cate with name invalid[2] CategoryModel(id=null, cateDesc=testcase create category not success, categoryName=, status=ACTIVE)
+----------------------------------------------------------------------
+13:38:10.780 [main] DEBUG net.thucydides.core.steps.StepEventBus -- Test suite started for CreateCategoryTestCase in class com.testek.api.features.categoryFeatures.CreateCategoryTestCase
+13:38:10.781 [main] INFO  -- Test Suite Started: CreateCategoryTestCase
+13:38:10.781 [main] DEBUG net.serenitybdd.junit5.SerenityTestExecutionListener -- Thread[main,5,main] Test started TestIdentifier [uniqueId = [engine:junit-jupiter]/[class:com.testek.api.features.categoryFeatures.CreateCategoryTestCase]/[test-template:CreateCateWithNameInvalid(com.testek.api.models.CategoryModel)]/[test-template-invocation:#3], parentId = [engine:junit-jupiter]/[class:com.testek.api.features.categoryFeatures.CreateCategoryTestCase]/[test-template:CreateCateWithNameInvalid(com.testek.api.models.CategoryModel)], displayName = '[3] CategoryModel(id=null, cateDesc=testcase create category not success, categoryName= , status=ACTIVE)', legacyReportingName = 'CreateCateWithNameInvalid(CategoryModel)[3]', source = MethodSource [className = 'com.testek.api.features.categoryFeatures.CreateCategoryTestCase', methodName = 'CreateCateWithNameInvalid', methodParameterTypes = 'com.testek.api.models.CategoryModel'], tags = [], type = TEST]
+13:38:10.787 [main] INFO  -- 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Create cate with name invalid[3] CategoryModel(id=null, cateDesc=testcase create category not success, categoryName= , status=ACTIVE)([engine:junit-jupiter]/[class:com.testek.api.features.categoryFeatures.CreateCategoryTestCase]/[test-template:CreateCateWithNameInvalid(com.testek.api.models.CategoryModel)]/[test-template-invocation:#3])
+--------------------------------------------------------------------------------
+13:38:10.804 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: LoginTask.performAs - {0} executes a POST on the resource #resource
+Request URI:	http://tapi.testek.vn/api/v0/prod-man/login-with-local
+Body:
+{
+    "username": "testek",
+    "password": "admin"
+}
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Fri, 11 Oct 2024 06:38:12 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmYmRlMDliNS1iYzJkLTRmNTEtYjQ2Zi01MTE2MWZhNWJiNDYiLCJhdWQiOlsib2F1dGgyLXJlc291cmNlIl0sInVzZXJfbmFtZSI6ImZiZGUwOWI1LWJjMmQtNGY1MS1iNDZmLTUxMTYxZmE1YmI0NiIsInNjb3BlIjpbInJlYWQiXSwiZXhwIjoxNzI4NjMyMjkyLCJpYXQiOjE3Mjg2Mjg2OTIsImp0aSI6ImRkYTQ0YjM0LWRhZDktNGNkMS1hMGY1LWRhNDA1Yzg3OTllZiIsImNsaWVudF9pZCI6ImYxMzU0OTg2LWU2OTgtNDcxMi1iYTk0LWU5NGIxMGJmMWI1OCJ9.VH_ySkpqz8uimevD8PVWU7TLibRrx_xincb5PMf7oGhROkmLe7O7kxdmvGX3lp9bqcRsdD1zzkvsHmiPNxHzuwp3zYBZm7q1fv3e0vt2jw5de8YRbYl2_AgLNc1pf5Oz47uPb-mfUPGOmt2gSOOdya8qwrd7fXrXuWPV4BmmhxRu8qCsQEHny622VJ1Cat3DWAWZtGU3SV0_iyU5xjPbx2nwMgFtS6f7PYt4EWtvwuf7a9sS90vk6tn_IbFdOvsxn-tN0J8Wu2n2wAVJHcqrD7sd-_fOkcc2v0Fwkn5Mlov21FRa7hTjpsU8NWVJsTzT2tK3h1eAc2DrpopmwY07qw",
+    "refresh_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmYmRlMDliNS1iYzJkLTRmNTEtYjQ2Zi01MTE2MWZhNWJiNDYiLCJhdWQiOlsib2F1dGgyLXJlc291cmNlIl0sInVzZXJfbmFtZSI6ImZiZGUwOWI1LWJjMmQtNGY1MS1iNDZmLTUxMTYxZmE1YmI0NiIsInNjb3BlIjpbInJlYWQiXSwiYXRpIjoiZGRhNDRiMzQtZGFkOS00Y2QxLWEwZjUtZGE0MDVjODc5OWVmIiwiZXhwIjoxNzMxMjIwNjkyLCJpYXQiOjE3Mjg2Mjg2OTIsImp0aSI6ImU2Y2IxMDc2LTFlZjAtNDUwNC04NWVlLWVmZWFiMDI0MjZlYiIsImNsaWVudF9pZCI6ImYxMzU0OTg2LWU2OTgtNDcxMi1iYTk0LWU5NGIxMGJmMWI1OCJ9.GWxsZaE3DLN3Y0c96S1a03w7k7urlw4jfqONkGmeyeNu1OS8X9MGZ3ekCmRXcXBMUONGeKsx2ghtPcKi5Gx5ZUh07Jd5eOmmLDWzaJ5wOypILHtxub9WPTxIyuW6c9wf7f1aHqDDbVhZp_jL_RQCxBtkuRO0aGpCPl-HbwgEGA1eWkPMJTUjAO_Au5YCM6B0JcizPOaf_utFnLJydkmGXK6FqwDN7w69nfU0R8_IItck4SEErL7fuqz3n1x4pj_0AdRBw0LWxYwEu1mg5Olp8B29tcnO7U-3MOxrkIuANWexhSdIsgSBF6e1icNKS52y1YdwEAUu0qyurY9PJx-meg",
+    "expires_in": 3599,
+    "token_type": "bearer"
+}
+13:38:11.845 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: {0} executes a POST on the resource #resource
+get token in response
+13:38:11.872 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: CreateCategoryTask.performAs - {0} executes a POST on the resource #resource
+Request URI:	http://tapi.testek.vn/api/v0/prod-man/category
+Body:
+{
+    "id": null,
+    "cateDesc": "testcase create category not success",
+    "categoryName": " ",
+    "status": "ACTIVE"
+}
+{
+    "code": 400,
+    "message": "Dữ liệu nhập không hợp lệ",
+    "error": "INVALID_INPUT",
+    "errors": [
+        {
+            "field": "categoryName",
+            "objectName": "createCategoryRequest",
+            "message": "CATEGORY_NAME",
+            "error": "CATEGORY_NAME"
+        },
+        {
+            "field": "categoryName",
+            "objectName": "createCategoryRequest",
+            "message": "CATEGORY_NAME_REQUIRED",
+            "error": "CATEGORY_NAME_REQUIRED"
+        }
+    ]
+}
+HTTP/1.1 400 
+13:38:12.018 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: {0} executes a POST on the resource #resource
+13:38:12.024 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: CreateCategoryTestCase.CreateCateWithNameInvalid - {0} should see #description
+13:38:12.032 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: {0} should see #description
+13:38:12.037 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: CreateCategoryTestCase.CreateCateWithNameInvalid - {0} should see #description
+13:38:12.062 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: {0} should see #description
+13:38:12.066 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: CreateCategoryTestCase.CreateCateWithNameInvalid - {0} should see #description
+13:38:12.090 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: {0} should see #description
+]]></system-out>
+  </testcase>
+  <testcase name="CreateCateWithNameInvalid(CategoryModel)[4]" classname="com.testek.api.features.categoryFeatures.CreateCategoryTestCase" time="1.286">
+    <system-out><![CDATA[13:38:12.107 [main] INFO  -- 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Create cate with name invalid[3] CategoryModel(id=null, cateDesc=testcase create category not success, categoryName= , status=ACTIVE)
+----------------------------------------------------------------------
+13:38:12.136 [main] DEBUG net.thucydides.core.steps.StepEventBus -- Test suite started for CreateCategoryTestCase in class com.testek.api.features.categoryFeatures.CreateCategoryTestCase
+13:38:12.137 [main] INFO  -- Test Suite Started: CreateCategoryTestCase
+13:38:12.138 [main] DEBUG net.serenitybdd.junit5.SerenityTestExecutionListener -- Thread[main,5,main] Test started TestIdentifier [uniqueId = [engine:junit-jupiter]/[class:com.testek.api.features.categoryFeatures.CreateCategoryTestCase]/[test-template:CreateCateWithNameInvalid(com.testek.api.models.CategoryModel)]/[test-template-invocation:#4], parentId = [engine:junit-jupiter]/[class:com.testek.api.features.categoryFeatures.CreateCategoryTestCase]/[test-template:CreateCateWithNameInvalid(com.testek.api.models.CategoryModel)], displayName = '[4] CategoryModel(id=null, cateDesc=testcase create category success, categoryName=CTT001, status=AHD)', legacyReportingName = 'CreateCateWithNameInvalid(CategoryModel)[4]', source = MethodSource [className = 'com.testek.api.features.categoryFeatures.CreateCategoryTestCase', methodName = 'CreateCateWithNameInvalid', methodParameterTypes = 'com.testek.api.models.CategoryModel'], tags = [], type = TEST]
+13:38:12.146 [main] INFO  -- 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Create cate with name invalid[4] CategoryModel(id=null, cateDesc=testcase create category success, categoryName=CTT001, status=AHD)([engine:junit-jupiter]/[class:com.testek.api.features.categoryFeatures.CreateCategoryTestCase]/[test-template:CreateCateWithNameInvalid(com.testek.api.models.CategoryModel)]/[test-template-invocation:#4])
+--------------------------------------------------------------------------------
+13:38:12.166 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: LoginTask.performAs - {0} executes a POST on the resource #resource
+Request URI:	http://tapi.testek.vn/api/v0/prod-man/login-with-local
+Body:
+{
+    "username": "testek",
+    "password": "admin"
+}
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Fri, 11 Oct 2024 06:38:13 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmYmRlMDliNS1iYzJkLTRmNTEtYjQ2Zi01MTE2MWZhNWJiNDYiLCJhdWQiOlsib2F1dGgyLXJlc291cmNlIl0sInVzZXJfbmFtZSI6ImZiZGUwOWI1LWJjMmQtNGY1MS1iNDZmLTUxMTYxZmE1YmI0NiIsInNjb3BlIjpbInJlYWQiXSwiZXhwIjoxNzI4NjMyMjkzLCJpYXQiOjE3Mjg2Mjg2OTMsImp0aSI6IjYxNDBiODVhLTY1MjUtNGEzMy04NDgyLWU0MzlkNzE3NTE5ZSIsImNsaWVudF9pZCI6ImYxMzU0OTg2LWU2OTgtNDcxMi1iYTk0LWU5NGIxMGJmMWI1OCJ9.VsAyKTHiEYVjJKFVkBfYOnjrRelWru1KuxEITjgpTDQuNoFu8X23SEjI5VP23iTvX8GNEgvursqL83n03NiU0-ND-NPTIqD9fQlAjWZO17zX-KHztRDaE1kldpMiyUOzgW8UZVGZSZkSjfplpUCYWdXYXB2vVba6AkYKe4048TgVrj9VRYblFsItd6WyGymRSiyO3U9IiF4IJ3VCY9sKjBOVdGu-uBu6lKmzrfFLl6NknZUMiPkgXrZPzBNEuULMk-d8GrqhSGKpwj8X304GCTaMn0Ev9eYJ_vROp20Zs34tsBfBMZeTFCvLFbnP-GG1v5-kjAEv21hfwp8VTdW8DA",
+    "refresh_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmYmRlMDliNS1iYzJkLTRmNTEtYjQ2Zi01MTE2MWZhNWJiNDYiLCJhdWQiOlsib2F1dGgyLXJlc291cmNlIl0sInVzZXJfbmFtZSI6ImZiZGUwOWI1LWJjMmQtNGY1MS1iNDZmLTUxMTYxZmE1YmI0NiIsInNjb3BlIjpbInJlYWQiXSwiYXRpIjoiNjE0MGI4NWEtNjUyNS00YTMzLTg0ODItZTQzOWQ3MTc1MTllIiwiZXhwIjoxNzMxMjIwNjkzLCJpYXQiOjE3Mjg2Mjg2OTMsImp0aSI6ImEyNTcwMWY5LTYwNWMtNDFkZi05NGFjLTZhNmNiNDFhMDUyNiIsImNsaWVudF9pZCI6ImYxMzU0OTg2LWU2OTgtNDcxMi1iYTk0LWU5NGIxMGJmMWI1OCJ9.VBuf01FXWKFF9DvJhFTV5HecQ5SjqO9zDL2odongRQXouGivzYJdrERPBtVoUquKtLZVxVKWCw30qY1kYiEzAsLptwGrfa2bbHWPScD_hxusDQIM61MRe93zYF0hPIgb8skzGkDkDvzsxbHw0K7VtEsREiyi7aDUzh5d1auLBv8wKV-G9VkwYcwaQzzJS14yfuINPm1APv_PP1keNKVetffq74XsjRBbGiV6RdTd2hC_n1d2EBu2at8w7uBzx_wpmamXVhyIMfKH9uAfReDTHDKLY_FnOtFYmbWGOokr7kpl9MFxFBGJNkW3FaLaKe0B0DnoWSm0iUUdveASh0UVLA",
+    "expires_in": 3599,
+    "token_type": "bearer"
+}
+13:38:13.177 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: {0} executes a POST on the resource #resource
+get token in response
+13:38:13.207 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: CreateCategoryTask.performAs - {0} executes a POST on the resource #resource
+Request URI:	http://tapi.testek.vn/api/v0/prod-man/category
+Body:
+{
+    "id": null,
+    "cateDesc": "testcase create category success",
+    "categoryName": "CTT001",
+    "status": "AHD"
+}
+{
+    "code": 400,
+    "message": "Dữ liệu nhập không hợp lệ",
+    "error": "INVALID_INPUT",
+    "errors": [
+        {
+            "field": "status",
+            "objectName": null,
+            "message": "Invalid input format",
+            "error": null
+        }
+    ]
+}
+HTTP/1.1 400 
+13:38:13.362 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: {0} executes a POST on the resource #resource
+13:38:13.368 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: CreateCategoryTestCase.CreateCateWithNameInvalid - {0} should see #description
+13:38:13.376 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: {0} should see #description
+13:38:13.383 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: CreateCategoryTestCase.CreateCateWithNameInvalid - {0} should see #description
+13:38:13.412 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: {0} should see #description
+13:38:13.416 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: CreateCategoryTestCase.CreateCateWithNameInvalid - {0} should see #description
+13:38:13.439 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: {0} should see #description
+]]></system-out>
+  </testcase>
+  <testcase name="CreateCateSuccess(CategoryModel)[1]" classname="com.testek.api.features.categoryFeatures.CreateCategoryTestCase" time="1.633">
+    <system-out><![CDATA[13:38:13.447 [main] INFO  -- 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Create cate with name invalid[4] CategoryModel(id=null, cateDesc=testcase create category success, categoryName=CTT001, status=AHD)
+----------------------------------------------------------------------
+13:38:13.477 [main] DEBUG net.thucydides.core.steps.StepEventBus -- Test suite started for CreateCategoryTestCase in class com.testek.api.features.categoryFeatures.CreateCategoryTestCase
+13:38:13.478 [main] INFO  -- Test Suite Started: CreateCategoryTestCase
+13:38:13.479 [main] DEBUG net.serenitybdd.junit5.SerenityTestExecutionListener -- Thread[main,5,main] Test started TestIdentifier [uniqueId = [engine:junit-jupiter]/[class:com.testek.api.features.categoryFeatures.CreateCategoryTestCase]/[test-template:CreateCateSuccess(com.testek.api.models.CategoryModel)]/[test-template-invocation:#1], parentId = [engine:junit-jupiter]/[class:com.testek.api.features.categoryFeatures.CreateCategoryTestCase]/[test-template:CreateCateSuccess(com.testek.api.models.CategoryModel)], displayName = '[1] CategoryModel(id=null, cateDesc=testcase create category success, categoryName=CTT001, status=ACTIVE)', legacyReportingName = 'CreateCateSuccess(CategoryModel)[1]', source = MethodSource [className = 'com.testek.api.features.categoryFeatures.CreateCategoryTestCase', methodName = 'CreateCateSuccess', methodParameterTypes = 'com.testek.api.models.CategoryModel'], tags = [], type = TEST]
+13:38:13.498 [main] INFO  -- 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Create cate success[1] CategoryModel(id=null, cateDesc=testcase create category success, categoryName=CTT001, status=ACTIVE)([engine:junit-jupiter]/[class:com.testek.api.features.categoryFeatures.CreateCategoryTestCase]/[test-template:CreateCateSuccess(com.testek.api.models.CategoryModel)]/[test-template-invocation:#1])
+--------------------------------------------------------------------------------
+13:38:13.508 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: LoginTask.performAs - {0} executes a POST on the resource #resource
+Request URI:	http://tapi.testek.vn/api/v0/prod-man/login-with-local
+Body:
+{
+    "username": "testek",
+    "password": "admin"
+}
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Fri, 11 Oct 2024 06:38:15 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmYmRlMDliNS1iYzJkLTRmNTEtYjQ2Zi01MTE2MWZhNWJiNDYiLCJhdWQiOlsib2F1dGgyLXJlc291cmNlIl0sInVzZXJfbmFtZSI6ImZiZGUwOWI1LWJjMmQtNGY1MS1iNDZmLTUxMTYxZmE1YmI0NiIsInNjb3BlIjpbInJlYWQiXSwiZXhwIjoxNzI4NjMyMjk1LCJpYXQiOjE3Mjg2Mjg2OTUsImp0aSI6IjZkNTIzYzFmLTNjMWEtNDI4MS1iZTVmLTMwODMzZjk2YWQ5ZCIsImNsaWVudF9pZCI6ImYxMzU0OTg2LWU2OTgtNDcxMi1iYTk0LWU5NGIxMGJmMWI1OCJ9.Mb3UbFdj3atqKn2c_-iz8PewR6sE-9muVpsUU60V2YTmnPwnmXpErvpPKyOIuGO0fB2kfIGd-q9NQovKbnwamij9n6yAQRfxlRBHRLhizM6tIW6zJB4SDNnb4nuvthr4fZFXzMrCA-fmGaNGAuvEOHia9BcXk2it2bUI5hkXU-RxB_WydR_oaxHnIDOIWiKP6NTZ1FAcA1WmaVtC2HxCvLOXuHlIbHNHIBwXDSQpxROYnVrHoyWpU_vHFph3d5gmXc7D3NynW6S-mzda9QaumlrkzzXlTbKjafiogTXShnB0wQnALfz0ywBs_jueFDl2Qcr7nOFhXXNy6yVxlHo5dQ",
+    "refresh_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmYmRlMDliNS1iYzJkLTRmNTEtYjQ2Zi01MTE2MWZhNWJiNDYiLCJhdWQiOlsib2F1dGgyLXJlc291cmNlIl0sInVzZXJfbmFtZSI6ImZiZGUwOWI1LWJjMmQtNGY1MS1iNDZmLTUxMTYxZmE1YmI0NiIsInNjb3BlIjpbInJlYWQiXSwiYXRpIjoiNmQ1MjNjMWYtM2MxYS00MjgxLWJlNWYtMzA4MzNmOTZhZDlkIiwiZXhwIjoxNzMxMjIwNjk1LCJpYXQiOjE3Mjg2Mjg2OTUsImp0aSI6IjQ5YTFlYWU5LTE3NTEtNGFhMi05ZjQ2LTZlOGQwOTVkZTg2YiIsImNsaWVudF9pZCI6ImYxMzU0OTg2LWU2OTgtNDcxMi1iYTk0LWU5NGIxMGJmMWI1OCJ9.ZnBOzsuYUcYWwHIgYAsTWss1WT-gwuY6PP0-wOLb9_CxybyeQSjygfkAES2pNyZeMcrBmGvo44apDHjA9388Y9-JCzkbRh3BiYHj9sOaN_Wzw3Z0pRUw2_DNY5aJgEtCU-B6fonYQjuge28iFi1-EEuSsf1dCafOoRGjWBzqywS9iMTSeBoxeKvMtAKoKEVKGO2D1GWOQMPCABfcBGotrOvs-tQhxNG9LnZTMXrPIWGVIIQSwXZmCBT9TdCdiiaohtdE5HmQSllBzUqxy6J03YbelNyAVu41CPojdj0Q4rMEhezsO_Ea87lcCXVdhWaS1z7swF-92qc1xPmymWZehA",
+    "expires_in": 3599,
+    "token_type": "bearer"
+}
+13:38:14.516 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: {0} executes a POST on the resource #resource
+get token in response
+13:38:14.542 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: CreateCategoryTask.performAs - {0} executes a POST on the resource #resource
+Request URI:	http://tapi.testek.vn/api/v0/prod-man/category
+Body:
+{
+    "id": null,
+    "cateDesc": "testcase create category success",
+    "categoryName": "CTT001",
+    "status": "ACTIVE"
+}
+{
+    "code": 200,
+    "data": {
+        "id": "d6884be9-94e3-445f-8f1e-066811ff84e6",
+        "categoryName": "CTT001",
+        "cateDesc": "testcase create category success",
+        "status": "ACTIVE"
+    }
+}
+HTTP/1.1 201 
+13:38:14.712 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: {0} executes a POST on the resource #resource
+13:38:14.716 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: CreateCategoryTestCase.CreateCateSuccess - {0} should see #description
+13:38:14.722 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: {0} should see #description
+13:38:14.749 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: GetDetailCategoryTask.performAs - {0} executes a GET on the resource #resource
+Request URI:	http://tapi.testek.vn/api/v0/prod-man/category/d6884be9-94e3-445f-8f1e-066811ff84e6/detail
+Body:			<none>
+{
+    "code": 200,
+    "data": {
+        "id": "d6884be9-94e3-445f-8f1e-066811ff84e6",
+        "categoryName": "CTT001",
+        "cateDesc": "testcase create category success",
+        "status": "ACTIVE"
+    }
+}
+HTTP/1.1 200 
+13:38:14.903 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: {0} executes a GET on the resource #resource
+13:38:14.907 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: CreateCategoryTestCase.CreateCateSuccess - {0} should see #description
+Category Request: CategoryModel(id=null, cateDesc=testcase create category success, categoryName=CTT001, status=ACTIVE)
+Category Response: CategoryModel(id=null, cateDesc=testcase create category success, categoryName=CTT001, status=ACTIVE)
+13:38:14.975 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: {0} should see #description
+13:38:14.980 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: DeleteCategoryTask.performAs - {0} executes a DELETE on the resource #resource
+Request URI:	http://tapi.testek.vn/api/v0/prod-man/category/d6884be9-94e3-445f-8f1e-066811ff84e6?isSoft=false
+Body:			<none>
+{
+    "code": 200,
+    "data": "Success"
+}
+HTTP/1.1 200 
+13:38:15.134 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: {0} executes a DELETE on the resource #resource
+]]></system-out>
+  </testcase>
+  <testcase name="CreateCateSuccess(CategoryModel)[2]" classname="com.testek.api.features.categoryFeatures.CreateCategoryTestCase" time="1.607">
+    <system-out><![CDATA[13:38:15.148 [main] INFO  -- 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Create cate success[1] CategoryModel(id=null, cateDesc=testcase create category success, categoryName=CTT001, status=ACTIVE)
+----------------------------------------------------------------------
+13:38:15.174 [main] DEBUG net.thucydides.core.steps.StepEventBus -- Test suite started for CreateCategoryTestCase in class com.testek.api.features.categoryFeatures.CreateCategoryTestCase
+13:38:15.174 [main] INFO  -- Test Suite Started: CreateCategoryTestCase
+13:38:15.174 [main] DEBUG net.serenitybdd.junit5.SerenityTestExecutionListener -- Thread[main,5,main] Test started TestIdentifier [uniqueId = [engine:junit-jupiter]/[class:com.testek.api.features.categoryFeatures.CreateCategoryTestCase]/[test-template:CreateCateSuccess(com.testek.api.models.CategoryModel)]/[test-template-invocation:#2], parentId = [engine:junit-jupiter]/[class:com.testek.api.features.categoryFeatures.CreateCategoryTestCase]/[test-template:CreateCateSuccess(com.testek.api.models.CategoryModel)], displayName = '[2] CategoryModel(id=null, cateDesc=null, categoryName=CTT001, status=ACTIVE)', legacyReportingName = 'CreateCateSuccess(CategoryModel)[2]', source = MethodSource [className = 'com.testek.api.features.categoryFeatures.CreateCategoryTestCase', methodName = 'CreateCateSuccess', methodParameterTypes = 'com.testek.api.models.CategoryModel'], tags = [], type = TEST]
+13:38:15.179 [main] INFO  -- 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Create cate success[2] CategoryModel(id=null, cateDesc=null, categoryName=CTT001, status=ACTIVE)([engine:junit-jupiter]/[class:com.testek.api.features.categoryFeatures.CreateCategoryTestCase]/[test-template:CreateCateSuccess(com.testek.api.models.CategoryModel)]/[test-template-invocation:#2])
+--------------------------------------------------------------------------------
+13:38:15.191 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: LoginTask.performAs - {0} executes a POST on the resource #resource
+Request URI:	http://tapi.testek.vn/api/v0/prod-man/login-with-local
+Body:
+{
+    "username": "testek",
+    "password": "admin"
+}
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Fri, 11 Oct 2024 06:38:16 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmYmRlMDliNS1iYzJkLTRmNTEtYjQ2Zi01MTE2MWZhNWJiNDYiLCJhdWQiOlsib2F1dGgyLXJlc291cmNlIl0sInVzZXJfbmFtZSI6ImZiZGUwOWI1LWJjMmQtNGY1MS1iNDZmLTUxMTYxZmE1YmI0NiIsInNjb3BlIjpbInJlYWQiXSwiZXhwIjoxNzI4NjMyMjk2LCJpYXQiOjE3Mjg2Mjg2OTYsImp0aSI6ImE4NzE1ZjA2LTZhM2ItNDBjOC04NDdhLTZmMTUzMzlmMTAxZCIsImNsaWVudF9pZCI6ImYxMzU0OTg2LWU2OTgtNDcxMi1iYTk0LWU5NGIxMGJmMWI1OCJ9.GFJMS8vsiV87r3Upz5Gm34cPesL2eBFOBFmNt4GusIUEMyIyVXUgNPgGl8s1HCpu-LZgFM4kEL_-15XC8h0kSh9itoEybDtyMLKKHAvznBWVrvLwATkYJSiEeY-LAfWW4LI9Y7wJCBa_H-Zp7fjkJXBj0CWzNjKUef2AglrZ4wFrA8Y-h27bCHp7vL5gMx3cnhMFRBv0xEglSBdvo-wjOwB8U74n-arJ5A0pJ1AAftsKNyJRSJ7GqNH63Ub_XA1i4jJS3vQz63WJXYyEzco53i5Flt0AGcmb-DQfd28u0NwH6AqOnOCKnQKIw5qxVIUeY0gi2H3PnSjWVM9YdFzTvw",
+    "refresh_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmYmRlMDliNS1iYzJkLTRmNTEtYjQ2Zi01MTE2MWZhNWJiNDYiLCJhdWQiOlsib2F1dGgyLXJlc291cmNlIl0sInVzZXJfbmFtZSI6ImZiZGUwOWI1LWJjMmQtNGY1MS1iNDZmLTUxMTYxZmE1YmI0NiIsInNjb3BlIjpbInJlYWQiXSwiYXRpIjoiYTg3MTVmMDYtNmEzYi00MGM4LTg0N2EtNmYxNTMzOWYxMDFkIiwiZXhwIjoxNzMxMjIwNjk2LCJpYXQiOjE3Mjg2Mjg2OTYsImp0aSI6IjE0Mjg5MjkxLTE1NGQtNDg4ZC05YzZlLTg0ZWIzMzJhNjljMiIsImNsaWVudF9pZCI6ImYxMzU0OTg2LWU2OTgtNDcxMi1iYTk0LWU5NGIxMGJmMWI1OCJ9.MKFGhXg6UBYl8S2c6I8zcZRk4finvBrHnm6SbndhJlxEcuiE0cVRiOsGRjU4r4cG5l5reeQPF0JxJqwNm5H0y-vn_aZS-dpO7qtG7k7oSN7rSBv2raaG88qn2T_FXMD8kCORnyuX1gvf8uMy5baBsQ_BtoopySgyx3BvR4h_x2MLJ2s-aMpRKudGDGaF9Q56oUaHFAwEClS0jAkcFW_AXjLL7FUMuEsfwIDwmWqdpVI3UOwSFywL9DcsBV0eAaawkINEXspNAapSJBh7M0wMPB-FJTpiSJz1sowgYIyuc3BGNYlCex6fjyxASfk5incGw40kBr0vjTSgBON3lX7scA",
+    "expires_in": 3599,
+    "token_type": "bearer"
+}
+13:38:16.230 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: {0} executes a POST on the resource #resource
+get token in response
+13:38:16.253 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: CreateCategoryTask.performAs - {0} executes a POST on the resource #resource
+Request URI:	http://tapi.testek.vn/api/v0/prod-man/category
+Body:
+{
+    "id": null,
+    "cateDesc": null,
+    "categoryName": "CTT001",
+    "status": "ACTIVE"
+}
+{
+    "code": 200,
+    "data": {
+        "id": "25015853-8e18-4a27-b0cb-10bb50788cd2",
+        "categoryName": "CTT001",
+        "cateDesc": null,
+        "status": "ACTIVE"
+    }
+}
+HTTP/1.1 201 
+13:38:16.413 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: {0} executes a POST on the resource #resource
+13:38:16.418 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: CreateCategoryTestCase.CreateCateSuccess - {0} should see #description
+13:38:16.425 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: {0} should see #description
+13:38:16.446 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: GetDetailCategoryTask.performAs - {0} executes a GET on the resource #resource
+Request URI:	http://tapi.testek.vn/api/v0/prod-man/category/25015853-8e18-4a27-b0cb-10bb50788cd2/detail
+Body:			<none>
+{
+    "code": 200,
+    "data": {
+        "id": "25015853-8e18-4a27-b0cb-10bb50788cd2",
+        "categoryName": "CTT001",
+        "cateDesc": null,
+        "status": "ACTIVE"
+    }
+}
+HTTP/1.1 200 
+13:38:16.597 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: {0} executes a GET on the resource #resource
+13:38:16.602 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: CreateCategoryTestCase.CreateCateSuccess - {0} should see #description
+Category Request: CategoryModel(id=null, cateDesc=null, categoryName=CTT001, status=ACTIVE)
+Category Response: CategoryModel(id=null, cateDesc=null, categoryName=CTT001, status=ACTIVE)
+13:38:16.627 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: {0} should see #description
+13:38:16.632 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: DeleteCategoryTask.performAs - {0} executes a DELETE on the resource #resource
+Request URI:	http://tapi.testek.vn/api/v0/prod-man/category/25015853-8e18-4a27-b0cb-10bb50788cd2?isSoft=false
+Body:			<none>
+{
+    "code": 200,
+    "data": "Success"
+}
+HTTP/1.1 200 
+13:38:16.789 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: {0} executes a DELETE on the resource #resource
+]]></system-out>
+  </testcase>
+  <testcase name="CreateCateSuccess(CategoryModel)[3]" classname="com.testek.api.features.categoryFeatures.CreateCategoryTestCase" time="1.604">
+    <failure type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+Expected: Verify Category response that is equal to: <"CateRes match CateReq">
+Actual:   <"CateRes not match CateReq">
+	at automation.testek.api@1.0-SNAPSHOT/com.testek.api.features.categoryFeatures.CreateCategoryTestCase.CreateCateSuccess(CreateCategoryTestCase.java:60)
+]]></failure>
+    <system-out><![CDATA[13:38:16.795 [main] INFO  -- 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Create cate success[2] CategoryModel(id=null, cateDesc=null, categoryName=CTT001, status=ACTIVE)
+----------------------------------------------------------------------
+13:38:16.831 [main] DEBUG net.thucydides.core.steps.StepEventBus -- Test suite started for CreateCategoryTestCase in class com.testek.api.features.categoryFeatures.CreateCategoryTestCase
+13:38:16.832 [main] INFO  -- Test Suite Started: CreateCategoryTestCase
+13:38:16.833 [main] DEBUG net.serenitybdd.junit5.SerenityTestExecutionListener -- Thread[main,5,main] Test started TestIdentifier [uniqueId = [engine:junit-jupiter]/[class:com.testek.api.features.categoryFeatures.CreateCategoryTestCase]/[test-template:CreateCateSuccess(com.testek.api.models.CategoryModel)]/[test-template-invocation:#3], parentId = [engine:junit-jupiter]/[class:com.testek.api.features.categoryFeatures.CreateCategoryTestCase]/[test-template:CreateCateSuccess(com.testek.api.models.CategoryModel)], displayName = '[3] CategoryModel(id=null, cateDesc=testcase create category success, categoryName=CTT001, status=INACTIVE)', legacyReportingName = 'CreateCateSuccess(CategoryModel)[3]', source = MethodSource [className = 'com.testek.api.features.categoryFeatures.CreateCategoryTestCase', methodName = 'CreateCateSuccess', methodParameterTypes = 'com.testek.api.models.CategoryModel'], tags = [], type = TEST]
+13:38:16.843 [main] INFO  -- 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Create cate success[3] CategoryModel(id=null, cateDesc=testcase create category success, categoryName=CTT001, status=INACTIVE)([engine:junit-jupiter]/[class:com.testek.api.features.categoryFeatures.CreateCategoryTestCase]/[test-template:CreateCateSuccess(com.testek.api.models.CategoryModel)]/[test-template-invocation:#3])
+--------------------------------------------------------------------------------
+13:38:16.856 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: LoginTask.performAs - {0} executes a POST on the resource #resource
+Request URI:	http://tapi.testek.vn/api/v0/prod-man/login-with-local
+Body:
+{
+    "username": "testek",
+    "password": "admin"
+}
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Fri, 11 Oct 2024 06:38:18 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmYmRlMDliNS1iYzJkLTRmNTEtYjQ2Zi01MTE2MWZhNWJiNDYiLCJhdWQiOlsib2F1dGgyLXJlc291cmNlIl0sInVzZXJfbmFtZSI6ImZiZGUwOWI1LWJjMmQtNGY1MS1iNDZmLTUxMTYxZmE1YmI0NiIsInNjb3BlIjpbInJlYWQiXSwiZXhwIjoxNzI4NjMyMjk4LCJpYXQiOjE3Mjg2Mjg2OTgsImp0aSI6Ijk0MjBiMTcyLTg1M2ItNDJmNS04YzcwLTVjM2E0ZDZlYTAxMSIsImNsaWVudF9pZCI6ImYxMzU0OTg2LWU2OTgtNDcxMi1iYTk0LWU5NGIxMGJmMWI1OCJ9.KUiWCqtypzu4hYyDE2Qgj_krSjiiG0qTu7V0diz8CuZOIhLHdYdHTCDpKdrpqTPLGpMVcmvZafaT6CgSzIbzvveFNvMLbVleIPDnRyrLzf2uYrrp0hcaPQkM0uLS4wzUqQ5-_ECSVAWRYfuLfCHXvP9qzt6s755_YfefY7KaQVdSF-M2PMMDQpOtN4kIf9VkwPjmKBmtxYNWsWmh_X2IgI845aH2ESO6CowJmE2PnP72y1l4DWNcE7_D6y_eRakF-jV2HZvR2q74dDQWk2oR-CnlfZey8laRBLTioFDMv48qM8lmkEPXBsy91XLfBUc4Bnx2PBt4E2njcck2EaLMCQ",
+    "refresh_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmYmRlMDliNS1iYzJkLTRmNTEtYjQ2Zi01MTE2MWZhNWJiNDYiLCJhdWQiOlsib2F1dGgyLXJlc291cmNlIl0sInVzZXJfbmFtZSI6ImZiZGUwOWI1LWJjMmQtNGY1MS1iNDZmLTUxMTYxZmE1YmI0NiIsInNjb3BlIjpbInJlYWQiXSwiYXRpIjoiOTQyMGIxNzItODUzYi00MmY1LThjNzAtNWMzYTRkNmVhMDExIiwiZXhwIjoxNzMxMjIwNjk4LCJpYXQiOjE3Mjg2Mjg2OTgsImp0aSI6IjAzYmZjNDZmLWE5YzYtNGEwYi1hMTUwLWQ3OWZiZDc3YjYwMCIsImNsaWVudF9pZCI6ImYxMzU0OTg2LWU2OTgtNDcxMi1iYTk0LWU5NGIxMGJmMWI1OCJ9.XHtuH2P-XR5tfRfhOJfmZCsE9-rdZd8rhGdddHBv5w5u2ng3unQw1fk7Cqz3dr_3ekYp7uLraGq8FDzuK4MY7dd-pqFPrNyXG_BaDxULWuVRiM7ll51qEIf8rKe_0owFwhw8_drA2Pvmic7o3ITytNCHoj6ohXBe99686Z5f6JEp1fpFPN3qWcSbfCSJZQSC_Qyqk4HxFoeMD6_nfAc8-AVYFwJe88KWmJusDSyNeEj0H1B9oPaIlEpZCWPaH1vC-CCxucX1SG_FXQBVNPbd5vIl3nMGmc2kniOiQxwCTpTnY1Vloq1ACAyer7DDl2ck9ULl4LGTHvTgAbWwjrEE0w",
+    "expires_in": 3599,
+    "token_type": "bearer"
+}
+13:38:17.852 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: {0} executes a POST on the resource #resource
+get token in response
+13:38:17.875 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: CreateCategoryTask.performAs - {0} executes a POST on the resource #resource
+Request URI:	http://tapi.testek.vn/api/v0/prod-man/category
+Body:
+{
+    "id": null,
+    "cateDesc": "testcase create category success",
+    "categoryName": "CTT001",
+    "status": "INACTIVE"
+}
+{
+    "code": 200,
+    "data": {
+        "id": "af94398f-54f9-45e9-b46c-f7a990ffee61",
+        "categoryName": "CTT001",
+        "cateDesc": "testcase create category success",
+        "status": "ACTIVE"
+    }
+}
+HTTP/1.1 201 
+13:38:18.035 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: {0} executes a POST on the resource #resource
+13:38:18.040 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: CreateCategoryTestCase.CreateCateSuccess - {0} should see #description
+13:38:18.050 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: {0} should see #description
+13:38:18.075 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: GetDetailCategoryTask.performAs - {0} executes a GET on the resource #resource
+Request URI:	http://tapi.testek.vn/api/v0/prod-man/category/af94398f-54f9-45e9-b46c-f7a990ffee61/detail
+Body:			<none>
+{
+    "code": 200,
+    "data": {
+        "id": "af94398f-54f9-45e9-b46c-f7a990ffee61",
+        "categoryName": "CTT001",
+        "cateDesc": "testcase create category success",
+        "status": "ACTIVE"
+    }
+}
+HTTP/1.1 200 
+13:38:18.218 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: {0} executes a GET on the resource #resource
+13:38:18.221 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: CreateCategoryTestCase.CreateCateSuccess - {0} should see #description
+Category Request: CategoryModel(id=null, cateDesc=testcase create category success, categoryName=CTT001, status=INACTIVE)
+Category Response: CategoryModel(id=null, cateDesc=testcase create category success, categoryName=CTT001, status=ACTIVE)
+13:38:18.293 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP FAILED: {0} should see #description - Expected: Verify Category response that is equal to: <"CateRes match CateReq">
+Actual:   <"CateRes not match CateReq">
+13:38:18.309 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: DeleteCategoryTask.performAs - {0} executes a DELETE on the resource #resource
+Request URI:	http://tapi.testek.vn/api/v0/prod-man/category/af94398f-54f9-45e9-b46c-f7a990ffee61?isSoft=false
+Body:			<none>
+{
+    "code": 200,
+    "data": "Success"
+}
+HTTP/1.1 200 
+13:38:18.448 [main] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: {0} executes a DELETE on the resource #resource
+]]></system-out>
+  </testcase>
+</testsuite>

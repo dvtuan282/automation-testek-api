@@ -114,7 +114,7 @@
                 <version>3.0.0-M5</version>
                 <configuration>
                     <includes>
-                        <include>UpdateSupplierTestCase.java</include>
+                        <include>CreateCategoryTestCase.java</include>
 <!--                        <include>**/When*.java</include>-->
 <!--                        <include>**/*Story.java</include>-->
                     </includes>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="3" name="com.testek.api.features.categoryFeatures.UpdateCategoryTestCase" skipped="0" tests="3" time="5.65" timestamp="2024-10-11 03:16:12"><testcase classname="com.testek.api.features.categoryFeatures.UpdateCategoryTestCase" name="updateCategorySuccess(CategoryModel)"><failure message="Expected: Verify category response body:  that is equal to: &lt;&quot;supplierRes match supplierReq&quot;&gt;&#10;Actual:   &lt;&quot;CateRes not match CateReq&quot;&gt;" type="java.lang.AssertionError">Expected: Verify category response body:  that is equal to: &lt;"supplierRes match supplierReq"&gt;
+Actual:   &lt;"CateRes not match CateReq"&gt;</failure><system-err>Expected: Verify category response body:  that is equal to: &lt;"supplierRes match supplierReq"&gt;
+Actual:   &lt;"CateRes not match CateReq"&gt;&#13;
+com.testek.api.features.categoryFeatures.UpdateCategoryTestCase.updateCategorySuccess(UpdateCategoryTestCase.java:63)&#13;
+</system-err></testcase></testsuite>

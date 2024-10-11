@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="2" failures="0" name="com.testek.api.features.categoryFeatures.GetCategoryTestCase" skipped="0" tests="2" time="5.39" timestamp="2024-10-11 02:48:52"><testcase classname="com.testek.api.features.categoryFeatures.GetCategoryTestCase" name="getDetailCategoryFalse(String, int, String, String)"><error message="firstParameterValue cannot be null" type="java.lang.IllegalArgumentException">firstParameterValue cannot be null</error><system-err>firstParameterValue cannot be null&#13;
+io.restassured.internal.common.assertion.AssertParameter.notNull(AssertParameter.groovy:26)&#13;
+io.restassured.internal.RequestSpecificationImpl.pathParams(RequestSpecificationImpl.groovy:522)&#13;
+net.serenitybdd.rest.decorators.request.RequestSpecificationParametersConfigurations.pathParams(RequestSpecificationParametersConfigurations.java:106)&#13;
+net.serenitybdd.rest.decorators.request.RequestSpecificationDecorated.pathParams(RequestSpecificationDecorated.java:38)&#13;
+com.testek.api.tasks.CategoryTasks.DeleteCategoryTask.lambda$performAs$0(DeleteCategoryTask.java:26)&#13;
+com.testek.api.tasks.CategoryTasks.DeleteCategoryTask.performAs(DeleteCategoryTask.java:21)&#13;
+com.testek.api.features.categoryFeatures.GetCategoryTestCase.cleanUp(GetCategoryTestCase.java:75)&#13;
+</system-err></testcase></testsuite>
