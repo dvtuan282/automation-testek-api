@@ -1,1 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="com.testek.api.features.supplierFeatures.UpdateSupplierTestCase" skipped="0" tests="1" time="1.62" timestamp="2024-10-09 04:41:49"><testcase classname="com.testek.api.features.supplierFeatures.UpdateSupplierTestCase" name="Update supplier when id is wrong"/></testsuite>

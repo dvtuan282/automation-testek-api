@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: com.testek.api.features.categoryFeatures.CreateCategoryTestCase
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 18.337 s <<< FAILURE! - in com.testek.api.features.categoryFeatures.CreateCategoryTestCase
+com.testek.api.features.categoryFeatures.CreateCategoryTestCase.CreateCateSuccess(CategoryModel)[3]  Time elapsed: 1.604 s  <<< FAILURE!
+java.lang.AssertionError: 
+Expected: Verify Category response that is equal to: <"CateRes match CateReq">
+Actual:   <"CateRes not match CateReq">
+	at automation.testek.api@1.0-SNAPSHOT/com.testek.api.features.categoryFeatures.CreateCategoryTestCase.CreateCateSuccess(CreateCategoryTestCase.java:60)
+

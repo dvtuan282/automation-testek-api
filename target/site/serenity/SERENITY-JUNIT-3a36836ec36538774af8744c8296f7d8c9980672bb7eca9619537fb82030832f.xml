@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="3" name="com.testek.api.features.categoryFeatures.UpdateCategoryTestCase" skipped="0" tests="4" time="6.13" timestamp="2024-10-11 03:39:21"><testcase classname="com.testek.api.features.categoryFeatures.UpdateCategoryTestCase" name="updateCategoryNotSuccess(CategoryModel, int)"><failure message="Expected: verify status code:  that is equal to: &lt;400&gt;&#10;Actual:   &lt;200&gt;" type="java.lang.AssertionError">Expected: verify status code:  that is equal to: &lt;400&gt;
+Actual:   &lt;200&gt;</failure><system-err>Expected: verify status code:  that is equal to: &lt;400&gt;
+Actual:   &lt;200&gt;&#13;
+com.testek.api.features.categoryFeatures.UpdateCategoryTestCase.updateCategoryNotSuccess(UpdateCategoryTestCase.java:77)&#13;
+</system-err></testcase></testsuite>
